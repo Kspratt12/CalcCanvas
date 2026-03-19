@@ -1,17 +1,16 @@
 import Link from "next/link";
 
 const categories = [
-  { label: "Financial Calculators", href: "/financial" },
-  { label: "Health & Fitness", href: "/health" },
-  { label: "Math Calculators", href: "/math" },
-  { label: "Text Tools", href: "/text" },
-  { label: "Developer Tools", href: "/developer" },
-  { label: "Everyday Tools", href: "/everyday" },
+  { label: "Financial Calculators", href: "/#financial" },
+  { label: "Health & Fitness", href: "/#health" },
+  { label: "Math Calculators", href: "/#math" },
+  { label: "Text Tools", href: "/#text" },
+  { label: "Developer Tools", href: "/#developer" },
+  { label: "Everyday Tools", href: "/#everyday" },
 ];
 
 const companyLinks = [
   { label: "About", href: "/about" },
-  { label: "Contact", href: "/contact" },
   { label: "Privacy Policy", href: "/privacy" },
   { label: "Terms of Service", href: "/terms" },
 ];
@@ -60,27 +59,27 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Extra */}
+          {/* Popular Tools */}
           <div>
             <h3 className="text-sm font-semibold text-slate-900">Popular Tools</h3>
             <ul className="mt-3 space-y-2">
               <li>
-                <Link href="/financial/mortgage-calculator" className="text-sm text-slate-500 hover:text-primary">
+                <Link href="/tools/mortgage-calculator" className="text-sm text-slate-500 hover:text-primary">
                   Mortgage Calculator
                 </Link>
               </li>
               <li>
-                <Link href="/health/bmi-calculator" className="text-sm text-slate-500 hover:text-primary">
+                <Link href="/tools/bmi-calculator" className="text-sm text-slate-500 hover:text-primary">
                   BMI Calculator
                 </Link>
               </li>
               <li>
-                <Link href="/text/word-counter" className="text-sm text-slate-500 hover:text-primary">
+                <Link href="/tools/word-counter" className="text-sm text-slate-500 hover:text-primary">
                   Word Counter
                 </Link>
               </li>
               <li>
-                <Link href="/developer/json-formatter" className="text-sm text-slate-500 hover:text-primary">
+                <Link href="/tools/json-formatter" className="text-sm text-slate-500 hover:text-primary">
                   JSON Formatter
                 </Link>
               </li>
@@ -89,7 +88,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-10 border-t border-slate-200 pt-6 text-center text-sm text-slate-400">
-          &copy; 2026 CalcCanvas. All rights reserved.
+          &copy; 2025 CalcCanvas. All rights reserved.
         </div>
       </div>
     </footer>

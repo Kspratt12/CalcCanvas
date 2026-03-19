@@ -4,11 +4,11 @@ import { useState } from "react";
 import Link from "next/link";
 
 const navLinks = [
-  { label: "Financial", href: "/financial" },
-  { label: "Health & Fitness", href: "/health" },
-  { label: "Math", href: "/math" },
-  { label: "Text Tools", href: "/text" },
-  { label: "Developer Tools", href: "/developer" },
+  { label: "Financial", href: "/#financial" },
+  { label: "Health & Fitness", href: "/#health" },
+  { label: "Math", href: "/#math" },
+  { label: "Text Tools", href: "/#text" },
+  { label: "Developer Tools", href: "/#developer" },
 ];
 
 export default function Header() {

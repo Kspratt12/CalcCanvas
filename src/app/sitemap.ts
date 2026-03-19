@@ -16,6 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "character-counter",
     "color-hex-to-rgb",
     "compound-interest-calculator",
+    "countdown-timer",
     "date-calculator",
     "fraction-calculator",
     "hash-generator",
@@ -28,12 +29,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "pace-calculator",
     "password-generator",
     "percentage-calculator",
+    "qr-code-generator",
     "random-number-generator",
     "retirement-calculator",
     "salary-to-hourly-converter",
     "slug-generator",
+    "square-root-calculator",
+    "standard-deviation-calculator",
     "text-repeater",
     "tip-calculator",
+    "unit-converter",
     "uuid-generator",
     "word-counter",
   ];
@@ -45,6 +50,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
+  const staticPages: MetadataRoute.Sitemap = [
+    { url: `${baseUrl}/about`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.5 },
+    { url: `${baseUrl}/privacy`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.3 },
+    { url: `${baseUrl}/terms`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.3 },
+  ];
+
   return [
     {
       url: baseUrl,
@@ -53,5 +64,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1.0,
     },
     ...toolPages,
+    ...staticPages,
   ];
 }
