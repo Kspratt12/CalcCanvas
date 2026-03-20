@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="96" fill="#2563eb"/>
+  <rect x="96" y="72" width="320" height="100" rx="16" fill="#1d4ed8"/>
+  <rect x="96" y="72" width="320" height="100" rx="16" fill="#1e40af" opacity="0.5"/>
+  <text x="256" y="138" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="64" font-weight="700" fill="white" letter-spacing="-2">CalcCanvas</text>
+  <g fill="white">
+    <rect x="96" y="204" width="68" height="60" rx="12"/>
+    <rect x="184" y="204" width="68" height="60" rx="12"/>
+    <rect x="272" y="204" width="68" height="60" rx="12"/>
+    <rect x="360" y="204" width="56" height="60" rx="12" fill="#60a5fa"/>
+    <rect x="96" y="284" width="68" height="60" rx="12"/>
+    <rect x="184" y="284" width="68" height="60" rx="12"/>
+    <rect x="272" y="284" width="68" height="60" rx="12"/>
+    <rect x="360" y="284" width="56" height="60" rx="12" fill="#60a5fa"/>
+    <rect x="96" y="364" width="68" height="60" rx="12"/>
+    <rect x="184" y="364" width="68" height="60" rx="12"/>
+    <rect x="272" y="364" width="68" height="60" rx="12"/>
+    <rect x="360" y="364" width="56" height="60" rx="12" fill="#34d399"/>
+  </g>
+  <text x="130" y="248" text-anchor="middle" font-family="system-ui,sans-serif" font-size="32" font-weight="600" fill="#2563eb">7</text>
+  <text x="218" y="248" text-anchor="middle" font-family="system-ui,sans-serif" font-size="32" font-weight="600" fill="#2563eb">8</text>
+  <text x="306" y="248" text-anchor="middle" font-family="system-ui,sans-serif" font-size="32" font-weight="600" fill="#2563eb">9</text>
+  <text x="388" y="248" text-anchor="middle" font-family="system-ui,sans-serif" font-size="28" font-weight="700" fill="white">&divide;</text>
+  <text x="130" y="328" text-anchor="middle" font-family="system-ui,sans-serif" font-size="32" font-weight="600" fill="#2563eb">4</text>
+  <text x="218" y="328" text-anchor="middle" font-family="system-ui,sans-serif" font-size="32" font-weight="600" fill="#2563eb">5</text>
+  <text x="306" y="328" text-anchor="middle" font-family="system-ui,sans-serif" font-size="32" font-weight="600" fill="#2563eb">6</text>
+  <text x="388" y="328" text-anchor="middle" font-family="system-ui,sans-serif" font-size="28" font-weight="700" fill="white">&times;</text>
+  <text x="130" y="408" text-anchor="middle" font-family="system-ui,sans-serif" font-size="32" font-weight="600" fill="#2563eb">1</text>
+  <text x="218" y="408" text-anchor="middle" font-family="system-ui,sans-serif" font-size="32" font-weight="600" fill="#2563eb">2</text>
+  <text x="306" y="408" text-anchor="middle" font-family="system-ui,sans-serif" font-size="32" font-weight="600" fill="#2563eb">3</text>
+  <text x="388" y="408" text-anchor="middle" font-family="system-ui,sans-serif" font-size="28" font-weight="700" fill="white">=</text>
+</svg>
