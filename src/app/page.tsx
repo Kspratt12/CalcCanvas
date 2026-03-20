@@ -196,7 +196,7 @@ export default function Home() {
           const catTools = tools.filter((t) => t.category === cat.name);
           return (
             <div key={cat.slug} id={cat.slug}>
-              <div className="mb-8 mt-20 first:mt-0 border-b border-slate-200 pb-4">
+              <div className="mb-8 mt-24 first:mt-0 border-b border-slate-200 pb-6">
                 <h2 className="text-2xl font-bold text-slate-900">
                   {cat.name}
                 </h2>
