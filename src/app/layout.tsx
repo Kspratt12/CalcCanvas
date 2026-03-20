@@ -24,6 +24,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} h-full antialiased`}>
+      <head>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7094912649355027"
+          crossOrigin="anonymous"
+        />
+      </head>
       <body className="flex min-h-full flex-col font-sans">
         <Header />
         <AdPlacement slot="header-leaderboard" format="leaderboard" />
