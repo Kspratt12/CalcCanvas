@@ -114,6 +114,49 @@ export default function ColorHexToRgbPage() {
 
   return (
     <main className="max-w-2xl mx-auto px-4 py-10">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is the difference between hex and RGB?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "They represent the same color information in different number systems. Hex uses base-16 (0-9 and A-F), packing each channel into two characters. RGB uses familiar base-10 numbers from 0 to 255. The visual result is identical."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What does HSL stand for and why is it useful?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "HSL stands for Hue, Saturation, and Lightness. Hue is the color angle on the color wheel (0-360 degrees), saturation controls how vivid the color is, and lightness controls how bright or dark it appears. HSL is useful because you can create lighter or darker shades by adjusting just one value."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I use shorthand hex codes like #fff?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. This tool accepts both 3-character shorthand codes (like #fff or #09c) and full 6-character codes (like #ffffff or #0099cc). Shorthand codes are expanded by doubling each character."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Which format should I use in my CSS?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Hex codes are the most compact and widely used in CSS. RGB is helpful when you want to add transparency using rgba(). HSL is great for programmatically generating color variations. All three are fully supported in modern browsers."
+                }
+              }
+            ]
+          })
+        }}
+      />
       <h1 className="text-3xl font-bold mb-2">Color Hex to RGB Converter</h1>
       <p className="text-gray-600 mb-6">
         Convert colors between hex, RGB, and HSL formats. Pick a color or type
@@ -249,6 +292,54 @@ export default function ColorHexToRgbPage() {
           (Hue, Saturation, Lightness) is often more intuitive for adjusting
           colors. All conversions happen instantly in your browser.
         </p>
+      </section>
+
+      <section className="mt-8">
+        <h2 className="text-xl font-semibold mb-3">What Is a Hex to RGB Color Converter?</h2>
+        <p className="text-gray-700 mb-3">
+          Colors on the web are represented in several formats, and the most common are hex and RGB. A hex color code like <code>#2563eb</code> is a compact six-character string that encodes red, green, and blue intensity values in hexadecimal (base-16) notation. RGB, on the other hand, uses three decimal numbers ranging from 0 to 255 to define the same color.
+        </p>
+        <p className="text-gray-700 mb-3">
+          Converting between these formats is something designers and developers do constantly. CSS accepts both <code>#2563eb</code> and <code>rgb(37, 99, 235)</code>, but different design tools, style guides, and codebases may prefer one format over the other. This converter also includes HSL (Hue, Saturation, Lightness), which many designers find more intuitive for adjusting colors because you can independently control brightness and saturation.
+        </p>
+        <p className="text-gray-700">
+          Whether you&apos;re matching brand colors across platforms, translating a mockup into code, or experimenting with color palettes, this tool lets you convert instantly without doing the math yourself.
+        </p>
+      </section>
+
+      <section className="mt-8">
+        <h2 className="text-xl font-semibold mb-3">Frequently Asked Questions</h2>
+
+        <h3 className="text-lg font-medium mt-4 mb-2">What is the difference between hex and RGB?</h3>
+        <p className="text-gray-700 mb-3">
+          They represent the same color information in different number systems. Hex uses base-16 (0-9 and A-F), packing each channel into two characters. RGB uses familiar base-10 numbers from 0 to 255. The visual result is identical — it&apos;s purely a formatting difference.
+        </p>
+
+        <h3 className="text-lg font-medium mt-4 mb-2">What does HSL stand for and why is it useful?</h3>
+        <p className="text-gray-700 mb-3">
+          HSL stands for Hue, Saturation, and Lightness. Hue is the color angle on the color wheel (0-360 degrees), saturation controls how vivid the color is, and lightness controls how bright or dark it appears. HSL is useful because you can create lighter or darker shades by adjusting just one value.
+        </p>
+
+        <h3 className="text-lg font-medium mt-4 mb-2">Can I use shorthand hex codes like #fff?</h3>
+        <p className="text-gray-700 mb-3">
+          Yes. This tool accepts both 3-character shorthand codes (like #fff or #09c) and full 6-character codes (like #ffffff or #0099cc). Shorthand codes are expanded by doubling each character — so #fff becomes #ffffff.
+        </p>
+
+        <h3 className="text-lg font-medium mt-4 mb-2">Which format should I use in my CSS?</h3>
+        <p className="text-gray-700 mb-3">
+          Hex codes are the most compact and widely used in CSS. RGB is helpful when you want to add transparency using <code>rgba()</code>. HSL is great for programmatically generating color variations. All three are fully supported in modern browsers.
+        </p>
+      </section>
+
+      <section className="mt-8">
+        <h2 className="text-xl font-semibold mb-3">Example Conversions</h2>
+        <ul className="list-disc list-inside space-y-2 text-gray-700">
+          <li><strong>#ffffff (White)</strong> — RGB: 255, 255, 255 | HSL: 0, 0%, 100%</li>
+          <li><strong>#000000 (Black)</strong> — RGB: 0, 0, 0 | HSL: 0, 0%, 0%</li>
+          <li><strong>#ff0000 (Red)</strong> — RGB: 255, 0, 0 | HSL: 0, 100%, 50%</li>
+          <li><strong>#2563eb (Blue)</strong> — RGB: 37, 99, 235 | HSL: 221, 83%, 53%</li>
+          <li><strong>#10b981 (Green)</strong> — RGB: 16, 185, 129 | HSL: 160, 84%, 39%</li>
+        </ul>
       </section>
 
       <section className="mt-8 pb-10">

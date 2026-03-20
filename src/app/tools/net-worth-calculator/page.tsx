@@ -167,6 +167,49 @@ export default function NetWorthCalculator() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What counts as an asset?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Assets include anything you own that has monetary value: bank accounts, retirement accounts (401k, IRA), investment portfolios, real estate, vehicles, and valuable personal property. Use current market values, not what you originally paid."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What counts as a liability?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Liabilities are all your outstanding debts: mortgage balance, student loans, auto loans, credit card balances, personal loans, medical debt, and any other money you owe. Use the current outstanding balance."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is a negative net worth bad?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A negative net worth is common for people early in their careers, especially those with student loans or a new mortgage. What matters is the trend. If your net worth is increasing over time, you're moving in the right direction."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How often should I calculate my net worth?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Most financial planners suggest calculating net worth quarterly or at least twice a year. This gives you enough time to see meaningful changes without obsessing over daily market fluctuations."
+                }
+              }
+            ]
+          })
+        }}
+      />
       <h1 className="text-3xl font-bold text-gray-900 mb-2">
         Net Worth Calculator
       </h1>
@@ -253,6 +296,89 @@ export default function NetWorthCalculator() {
           vehicles). Liabilities are everything you owe (mortgages, loans, credit
           card balances). Tracking your net worth over time is one of the best
           ways to measure financial progress.
+        </p>
+      </section>
+
+      <section className="mt-10">
+        <h2 className="text-xl font-semibold text-gray-900 mb-3">
+          What Is a Net Worth Calculator?
+        </h2>
+        <p className="text-gray-600 mb-3">
+          A net worth calculator gives you a single number that represents your overall financial health. It works by adding up everything you own (assets) and subtracting everything you owe (liabilities). The result is your net worth &mdash; positive if your assets exceed your debts, or negative if the reverse is true.
+        </p>
+        <p className="text-gray-600 mb-3">
+          Unlike income, which only tells you how much money flows in, net worth captures the bigger picture. Someone earning $200,000 per year but carrying $500,000 in debt may have a lower net worth than someone earning $60,000 with no debt and a paid-off home. This tool helps you see where you actually stand.
+        </p>
+        <p className="text-gray-600">
+          Financial advisors recommend calculating your net worth at least once or twice a year. Tracking it over time is one of the most effective ways to measure whether you&apos;re making real financial progress, regardless of what your income looks like on paper.
+        </p>
+      </section>
+
+      <section className="mt-10">
+        <h2 className="text-xl font-semibold text-gray-900 mb-3">
+          Frequently Asked Questions
+        </h2>
+
+        <h3 className="text-lg font-medium text-gray-900 mt-4 mb-2">
+          What counts as an asset?
+        </h3>
+        <p className="text-gray-600 mb-4">
+          Assets include anything you own that has monetary value: bank accounts, retirement accounts (401k, IRA), investment portfolios, real estate, vehicles, and valuable personal property. Use current market values, not what you originally paid. For your home, a recent appraisal or online estimate works well.
+        </p>
+
+        <h3 className="text-lg font-medium text-gray-900 mt-4 mb-2">
+          What counts as a liability?
+        </h3>
+        <p className="text-gray-600 mb-4">
+          Liabilities are all your outstanding debts: mortgage balance, student loans, auto loans, credit card balances, personal loans, medical debt, and any other money you owe. Use the current outstanding balance, not the original loan amount.
+        </p>
+
+        <h3 className="text-lg font-medium text-gray-900 mt-4 mb-2">
+          Is a negative net worth bad?
+        </h3>
+        <p className="text-gray-600 mb-4">
+          A negative net worth is common for people early in their careers, especially those with student loans or a new mortgage. It&apos;s not a cause for panic &mdash; what matters is the trend. If your net worth is increasing over time, you&apos;re moving in the right direction. Focus on paying down high-interest debt and building savings.
+        </p>
+
+        <h3 className="text-lg font-medium text-gray-900 mt-4 mb-2">
+          Should I include my car as an asset?
+        </h3>
+        <p className="text-gray-600 mb-4">
+          Yes, include your car at its current market value (check Kelley Blue Book or a similar tool). If you still owe money on the car, list that balance as a liability. The difference between the two is the equity you have in the vehicle.
+        </p>
+
+        <h3 className="text-lg font-medium text-gray-900 mt-4 mb-2">
+          How often should I calculate my net worth?
+        </h3>
+        <p className="text-gray-600">
+          Most financial planners suggest calculating net worth quarterly or at least twice a year. This gives you enough time to see meaningful changes without obsessing over daily market fluctuations. Pick consistent dates &mdash; like January 1 and July 1 &mdash; and make it a habit.
+        </p>
+      </section>
+
+      <section className="mt-10">
+        <h2 className="text-xl font-semibold text-gray-900 mb-3">
+          Example Calculation
+        </h2>
+        <p className="text-gray-600 mb-3">
+          Here&apos;s a sample net worth calculation for a 35-year-old homeowner:
+        </p>
+        <p className="text-gray-600 font-medium mb-1">Assets:</p>
+        <ul className="list-disc list-inside text-gray-600 space-y-1 mb-3">
+          <li>Cash and savings: $15,000</li>
+          <li>Retirement accounts: $85,000</li>
+          <li>Home value: $320,000</li>
+          <li>Car value: $18,000</li>
+          <li>Other investments: $12,000</li>
+        </ul>
+        <p className="text-gray-600 font-medium mb-1">Liabilities:</p>
+        <ul className="list-disc list-inside text-gray-600 space-y-1 mb-3">
+          <li>Mortgage balance: $245,000</li>
+          <li>Student loans: $22,000</li>
+          <li>Auto loan: $10,000</li>
+          <li>Credit cards: $3,000</li>
+        </ul>
+        <p className="text-gray-600">
+          Total assets: $450,000. Total liabilities: $280,000. Net worth: $170,000. This person is in solid financial shape. If they recalculate in six months and the number has grown, they know their savings and debt payoff strategy is working.
         </p>
       </section>
 

@@ -80,6 +80,57 @@ export default function RetirementCalculator() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "How much do I need to retire?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A common target is 25 times your expected annual expenses in retirement (the inverse of the 4% rule). If you plan to spend $50,000 per year, you'd need about $1.25 million saved."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the 4% rule?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The 4% rule comes from the Trinity Study, which found that withdrawing 4% of a diversified portfolio in the first year of retirement (and adjusting for inflation each year) has historically sustained the portfolio for at least 30 years."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What rate of return should I assume?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The historical average return for a diversified stock portfolio is about 10% before inflation, or roughly 7% after inflation. If you have a more conservative portfolio with bonds, 5-6% may be more appropriate."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does this include Social Security?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No, this calculator only projects your personal savings and investments. Social Security, pensions, or other income sources would be in addition to the amounts shown."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What if I want to retire early?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Early retirement (before age 59 1/2) may limit access to certain retirement accounts without penalties. You'll also need your savings to last longer, which means you may want to use a lower withdrawal rate like 3-3.5%."
+                }
+              }
+            ]
+          })
+        }}
+      />
       <h1 className="text-3xl font-bold text-gray-900 mb-2">
         Retirement Calculator
       </h1>
@@ -233,6 +284,81 @@ export default function RetirementCalculator() {
           safe withdrawal rule, which suggests you can withdraw 4% of your
           portfolio annually with low risk of running out over a 30-year
           retirement.
+        </p>
+      </section>
+
+      <section className="mt-10">
+        <h2 className="text-xl font-semibold text-gray-900 mb-3">
+          What Is a Retirement Calculator?
+        </h2>
+        <p className="text-gray-600 mb-3">
+          A retirement calculator estimates how much money you&apos;ll have saved by the time you retire, based on your current savings, monthly contributions, and expected investment returns. It then uses that total to project how much monthly income you can safely withdraw during retirement.
+        </p>
+        <p className="text-gray-600 mb-3">
+          This calculator uses the widely-referenced 4% rule, which suggests that you can withdraw 4% of your portfolio in the first year of retirement and adjust for inflation each year after that, with a low probability of running out of money over a 30-year retirement. While no rule is perfect, it provides a reasonable starting point for planning.
+        </p>
+        <p className="text-gray-600">
+          The key insight from running these numbers is that time matters more than amount. Starting to save at age 25 versus 35 can result in hundreds of thousands of dollars more at retirement, even with the same monthly contribution. This calculator makes that difference tangible so you can plan accordingly.
+        </p>
+      </section>
+
+      <section className="mt-10">
+        <h2 className="text-xl font-semibold text-gray-900 mb-3">
+          Frequently Asked Questions
+        </h2>
+
+        <h3 className="text-lg font-medium text-gray-900 mt-4 mb-2">
+          How much do I need to retire?
+        </h3>
+        <p className="text-gray-600 mb-4">
+          A common target is 25 times your expected annual expenses in retirement (the inverse of the 4% rule). If you plan to spend $50,000 per year, you&apos;d need about $1.25 million saved. Your actual number depends on your lifestyle, healthcare costs, Social Security benefits, and other income sources.
+        </p>
+
+        <h3 className="text-lg font-medium text-gray-900 mt-4 mb-2">
+          What is the 4% rule?
+        </h3>
+        <p className="text-gray-600 mb-4">
+          The 4% rule comes from the Trinity Study, which found that withdrawing 4% of a diversified portfolio in the first year of retirement (and adjusting for inflation each year) has historically sustained the portfolio for at least 30 years. It&apos;s a guideline, not a guarantee, and some financial planners now suggest 3.5% for added safety.
+        </p>
+
+        <h3 className="text-lg font-medium text-gray-900 mt-4 mb-2">
+          What rate of return should I assume?
+        </h3>
+        <p className="text-gray-600 mb-4">
+          The historical average return for a diversified stock portfolio is about 10% before inflation, or roughly 7% after inflation. If you have a more conservative portfolio with bonds, 5-6% may be more appropriate. Use a rate that reflects your actual investment mix.
+        </p>
+
+        <h3 className="text-lg font-medium text-gray-900 mt-4 mb-2">
+          Does this include Social Security?
+        </h3>
+        <p className="text-gray-600 mb-4">
+          No, this calculator only projects your personal savings and investments. Social Security, pensions, or other income sources would be in addition to the amounts shown. You can check your estimated Social Security benefit at ssa.gov to get the full picture.
+        </p>
+
+        <h3 className="text-lg font-medium text-gray-900 mt-4 mb-2">
+          What if I want to retire early?
+        </h3>
+        <p className="text-gray-600">
+          Early retirement (before age 59 1/2) may limit access to certain retirement accounts without penalties. You&apos;ll also need your savings to last longer, which means you may want to use a lower withdrawal rate like 3-3.5%. Set your retirement age in this calculator to see how much more you need to save.
+        </p>
+      </section>
+
+      <section className="mt-10">
+        <h2 className="text-xl font-semibold text-gray-900 mb-3">
+          Example Calculation
+        </h2>
+        <p className="text-gray-600 mb-3">
+          A 30-year-old with $50,000 in current savings contributes $1,000 per month and expects a 7% annual return, planning to retire at 65. Here are the projections:
+        </p>
+        <ul className="list-disc list-inside text-gray-600 space-y-1 mb-3">
+          <li>Years until retirement: 35</li>
+          <li>Total contributions: $470,000 ($50,000 + $420,000 in monthly deposits)</li>
+          <li>Investment growth: approximately $1,390,000</li>
+          <li>Total retirement savings: approximately $1,860,000</li>
+          <li>Estimated monthly income (4% rule): approximately $6,200</li>
+        </ul>
+        <p className="text-gray-600">
+          That $1,000 per month turns into nearly $1.9 million thanks to 35 years of compound growth. If this same person waited until age 40 to start, the total would drop to roughly $920,000 &mdash; less than half &mdash; even with the same monthly contribution and rate of return.
         </p>
       </section>
 

@@ -95,6 +95,49 @@ export default function PaceCalculatorPage() {
 
   return (
     <main className="max-w-4xl mx-auto px-4 py-10">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is a good running pace for beginners?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Most beginner runners start at a pace of 10 to 13 minutes per mile (6:15 to 8:00 per kilometer). The right pace for you is one where you can hold a conversation without gasping for breath."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How do I convert pace to speed?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "To convert pace (minutes per mile) to speed (miles per hour), divide 60 by your pace in minutes. For example, a 10-minute mile pace equals 6.0 miles per hour."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Why do the race estimates assume constant pace?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Constant pace is the simplest and most useful assumption for planning purposes. In reality, most runners experience positive splits, meaning they slow down in the second half of a race. The constant pace estimate gives you a solid baseline to plan around."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How can I improve my pace?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Incorporate a mix of easy runs, tempo runs, and interval training into your weekly schedule. Most coaches recommend keeping about 80 percent of your weekly mileage at an easy, conversational pace."
+                }
+              }
+            ]
+          })
+        }}
+      />
       <h1 className="text-3xl font-bold mb-2">Pace Calculator</h1>
       <p className="text-gray-600 mb-6">
         Calculate your running pace, finish time, or distance. Get estimated finish times for popular race distances.
@@ -208,6 +251,52 @@ export default function PaceCalculatorPage() {
         <h2 className="text-xl font-semibold mb-3">How It Works</h2>
         <p className="text-gray-700">
           Pace = Time / Distance. Time = Pace &times; Distance. Distance = Time / Pace. The calculator divides your total time by distance to get your pace per mile or kilometer. Estimated race times are calculated by multiplying your pace by the standard race distance (5K = 3.107 mi, 10K = 6.214 mi, Half Marathon = 13.109 mi, Marathon = 26.219 mi).
+        </p>
+      </section>
+
+      <section className="mt-8">
+        <h2 className="text-xl font-semibold mb-3">What Is a Pace Calculator?</h2>
+        <p className="text-gray-700 mb-4">
+          A pace calculator is a tool that helps runners and walkers figure out the relationship between distance, time, and speed. If you know any two of these three values, you can calculate the third. Pace is typically expressed as minutes per mile or minutes per kilometer, and it tells you how fast you&apos;re covering ground. Unlike speed (which measures distance per hour), pace is more intuitive for runners because it directly relates to the effort you feel during each mile or kilometer.
+        </p>
+        <p className="text-gray-700 mb-4">
+          Whether you&apos;re training for your first 5K, chasing a personal record in the marathon, or simply trying to understand your fitness level, knowing your pace is essential. It helps you plan race strategies, set training zones, and track improvement over time. This calculator also provides estimated finish times for popular race distances so you can set realistic goals. Keep in mind that maintaining a steady pace throughout a longer race is difficult, and most runners slow down in the later miles. The estimates here assume a constant pace, so real-world times may vary slightly.
+        </p>
+      </section>
+
+      <section className="mt-8">
+        <h2 className="text-xl font-semibold mb-3">Frequently Asked Questions</h2>
+
+        <h3 className="text-lg font-medium mt-4 mb-2">What is a good running pace for beginners?</h3>
+        <p className="text-gray-700 mb-4">
+          Most beginner runners start at a pace of 10 to 13 minutes per mile (6:15 to 8:00 per kilometer). The right pace for you is one where you can hold a conversation without gasping for breath. Don&apos;t worry about speed when you&apos;re starting out — consistency and building endurance matter far more in the early stages.
+        </p>
+
+        <h3 className="text-lg font-medium mt-4 mb-2">How do I convert pace to speed?</h3>
+        <p className="text-gray-700 mb-4">
+          To convert pace (minutes per mile) to speed (miles per hour), divide 60 by your pace in minutes. For example, a 10-minute mile pace equals 6.0 miles per hour. For kilometers, divide 60 by your pace in minutes per kilometer. A 5-minute per kilometer pace equals 12 kilometers per hour.
+        </p>
+
+        <h3 className="text-lg font-medium mt-4 mb-2">Why do the race estimates assume constant pace?</h3>
+        <p className="text-gray-700 mb-4">
+          Constant pace is the simplest and most useful assumption for planning purposes. In reality, most runners experience &quot;positive splits,&quot; meaning they slow down in the second half of a race. Elite runners sometimes run &quot;negative splits,&quot; getting faster as the race progresses. The constant pace estimate gives you a solid baseline to plan around.
+        </p>
+
+        <h3 className="text-lg font-medium mt-4 mb-2">How can I improve my pace?</h3>
+        <p className="text-gray-700 mb-4">
+          Incorporate a mix of easy runs, tempo runs, and interval training into your weekly schedule. Easy runs build your aerobic base, tempo runs improve your lactate threshold, and intervals boost your top-end speed. Most coaches recommend keeping about 80 percent of your weekly mileage at an easy, conversational pace.
+        </p>
+
+        <h3 className="text-lg font-medium mt-4 mb-2">Should I train at my goal race pace?</h3>
+        <p className="text-gray-700 mb-4">
+          Goal race pace workouts are valuable, but they should be only a small portion of your training. Running too fast too often leads to overtraining and injury. One or two race-pace sessions per week, combined with easy runs and rest days, is a balanced approach that builds fitness safely.
+        </p>
+      </section>
+
+      <section className="mt-8">
+        <h2 className="text-xl font-semibold mb-3">Example Calculation</h2>
+        <p className="text-gray-700 mb-4">
+          Suppose you ran 3.1 miles (a 5K) in 27 minutes and 30 seconds. Your pace is 27:30 / 3.1 = <strong>8:52 per mile</strong>. At that same pace, your estimated finish times would be: <strong>10K</strong>: 55:03, <strong>Half Marathon</strong>: 1:56:12, <strong>Marathon</strong>: 3:52:24. These estimates help you set goals for future races. For instance, if you want to break 25 minutes in the 5K, you would need to run at about an 8:04 per mile pace.
         </p>
       </section>
 

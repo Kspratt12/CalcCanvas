@@ -120,6 +120,49 @@ export default function DateCalculatorPage() {
 
   return (
     <main className="max-w-4xl mx-auto px-4 py-10">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "How are business days calculated?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Business days count only Monday through Friday, excluding Saturdays and Sundays. This calculator does not account for public holidays, since those vary by country and region."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does the order of dates matter in the \"between\" mode?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. The calculator automatically determines which date comes first and computes the absolute difference. You can enter the dates in any order and get the same result."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How does it handle leap years?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The calculator uses JavaScript's Date object, which correctly handles leap years (including century-year rules). If your date range spans February 29 in a leap year, that day is counted."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I calculate dates far in the past or future?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. JavaScript's Date object supports dates from roughly 271,821 BCE to 275,760 CE, so you can calculate date differences across centuries."
+                }
+              }
+            ]
+          })
+        }}
+      />
       <h1 className="text-3xl font-bold mb-2">Date Calculator</h1>
       <p className="text-gray-600 mb-6">
         Calculate the number of days between two dates or add/subtract days from a specific date.
@@ -237,6 +280,59 @@ export default function DateCalculatorPage() {
         <p className="text-gray-700">
           The &quot;Days Between Dates&quot; mode calculates the exact number of calendar days between two dates, then breaks it down into years, months, days, and weeks. Business days are calculated by counting only Monday through Friday. The &quot;Add/Subtract Days&quot; mode simply adds or removes the specified number of calendar days from the start date, accounting for month lengths and leap years.
         </p>
+      </section>
+
+      <section className="mt-8">
+        <h2 className="text-xl font-semibold mb-3">What Is a Date Calculator?</h2>
+        <p className="text-gray-700 mb-3">
+          A date calculator performs arithmetic with calendar dates — something that&apos;s surprisingly tricky to do in your head. Months have different lengths, leap years add an extra day to February, and business-day calculations need to skip weekends. This tool handles all of that automatically.
+        </p>
+        <p className="text-gray-700 mb-3">
+          The &quot;Days Between Dates&quot; mode counts the exact number of calendar days between any two dates and breaks the result down into years, months, days, weeks, and business days. The &quot;Add/Subtract Days&quot; mode takes a starting date and moves it forward or backward by a specified number of days, giving you the resulting date.
+        </p>
+        <p className="text-gray-700">
+          Whether you&apos;re calculating a project deadline, figuring out how many workdays remain until a milestone, or determining what date falls 90 days from now, this tool gives you instant, accurate results without any manual counting.
+        </p>
+      </section>
+
+      <section className="mt-8">
+        <h2 className="text-xl font-semibold mb-3">Frequently Asked Questions</h2>
+
+        <h3 className="text-lg font-medium mt-4 mb-2">How are business days calculated?</h3>
+        <p className="text-gray-700 mb-3">
+          Business days count only Monday through Friday, excluding Saturdays and Sundays. This calculator does not account for public holidays, since those vary by country and region. For a precise business-day count including holidays, you would need to manually subtract the relevant holiday dates.
+        </p>
+
+        <h3 className="text-lg font-medium mt-4 mb-2">Does the order of dates matter in the &quot;between&quot; mode?</h3>
+        <p className="text-gray-700 mb-3">
+          No. The calculator automatically determines which date comes first and computes the absolute difference. You can enter the dates in any order and get the same result. The output always shows a positive number of days.
+        </p>
+
+        <h3 className="text-lg font-medium mt-4 mb-2">How does it handle leap years?</h3>
+        <p className="text-gray-700 mb-3">
+          The calculator uses JavaScript&apos;s Date object, which correctly handles leap years (including century-year rules). If your date range spans February 29 in a leap year, that day is counted. When adding days, the result correctly accounts for the extra day in February.
+        </p>
+
+        <h3 className="text-lg font-medium mt-4 mb-2">Can I calculate dates far in the past or future?</h3>
+        <p className="text-gray-700 mb-3">
+          Yes. JavaScript&apos;s Date object supports dates from roughly 271,821 BCE to 275,760 CE, so you can calculate date differences across centuries. The accuracy is maintained regardless of how far apart the two dates are.
+        </p>
+
+        <h3 className="text-lg font-medium mt-4 mb-2">What is the &quot;approximate months&quot; figure based on?</h3>
+        <p className="text-gray-700 mb-3">
+          The approximate months value divides the total number of days by 30.44, which is the average length of a month in the Gregorian calendar (365.25 days / 12 months). This gives a quick estimate that is close but may differ slightly from the exact years-months-days breakdown.
+        </p>
+      </section>
+
+      <section className="mt-8">
+        <h2 className="text-xl font-semibold mb-3">Common Use Cases</h2>
+        <ul className="list-disc list-inside space-y-2 text-gray-700">
+          <li><strong>Project deadlines</strong> — Calculate exactly how many workdays remain between today and a project due date.</li>
+          <li><strong>Contract terms</strong> — Determine the end date of a 90-day, 6-month, or 1-year contract from the signing date.</li>
+          <li><strong>Travel planning</strong> — Count the days between your booking date and departure to know how much prep time you have.</li>
+          <li><strong>Legal deadlines</strong> — Many legal filings have strict day-count requirements (e.g., &quot;within 30 days of notice&quot;).</li>
+          <li><strong>Personal milestones</strong> — Find out how many days until a wedding, graduation, retirement, or other significant event.</li>
+        </ul>
       </section>
 
       <section className="mt-8">

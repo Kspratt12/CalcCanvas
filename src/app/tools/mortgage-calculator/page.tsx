@@ -66,6 +66,57 @@ export default function MortgageCalculator() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "How much house can I afford?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A common guideline is to keep your monthly mortgage payment at or below 28% of your gross monthly income. Use this calculator to experiment with different price points until you find a comfortable range."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the difference between a 15-year and 30-year mortgage?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A 15-year mortgage has higher monthly payments but a significantly lower total interest cost. A 30-year mortgage spreads payments out, making each one more affordable, but you'll pay much more in interest over the full term."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does this calculator include property taxes and insurance?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "This calculator focuses on principal and interest only. Your actual monthly payment will likely be higher once you add property taxes, homeowners insurance, and possibly private mortgage insurance (PMI)."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How does my down payment affect the loan?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A larger down payment reduces the amount you need to borrow, which lowers both your monthly payment and the total interest paid. Putting down at least 20% also typically lets you avoid PMI."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What interest rate should I use?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Use the rate your lender has quoted you, or check current average rates online for a general estimate. Even a small difference in rate can have a big impact over 30 years."
+                }
+              }
+            ]
+          })
+        }}
+      />
       <h1 className="text-3xl font-bold text-gray-900 mb-2">
         Mortgage Calculator
       </h1>
@@ -211,6 +262,80 @@ export default function MortgageCalculator() {
           / [(1+r)^n - 1], where P is the loan principal, r is the monthly
           interest rate, and n is the total number of payments. The result gives
           you the fixed monthly payment over the life of the loan.
+        </p>
+      </section>
+
+      <section className="mt-10">
+        <h2 className="text-xl font-semibold text-gray-900 mb-3">
+          What Is a Mortgage Calculator?
+        </h2>
+        <p className="text-gray-600 mb-3">
+          A mortgage calculator is a financial tool that helps you estimate your monthly home loan payment before you commit to buying a property. It takes your home price, down payment, interest rate, and loan term and runs them through the standard amortization formula to give you a clear picture of what you&apos;ll owe each month.
+        </p>
+        <p className="text-gray-600 mb-3">
+          Beyond the monthly payment, a good mortgage calculator also shows you the total interest you&apos;ll pay over the life of the loan and the overall cost of the home including financing. This is critical information because the sticker price of a house is only part of the story. On a 30-year mortgage, you can easily pay more in interest than the original loan amount.
+        </p>
+        <p className="text-gray-600">
+          Whether you&apos;re a first-time homebuyer comparing neighborhoods or a current homeowner thinking about refinancing, running the numbers ahead of time helps you set a realistic budget and avoid surprises at the closing table.
+        </p>
+      </section>
+
+      <section className="mt-10">
+        <h2 className="text-xl font-semibold text-gray-900 mb-3">
+          Frequently Asked Questions
+        </h2>
+
+        <h3 className="text-lg font-medium text-gray-900 mt-4 mb-2">
+          How much house can I afford?
+        </h3>
+        <p className="text-gray-600 mb-4">
+          A common guideline is to keep your monthly mortgage payment at or below 28% of your gross monthly income. For example, if your household earns $6,000 per month before taxes, you&apos;d want your payment to stay under roughly $1,680. Use this calculator to experiment with different price points until you find a comfortable range.
+        </p>
+
+        <h3 className="text-lg font-medium text-gray-900 mt-4 mb-2">
+          What is the difference between a 15-year and 30-year mortgage?
+        </h3>
+        <p className="text-gray-600 mb-4">
+          A 15-year mortgage has higher monthly payments but a significantly lower total interest cost. A 30-year mortgage spreads payments out, making each one more affordable, but you&apos;ll pay much more in interest over the full term. Try both options in the calculator to see the difference in dollars.
+        </p>
+
+        <h3 className="text-lg font-medium text-gray-900 mt-4 mb-2">
+          Does this calculator include property taxes and insurance?
+        </h3>
+        <p className="text-gray-600 mb-4">
+          This calculator focuses on principal and interest only. Your actual monthly payment will likely be higher once you add property taxes, homeowners insurance, and possibly private mortgage insurance (PMI) if your down payment is less than 20%. These vary widely by location and policy.
+        </p>
+
+        <h3 className="text-lg font-medium text-gray-900 mt-4 mb-2">
+          How does my down payment affect the loan?
+        </h3>
+        <p className="text-gray-600 mb-4">
+          A larger down payment reduces the amount you need to borrow, which lowers both your monthly payment and the total interest paid. Putting down at least 20% also typically lets you avoid PMI, saving you even more each month.
+        </p>
+
+        <h3 className="text-lg font-medium text-gray-900 mt-4 mb-2">
+          What interest rate should I use?
+        </h3>
+        <p className="text-gray-600">
+          Use the rate your lender has quoted you, or check current average rates online for a general estimate. Even a small difference in rate can have a big impact over 30 years. For example, the difference between 6% and 6.5% on a $300,000 loan adds up to tens of thousands of dollars in extra interest.
+        </p>
+      </section>
+
+      <section className="mt-10">
+        <h2 className="text-xl font-semibold text-gray-900 mb-3">
+          Example Calculation
+        </h2>
+        <p className="text-gray-600 mb-3">
+          Suppose you&apos;re buying a home for $350,000 with a 20% down payment ($70,000), a 6.5% interest rate, and a 30-year term. Here&apos;s what the numbers look like:
+        </p>
+        <ul className="list-disc list-inside text-gray-600 space-y-1 mb-3">
+          <li>Loan amount: $280,000</li>
+          <li>Monthly payment: approximately $1,770</li>
+          <li>Total interest over 30 years: approximately $357,300</li>
+          <li>Total cost (principal + interest): approximately $637,300</li>
+        </ul>
+        <p className="text-gray-600">
+          That means you&apos;d pay more in interest than the original loan amount. Switching to a 15-year term would raise the monthly payment to about $2,441 but cut total interest to roughly $159,400 &mdash; saving you nearly $198,000.
         </p>
       </section>
 

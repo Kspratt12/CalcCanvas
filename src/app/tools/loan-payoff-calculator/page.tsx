@@ -110,6 +110,49 @@ export default function LoanPayoffCalculator() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "How much can I save with extra payments?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The savings depend on your balance, rate, and how much extra you pay. On a $25,000 loan at 6% with a $500 monthly payment, adding $100 per month can save you over $1,500 in interest and pay off the loan about 10 months early."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Should I pay off my loan early or invest the extra money?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "It depends on the interest rate. If your loan charges 7% or more, paying it off early gives you a guaranteed \"return\" at that rate. If the rate is low (under 4-5%), investing might yield better long-term results, though it comes with market risk."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does my loan have a prepayment penalty?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Some loans charge a fee for paying off the balance early. Check your loan agreement or call your lender before making extra payments. Most personal loans and auto loans do not have prepayment penalties, but some mortgages and private loans do."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I use this for credit card debt?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. Enter your current balance, the card's APR, and your planned monthly payment. Credit cards have variable rates, so the actual payoff may differ slightly, but this gives you a solid estimate."
+                }
+              }
+            ]
+          })
+        }}
+      />
       <h1 className="text-3xl font-bold text-gray-900 mb-2">
         Loan Payoff Calculator
       </h1>
@@ -269,6 +312,87 @@ export default function LoanPayoffCalculator() {
           interest first, then principal. The process repeats until the balance
           reaches zero. Adding extra payments reduces the principal faster,
           cutting both the payoff time and total interest.
+        </p>
+      </section>
+
+      <section className="mt-10">
+        <h2 className="text-xl font-semibold text-gray-900 mb-3">
+          What Is a Loan Payoff Calculator?
+        </h2>
+        <p className="text-gray-600 mb-3">
+          A loan payoff calculator shows you exactly when your loan will be fully paid off and how much total interest you&apos;ll pay along the way. It simulates the month-by-month repayment process, applying interest to the remaining balance and subtracting each payment until the debt reaches zero.
+        </p>
+        <p className="text-gray-600 mb-3">
+          What makes this tool especially useful is the extra payment feature. By entering an additional monthly amount &mdash; even just $50 or $100 &mdash; you can see how many months or years you&apos;ll shave off your loan and how much interest you&apos;ll save. The results can be surprisingly dramatic, especially on longer-term loans.
+        </p>
+        <p className="text-gray-600">
+          This calculator works for any type of fixed-rate loan: personal loans, student loans, auto loans, or credit card debt. If you&apos;re trying to decide between paying off a loan faster or investing extra money, seeing the concrete savings from accelerated payments can help you make that decision.
+        </p>
+      </section>
+
+      <section className="mt-10">
+        <h2 className="text-xl font-semibold text-gray-900 mb-3">
+          Frequently Asked Questions
+        </h2>
+
+        <h3 className="text-lg font-medium text-gray-900 mt-4 mb-2">
+          How much can I save with extra payments?
+        </h3>
+        <p className="text-gray-600 mb-4">
+          The savings depend on your balance, rate, and how much extra you pay. On a $25,000 loan at 6% with a $500 monthly payment, adding $100 per month can save you over $1,500 in interest and pay off the loan about 10 months early. Higher interest rates amplify the benefit even more.
+        </p>
+
+        <h3 className="text-lg font-medium text-gray-900 mt-4 mb-2">
+          Should I pay off my loan early or invest the extra money?
+        </h3>
+        <p className="text-gray-600 mb-4">
+          It depends on the interest rate. If your loan charges 7% or more, paying it off early gives you a guaranteed &quot;return&quot; at that rate. If the rate is low (under 4-5%), investing might yield better long-term results, though it comes with market risk. Many people choose a hybrid approach.
+        </p>
+
+        <h3 className="text-lg font-medium text-gray-900 mt-4 mb-2">
+          Does my loan have a prepayment penalty?
+        </h3>
+        <p className="text-gray-600 mb-4">
+          Some loans charge a fee for paying off the balance early. Check your loan agreement or call your lender before making extra payments. Most personal loans and auto loans do not have prepayment penalties, but some mortgages and private loans do.
+        </p>
+
+        <h3 className="text-lg font-medium text-gray-900 mt-4 mb-2">
+          What if my payment doesn&apos;t cover the interest?
+        </h3>
+        <p className="text-gray-600 mb-4">
+          If your monthly payment is less than the monthly interest charge, your balance will actually grow over time. This is called negative amortization. The calculator will alert you if your payment is too low to make progress on the principal.
+        </p>
+
+        <h3 className="text-lg font-medium text-gray-900 mt-4 mb-2">
+          Can I use this for credit card debt?
+        </h3>
+        <p className="text-gray-600">
+          Yes. Enter your current balance, the card&apos;s APR, and your planned monthly payment. Credit cards have variable rates, so the actual payoff may differ slightly, but this gives you a solid estimate. Seeing how long it takes to pay off a credit card with minimum payments can be a powerful motivator to pay more.
+        </p>
+      </section>
+
+      <section className="mt-10">
+        <h2 className="text-xl font-semibold text-gray-900 mb-3">
+          Example Calculation
+        </h2>
+        <p className="text-gray-600 mb-3">
+          Suppose you have a $20,000 personal loan at 7% interest and you&apos;re paying $400 per month. Here are the results:
+        </p>
+        <ul className="list-disc list-inside text-gray-600 space-y-1 mb-3">
+          <li>Time to payoff: 4 years, 10 months (58 months)</li>
+          <li>Total interest paid: approximately $3,160</li>
+        </ul>
+        <p className="text-gray-600 mb-3">
+          Now add an extra $100 per month ($500 total):
+        </p>
+        <ul className="list-disc list-inside text-gray-600 space-y-1 mb-3">
+          <li>New payoff time: 3 years, 9 months (45 months)</li>
+          <li>Total interest paid: approximately $2,380</li>
+          <li>Time saved: 13 months</li>
+          <li>Interest saved: approximately $780</li>
+        </ul>
+        <p className="text-gray-600">
+          That extra $100 per month costs you $4,500 over the payoff period but saves you $780 in interest and gets you debt-free more than a year sooner.
         </p>
       </section>
 

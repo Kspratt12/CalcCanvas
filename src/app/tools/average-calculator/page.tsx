@@ -81,6 +81,57 @@ export default function AverageCalculatorPage() {
 
   return (
     <main className="max-w-4xl mx-auto px-4 py-10">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is the difference between mean, median, and mode?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The mean is the sum of all values divided by the count. The median is the middle value when data is sorted from smallest to largest. The mode is the value that appears most frequently. Each measure highlights a different aspect of your data, and they can differ significantly when outliers are present."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "When is the median more useful than the mean?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The median is more useful when your data has extreme outliers or is heavily skewed. For example, median household income is a better measure of typical earnings than mean income, because a few very high earners can pull the mean way up without reflecting what most people actually earn."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What does \"No mode\" mean?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "If every value in your data set appears exactly once, there is no mode — no single value is more common than any other. The calculator displays \"No mode\" in this case. If multiple values tie for the highest frequency, all of them are listed as modes."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I paste data from a spreadsheet?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. Copy a row or column of numbers from Excel or Google Sheets and paste it into the text area. The calculator handles numbers separated by commas, spaces, tabs, and newlines, so most common formats will be parsed correctly without any manual reformatting."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How is the range calculated?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The range is simply the difference between the largest and smallest values in your data set. It gives you a quick sense of how spread out the data is, though it can be heavily influenced by a single outlier."
+                }
+              }
+            ]
+          })
+        }}
+      />
       <h1 className="text-3xl font-bold mb-2">Average Calculator</h1>
       <p className="text-gray-600 mb-6">
         Calculate the mean, median, mode, range, sum, and count of any set of numbers.
@@ -168,6 +219,64 @@ export default function AverageCalculatorPage() {
           <strong> Median</strong> is the middle value when numbers are sorted (or the average of the two middle values for even-length sets).
           <strong> Mode</strong> is the most frequently occurring value(s). If all values appear once, there is no mode.
           <strong> Range</strong> is the difference between the largest and smallest values.
+        </p>
+      </section>
+
+      <section className="mt-8">
+        <h2 className="text-xl font-semibold mb-3">What Is an Average?</h2>
+        <p className="text-gray-700 mb-4">
+          In everyday language, &quot;average&quot; usually refers to the arithmetic mean &mdash; add up all the numbers and divide by how many there are. But in statistics, there are actually several types of averages, each telling you something different about your data. The mean gives you the overall balance point, the median gives you the true middle value, and the mode tells you which value appears most often.
+        </p>
+        <p className="text-gray-700 mb-4">
+          This calculator computes all three averages at once, along with the range, sum, and count. That&apos;s useful because no single average tells the whole story. For example, if you have incomes of $30k, $35k, $40k, $45k, and $500k, the mean ($130k) is misleading &mdash; the median ($40k) gives a much better picture of what&apos;s typical. Having all the measures side by side helps you understand your data more completely.
+        </p>
+      </section>
+
+      <section className="mt-8">
+        <h2 className="text-xl font-semibold mb-3">Frequently Asked Questions</h2>
+
+        <h3 className="text-lg font-medium mt-4 mb-2">What is the difference between mean, median, and mode?</h3>
+        <p className="text-gray-700 mb-4">
+          The mean is the sum of all values divided by the count. The median is the middle value when data is sorted from smallest to largest. The mode is the value that appears most frequently. Each measure highlights a different aspect of your data, and they can differ significantly when outliers are present.
+        </p>
+
+        <h3 className="text-lg font-medium mt-4 mb-2">When is the median more useful than the mean?</h3>
+        <p className="text-gray-700 mb-4">
+          The median is more useful when your data has extreme outliers or is heavily skewed. For example, median household income is a better measure of typical earnings than mean income, because a few very high earners can pull the mean way up without reflecting what most people actually earn.
+        </p>
+
+        <h3 className="text-lg font-medium mt-4 mb-2">What does &quot;No mode&quot; mean?</h3>
+        <p className="text-gray-700 mb-4">
+          If every value in your data set appears exactly once, there is no mode &mdash; no single value is more common than any other. The calculator displays &quot;No mode&quot; in this case. If multiple values tie for the highest frequency, all of them are listed as modes.
+        </p>
+
+        <h3 className="text-lg font-medium mt-4 mb-2">Can I paste data from a spreadsheet?</h3>
+        <p className="text-gray-700 mb-4">
+          Yes. Copy a row or column of numbers from Excel or Google Sheets and paste it into the text area. The calculator handles numbers separated by commas, spaces, tabs, and newlines, so most common formats will be parsed correctly without any manual reformatting.
+        </p>
+
+        <h3 className="text-lg font-medium mt-4 mb-2">How is the range calculated?</h3>
+        <p className="text-gray-700 mb-4">
+          The range is simply the difference between the largest and smallest values in your data set. It gives you a quick sense of how spread out the data is, though it can be heavily influenced by a single outlier. For a more robust measure of spread, consider looking at standard deviation as well.
+        </p>
+      </section>
+
+      <section className="mt-8">
+        <h2 className="text-xl font-semibold mb-3">Example Calculation</h2>
+        <p className="text-gray-700 mb-2">
+          <strong>Scenario:</strong> You tracked your daily step counts for a week: 8200, 6500, 9100, 7800, 10500, 6500, 8400. You want to know your average daily steps.
+        </p>
+        <p className="text-gray-700 mb-2">
+          <strong>Mean:</strong> (8200 + 6500 + 9100 + 7800 + 10500 + 6500 + 8400) &divide; 7 = <strong>8,142.86</strong> steps per day on average.
+        </p>
+        <p className="text-gray-700 mb-2">
+          <strong>Median:</strong> Sorted data is 6500, 6500, 7800, 8200, 8400, 9100, 10500. The middle value is <strong>8,200</strong>.
+        </p>
+        <p className="text-gray-700 mb-2">
+          <strong>Mode:</strong> 6,500 appears twice while all other values appear once, so the mode is <strong>6,500</strong>.
+        </p>
+        <p className="text-gray-700">
+          <strong>Range:</strong> 10,500 &minus; 6,500 = <strong>4,000</strong>. This tells you your most active day had 4,000 more steps than your least active day.
         </p>
       </section>
 

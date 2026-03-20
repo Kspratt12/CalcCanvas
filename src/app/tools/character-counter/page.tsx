@@ -30,6 +30,49 @@ export default function CharacterCounterPage() {
 
   return (
     <main className="max-w-4xl mx-auto px-4 py-10">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Do spaces count as characters?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, spaces are counted in the \"Total Characters\" figure. However, the tool also shows a separate \"Characters (no spaces)\" count for situations where you need to exclude whitespace."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the character limit feature for?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The optional character limit lets you set a maximum number of characters and see a live counter showing how close you are. When you exceed the limit, the counter turns red to alert you. This is handy for writing social media posts or meta descriptions."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does this tool count special characters and emojis?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, every character is counted including punctuation, symbols, and emojis. Keep in mind that some emojis may count as more than one character in certain encoding systems."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I paste text from other applications?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Absolutely. You can paste text from Word documents, PDFs, emails, web pages, or any other source. The counter will immediately analyze the pasted content and display all relevant statistics."
+                }
+              }
+            ]
+          })
+        }}
+      />
       <h1 className="text-3xl font-bold mb-2">Character Counter</h1>
       <p className="text-gray-600 mb-6">
         Count characters, words, and lines in your text with an optional
@@ -108,6 +151,66 @@ export default function CharacterCounterPage() {
           character limit checker, perfect for social media posts, SMS messages,
           or any text with length restrictions.
         </p>
+      </section>
+
+      {/* What Is Character Counter */}
+      <section className="mt-10">
+        <h2 className="text-xl font-semibold mb-3">What Is a Character Counter?</h2>
+        <p className="text-gray-700 mb-3">
+          A character counter is a tool that counts every individual character in a piece of text, including letters, numbers, punctuation marks, and spaces. It gives you a precise measurement of text length that goes beyond simple word counting. This matters because many digital platforms impose strict character limits rather than word limits.
+        </p>
+        <p className="text-gray-700">
+          Think about composing a tweet, writing an SMS, crafting a Google Ads headline, or filling out a form field with a maximum length. In all of these situations, you need to know your exact character count. Our character counter provides this information in real time as you type, and even lets you set a custom character limit so you can see at a glance whether your text fits within the allowed space.
+        </p>
+      </section>
+
+      {/* FAQ */}
+      <section className="mt-10">
+        <h2 className="text-xl font-semibold mb-4">Frequently Asked Questions</h2>
+
+        <h3 className="text-lg font-medium mt-4 mb-2">Do spaces count as characters?</h3>
+        <p className="text-gray-700 mb-4">
+          Yes, spaces are counted in the &quot;Total Characters&quot; figure. However, the tool also shows a separate &quot;Characters (no spaces)&quot; count for situations where you need to exclude whitespace. Most platforms like Twitter count spaces as characters, while some coding contexts do not.
+        </p>
+
+        <h3 className="text-lg font-medium mt-4 mb-2">What is the character limit feature for?</h3>
+        <p className="text-gray-700 mb-4">
+          The optional character limit lets you set a maximum number of characters and see a live counter showing how close you are. When you exceed the limit, the counter turns red and the textarea border changes to alert you. This is especially handy for writing social media posts or meta descriptions.
+        </p>
+
+        <h3 className="text-lg font-medium mt-4 mb-2">Does this tool count special characters and emojis?</h3>
+        <p className="text-gray-700 mb-4">
+          Yes, every character is counted including punctuation, symbols, and emojis. Keep in mind that some emojis may count as more than one character in certain encoding systems, though the tool reports them as JavaScript measures string length.
+        </p>
+
+        <h3 className="text-lg font-medium mt-4 mb-2">Can I paste text from other applications?</h3>
+        <p className="text-gray-700 mb-4">
+          Absolutely. You can paste text from Word documents, PDFs, emails, web pages, or any other source. The counter will immediately analyze the pasted content and display all relevant statistics.
+        </p>
+
+        <h3 className="text-lg font-medium mt-4 mb-2">Is there a maximum text length this tool can handle?</h3>
+        <p className="text-gray-700 mb-4">
+          There&apos;s no hard limit built into the tool. It runs entirely in your browser, so it can handle very large texts as long as your device has enough memory. For most practical purposes, texts of any reasonable length will work perfectly.
+        </p>
+      </section>
+
+      {/* Use Cases */}
+      <section className="mt-10">
+        <h2 className="text-xl font-semibold mb-3">Who Uses This Tool?</h2>
+        <div className="space-y-3 text-gray-700">
+          <p>
+            <strong>Social media marketers</strong> use the character counter daily to write posts that fit within platform limits. Twitter allows 280 characters, Instagram bios cap at 150, and Pinterest descriptions max out at 500. Knowing your exact count prevents awkward truncation.
+          </p>
+          <p>
+            <strong>SEO professionals</strong> rely on character counts for meta titles (50-60 characters) and meta descriptions (150-160 characters). Staying within these ranges ensures your content displays properly in search engine results without getting cut off.
+          </p>
+          <p>
+            <strong>Developers and UX writers</strong> use character counting when designing interfaces with fixed-width text fields. Button labels, error messages, and tooltips all need to fit within specific spaces, making precise character measurement essential.
+          </p>
+          <p>
+            <strong>Students and job seekers</strong> use this tool for application forms, personal statements, and cover letters that have strict character limits. Many university and job applications specify maximum character counts rather than word counts.
+          </p>
+        </div>
       </section>
 
       <section className="mt-8">

@@ -57,6 +57,49 @@ export default function SquareRootPage() {
 
   return (
     <main className="max-w-4xl mx-auto px-4 py-10">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is a perfect square?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A perfect square is a number whose square root is a whole number. Examples include 1, 4, 9, 16, 25, 36, 49, 64, 81, and 100. If you take the square root and get a decimal, the number is not a perfect square."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I calculate the square root of a negative number?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Not with this tool. The square root of a negative number involves imaginary numbers (denoted with \"i\"), which are part of the complex number system. This calculator works with real numbers only."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is an nth root?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The nth root of a number x is the value that, when raised to the power n, equals x. A square root is a 2nd root, a cube root is a 3rd root, and so on. This calculator lets you compute any nth root."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How precise are the results?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Results are rounded to 5 decimal places, which provides more than enough precision for most practical applications. Many square roots are irrational numbers that go on forever without repeating, so some rounding is always necessary."
+                }
+              }
+            ]
+          })
+        }}
+      />
       <h1 className="text-3xl font-bold mb-2">Square Root Calculator</h1>
       <p className="text-gray-600 mb-6">
         Calculate square roots, cube roots, and nth roots of any number instantly.
@@ -155,6 +198,64 @@ export default function SquareRootPage() {
           For example, {"\u221A"}144 = 12 because 12 {"\u00D7"} 12 = 144. A <strong>perfect square</strong> is
           a number whose square root is a whole number. The <strong>nth root</strong> generalizes this
           concept: the nth root of x is x raised to the power of 1/n.
+        </p>
+      </section>
+
+      <section className="mt-8">
+        <h2 className="text-xl font-semibold mb-3">What Is a Square Root?</h2>
+        <p className="text-gray-700 mb-4">
+          The square root of a number is the value that, when multiplied by itself, produces the original number. For example, the square root of 49 is 7, because 7 &times; 7 = 49. The concept extends naturally to cube roots (what number multiplied by itself three times gives you the original?) and nth roots for any positive integer n.
+        </p>
+        <p className="text-gray-700 mb-4">
+          Square roots come up constantly in geometry, physics, engineering, and finance. You need them to calculate distances (the Pythagorean theorem), find the side length of a square with a known area, compute standard deviations in statistics, and much more. This calculator gives you the square root, cube root, and any nth root you need, plus it tells you whether the input is a perfect square &mdash; all in one click.
+        </p>
+      </section>
+
+      <section className="mt-8">
+        <h2 className="text-xl font-semibold mb-3">Frequently Asked Questions</h2>
+
+        <h3 className="text-lg font-medium mt-4 mb-2">What is a perfect square?</h3>
+        <p className="text-gray-700 mb-4">
+          A perfect square is a number whose square root is a whole number. Examples include 1, 4, 9, 16, 25, 36, 49, 64, 81, and 100. If you take the square root and get a decimal, the number is not a perfect square. This calculator automatically checks this for you.
+        </p>
+
+        <h3 className="text-lg font-medium mt-4 mb-2">Can I calculate the square root of a negative number?</h3>
+        <p className="text-gray-700 mb-4">
+          Not with this tool. The square root of a negative number involves imaginary numbers (denoted with &quot;i&quot;), which are part of the complex number system. For example, the square root of -9 is 3i. This calculator works with real numbers only, so it requires non-negative input.
+        </p>
+
+        <h3 className="text-lg font-medium mt-4 mb-2">What is an nth root?</h3>
+        <p className="text-gray-700 mb-4">
+          The nth root of a number x is the value that, when raised to the power n, equals x. A square root is a 2nd root, a cube root is a 3rd root, and so on. Mathematically, the nth root of x equals x raised to the power of 1/n. This calculator lets you compute any nth root by changing the root value.
+        </p>
+
+        <h3 className="text-lg font-medium mt-4 mb-2">How precise are the results?</h3>
+        <p className="text-gray-700 mb-4">
+          Results are rounded to 5 decimal places, which provides more than enough precision for most practical applications. Keep in mind that many square roots are irrational numbers (like the square root of 2 = 1.41421...) that go on forever without repeating, so some rounding is always necessary.
+        </p>
+
+        <h3 className="text-lg font-medium mt-4 mb-2">What does the &quot;squared&quot; result show?</h3>
+        <p className="text-gray-700 mb-4">
+          The squared result shows your input number multiplied by itself. This is the inverse operation of a square root. It&apos;s included as a quick reference &mdash; for example, if you enter 12, you&apos;ll see that 12 squared is 144, which confirms that the square root of 144 is 12.
+        </p>
+      </section>
+
+      <section className="mt-8">
+        <h2 className="text-xl font-semibold mb-3">Example Calculation</h2>
+        <p className="text-gray-700 mb-2">
+          <strong>Scenario:</strong> You have a square garden with an area of 225 square feet and want to know the length of each side.
+        </p>
+        <p className="text-gray-700 mb-2">
+          <strong>Step 1:</strong> Enter 225 in the input field and click &quot;Calculate.&quot;
+        </p>
+        <p className="text-gray-700 mb-2">
+          <strong>Step 2:</strong> The square root result shows <strong>15</strong>, meaning each side of the garden is 15 feet long.
+        </p>
+        <p className="text-gray-700 mb-2">
+          <strong>Step 3:</strong> The calculator also confirms 225 is a &quot;Perfect Square&quot; (Yes), since 15 is a whole number.
+        </p>
+        <p className="text-gray-700">
+          <strong>Bonus:</strong> The cube root of 225 is approximately 6.08252 (the side length of a cube with volume 225), and 225 squared is 50,625.
         </p>
       </section>
 

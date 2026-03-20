@@ -60,6 +60,57 @@ export default function AutoLoanCalculator() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is a good interest rate for a car loan?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Auto loan rates depend heavily on your credit score, the loan term, and whether the vehicle is new or used. As of recent years, buyers with excellent credit can get rates around 4-6% for new cars. Used car rates tend to be 1-2 percentage points higher. Check with your bank or credit union before accepting dealer financing."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How much should I put down on a car?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A common recommendation is at least 20% for a new car and 10% for a used car. A larger down payment reduces the loan amount, lowers your monthly payment, and helps you avoid being \"upside down\" on the loan — meaning you owe more than the car is worth."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is a longer loan term better?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A longer term (60-84 months) lowers the monthly payment but increases total interest significantly. For example, stretching a $30,000 loan from 48 to 72 months could add over $2,000 in interest. Choose the shortest term you can comfortably afford to minimize total cost."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Should I include trade-in value in the down payment?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, your trade-in value effectively reduces the amount you need to finance. Enter the combined total of your cash down payment and trade-in value in the down payment field to get an accurate monthly estimate."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does this calculator include fees and taxes?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "This calculator covers the vehicle price, down payment, and loan financing. Sales tax, registration fees, dealer fees, and extended warranties are not included. In many states, sales tax on a vehicle can add several thousand dollars to the total, so keep that in mind when budgeting."
+                }
+              }
+            ]
+          })
+        }}
+      />
       <h1 className="text-3xl font-bold text-gray-900 mb-2">
         Auto Loan Calculator
       </h1>
@@ -193,6 +244,80 @@ export default function AutoLoanCalculator() {
           / [(1+r)^n - 1]. The principal (P) is the vehicle price minus your down
           payment, r is the monthly interest rate, and n is the number of monthly
           payments. A shorter term means higher payments but less total interest.
+        </p>
+      </section>
+
+      <section className="mt-10">
+        <h2 className="text-xl font-semibold text-gray-900 mb-3">
+          What Is an Auto Loan Calculator?
+        </h2>
+        <p className="text-gray-600 mb-3">
+          An auto loan calculator helps you estimate the monthly payment, total interest, and overall cost of financing a vehicle. Whether you&apos;re shopping for a new car, a used truck, or refinancing your current auto loan, this tool gives you the numbers before you step into a dealership.
+        </p>
+        <p className="text-gray-600 mb-3">
+          Car purchases are the second-largest transactions most people make after buying a home. Yet many buyers focus only on the monthly payment without considering how much they&apos;ll pay in total. A $35,000 car financed at 6% for 72 months costs over $41,500 when you factor in interest. This calculator makes those hidden costs visible.
+        </p>
+        <p className="text-gray-600">
+          You can experiment with different down payment amounts, loan terms, and interest rates to find the financing structure that fits your budget. Shorter loan terms mean higher monthly payments but significantly less interest paid overall.
+        </p>
+      </section>
+
+      <section className="mt-10">
+        <h2 className="text-xl font-semibold text-gray-900 mb-3">
+          Frequently Asked Questions
+        </h2>
+
+        <h3 className="text-lg font-medium text-gray-900 mt-4 mb-2">
+          What is a good interest rate for a car loan?
+        </h3>
+        <p className="text-gray-600 mb-4">
+          Auto loan rates depend heavily on your credit score, the loan term, and whether the vehicle is new or used. As of recent years, buyers with excellent credit can get rates around 4-6% for new cars. Used car rates tend to be 1-2 percentage points higher. Check with your bank or credit union before accepting dealer financing.
+        </p>
+
+        <h3 className="text-lg font-medium text-gray-900 mt-4 mb-2">
+          How much should I put down on a car?
+        </h3>
+        <p className="text-gray-600 mb-4">
+          A common recommendation is at least 20% for a new car and 10% for a used car. A larger down payment reduces the loan amount, lowers your monthly payment, and helps you avoid being &quot;upside down&quot; on the loan &mdash; meaning you owe more than the car is worth.
+        </p>
+
+        <h3 className="text-lg font-medium text-gray-900 mt-4 mb-2">
+          Is a longer loan term better?
+        </h3>
+        <p className="text-gray-600 mb-4">
+          A longer term (60-84 months) lowers the monthly payment but increases total interest significantly. For example, stretching a $30,000 loan from 48 to 72 months could add over $2,000 in interest. Choose the shortest term you can comfortably afford to minimize total cost.
+        </p>
+
+        <h3 className="text-lg font-medium text-gray-900 mt-4 mb-2">
+          Should I include trade-in value in the down payment?
+        </h3>
+        <p className="text-gray-600 mb-4">
+          Yes, your trade-in value effectively reduces the amount you need to finance. Enter the combined total of your cash down payment and trade-in value in the down payment field to get an accurate monthly estimate.
+        </p>
+
+        <h3 className="text-lg font-medium text-gray-900 mt-4 mb-2">
+          Does this calculator include fees and taxes?
+        </h3>
+        <p className="text-gray-600">
+          This calculator covers the vehicle price, down payment, and loan financing. Sales tax, registration fees, dealer fees, and extended warranties are not included. In many states, sales tax on a vehicle can add several thousand dollars to the total, so keep that in mind when budgeting.
+        </p>
+      </section>
+
+      <section className="mt-10">
+        <h2 className="text-xl font-semibold text-gray-900 mb-3">
+          Example Calculation
+        </h2>
+        <p className="text-gray-600 mb-3">
+          You&apos;re buying a car for $32,000 with a $5,000 down payment, a 5.9% interest rate, and a 60-month loan term. Here&apos;s the breakdown:
+        </p>
+        <ul className="list-disc list-inside text-gray-600 space-y-1 mb-3">
+          <li>Loan amount: $27,000</li>
+          <li>Monthly payment: approximately $522</li>
+          <li>Total interest over 60 months: approximately $4,320</li>
+          <li>Total cost (principal + interest): approximately $31,320</li>
+        </ul>
+        <p className="text-gray-600">
+          If you chose a 48-month term instead, the monthly payment rises to about $634, but total interest drops to around $3,420 &mdash; saving you roughly $900. On the other hand, extending to 72 months lowers the payment to about $446 but pushes total interest to approximately $5,130.
         </p>
       </section>
 

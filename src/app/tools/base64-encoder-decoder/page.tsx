@@ -50,6 +50,49 @@ export default function Base64EncoderDecoderPage() {
 
   return (
     <main className="max-w-4xl mx-auto px-4 py-10">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Why would I use Base64 instead of sending raw data?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Many protocols and formats (like email, JSON, and HTML) are designed to handle text, not raw binary. Base64 lets you embed binary content — such as images or file attachments — within these text-based formats without corrupting the data."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is Base64 the same as encryption?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. Base64 is an encoding scheme, not an encryption method. Anyone with access to the encoded string can decode it instantly. If you need to protect sensitive data, use proper encryption algorithms like AES or RSA instead."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Why is the Base64 output longer than my input?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Base64 represents every 3 bytes of input as 4 characters of output. This means the encoded string is approximately 33% larger than the original. The trade-off is worth it when you need to embed binary data in a text-only context."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does this tool support Unicode text?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. This tool handles full Unicode by first encoding the text as UTF-8 before applying Base64 encoding. This means you can safely encode and decode text in any language, including emoji and special characters."
+                }
+              }
+            ]
+          })
+        }}
+      />
       <h1 className="text-3xl font-bold mb-2">Base64 Encoder / Decoder</h1>
       <p className="text-gray-600 mb-6">
         Encode text to Base64 or decode Base64 strings back to plain text.
@@ -138,6 +181,54 @@ export default function Base64EncoderDecoderPage() {
           complex data in JSON. This tool supports full Unicode text through
           UTF-8 encoding.
         </p>
+      </section>
+
+      <section className="mt-8">
+        <h2 className="text-xl font-semibold mb-3">What Is Base64 Encoding?</h2>
+        <p className="text-gray-700 mb-3">
+          Base64 is a way of representing binary data using only printable ASCII characters. It takes any sequence of bytes and converts it into a string made up of letters (A-Z, a-z), digits (0-9), plus signs (+), and forward slashes (/). The result is always about 33% larger than the original data, but it can safely travel through systems that only handle text.
+        </p>
+        <p className="text-gray-700 mb-3">
+          The encoding works by taking groups of three bytes (24 bits) and splitting them into four 6-bit chunks. Each chunk maps to one of the 64 characters in the Base64 alphabet. If the input length isn&apos;t divisible by three, padding characters (=) are added at the end.
+        </p>
+        <p className="text-gray-700">
+          Base64 is not encryption. It doesn&apos;t provide any security — anyone can decode a Base64 string. Its purpose is purely about safe data transport, not confidentiality.
+        </p>
+      </section>
+
+      <section className="mt-8">
+        <h2 className="text-xl font-semibold mb-3">Frequently Asked Questions</h2>
+
+        <h3 className="text-lg font-medium mt-4 mb-2">Why would I use Base64 instead of sending raw data?</h3>
+        <p className="text-gray-700 mb-3">
+          Many protocols and formats (like email, JSON, and HTML) are designed to handle text, not raw binary. Base64 lets you embed binary content — such as images or file attachments — within these text-based formats without corrupting the data.
+        </p>
+
+        <h3 className="text-lg font-medium mt-4 mb-2">Is Base64 the same as encryption?</h3>
+        <p className="text-gray-700 mb-3">
+          No. Base64 is an encoding scheme, not an encryption method. Anyone with access to the encoded string can decode it instantly. If you need to protect sensitive data, use proper encryption algorithms like AES or RSA instead.
+        </p>
+
+        <h3 className="text-lg font-medium mt-4 mb-2">Why is the Base64 output longer than my input?</h3>
+        <p className="text-gray-700 mb-3">
+          Base64 represents every 3 bytes of input as 4 characters of output. This means the encoded string is approximately 33% larger than the original. The trade-off is worth it when you need to embed binary data in a text-only context.
+        </p>
+
+        <h3 className="text-lg font-medium mt-4 mb-2">Does this tool support Unicode text?</h3>
+        <p className="text-gray-700 mb-3">
+          Yes. This tool handles full Unicode by first encoding the text as UTF-8 before applying Base64 encoding. This means you can safely encode and decode text in any language, including emoji and special characters.
+        </p>
+      </section>
+
+      <section className="mt-8">
+        <h2 className="text-xl font-semibold mb-3">Common Use Cases</h2>
+        <ul className="list-disc list-inside space-y-2 text-gray-700">
+          <li><strong>Data URIs in CSS/HTML</strong> — Embed small images directly in stylesheets or HTML using <code>data:image/png;base64,...</code> to reduce HTTP requests.</li>
+          <li><strong>Email attachments (MIME)</strong> — Email protocols use Base64 to encode file attachments within the message body.</li>
+          <li><strong>API authentication</strong> — HTTP Basic Authentication encodes the username and password as a Base64 string in the Authorization header.</li>
+          <li><strong>Storing binary in JSON</strong> — Since JSON doesn&apos;t support binary data natively, Base64 is the standard way to include files or images in JSON payloads.</li>
+          <li><strong>JWT tokens</strong> — JSON Web Tokens use Base64url encoding (a URL-safe variant) for the header and payload sections.</li>
+        </ul>
       </section>
 
       <section className="mt-8 pb-10">

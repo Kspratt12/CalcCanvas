@@ -89,6 +89,57 @@ export default function CompoundInterestCalculator() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is the difference between simple and compound interest?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Simple interest is calculated only on the original principal amount. Compound interest is calculated on the principal plus any interest that has already been added. Over time, compound interest produces significantly higher returns because you're effectively earning interest on your interest."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How often should interest compound?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "More frequent compounding produces slightly higher returns. Daily compounding will grow your money a bit faster than monthly, which beats quarterly, which beats annually. However, the differences are relatively small for most savings accounts."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is a realistic rate of return to use?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "For a diversified stock portfolio, the historical average is roughly 7% per year after inflation. High-yield savings accounts currently offer 4-5%. Bond funds typically return 3-5%. Use a rate that matches the type of investment you plan to hold."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does this calculator account for taxes?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. The results show pre-tax growth. If your money is in a taxable brokerage account, you'll owe taxes on dividends and capital gains each year. Tax-advantaged accounts like 401(k)s and IRAs let your money compound without annual tax drag."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Why do small changes in interest rate matter so much?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Because compounding is exponential, even a 1% difference in annual return can result in tens of thousands of dollars over a 20- or 30-year period. That's why keeping investment fees low is so important."
+                }
+              }
+            ]
+          })
+        }}
+      />
       <h1 className="text-3xl font-bold text-gray-900 mb-2">
         Compound Interest Calculator
       </h1>
@@ -270,6 +321,79 @@ export default function CompoundInterestCalculator() {
           initial principal, while additional contributions are added before each
           compounding period. Over time, you earn interest on your interest,
           accelerating growth.
+        </p>
+      </section>
+
+      <section className="mt-10">
+        <h2 className="text-xl font-semibold text-gray-900 mb-3">
+          What Is Compound Interest?
+        </h2>
+        <p className="text-gray-600 mb-3">
+          Compound interest is the process of earning interest on both your original investment and on the interest that has already accumulated. Unlike simple interest, which only applies to the principal, compound interest creates a snowball effect where your money grows faster over time.
+        </p>
+        <p className="text-gray-600 mb-3">
+          Albert Einstein reportedly called compound interest the &quot;eighth wonder of the world,&quot; and the math backs up the hype. The longer your money stays invested, the more dramatic the compounding effect becomes. A modest monthly contribution of $500 at 7% annual returns can grow to well over $250,000 in 20 years &mdash; even though you only contributed $120,000 out of pocket.
+        </p>
+        <p className="text-gray-600">
+          This calculator lets you see exactly how compounding works with your own numbers. Adjust the frequency between daily, monthly, quarterly, or annual compounding to see how each option affects your final balance.
+        </p>
+      </section>
+
+      <section className="mt-10">
+        <h2 className="text-xl font-semibold text-gray-900 mb-3">
+          Frequently Asked Questions
+        </h2>
+
+        <h3 className="text-lg font-medium text-gray-900 mt-4 mb-2">
+          What is the difference between simple and compound interest?
+        </h3>
+        <p className="text-gray-600 mb-4">
+          Simple interest is calculated only on the original principal amount. Compound interest is calculated on the principal plus any interest that has already been added. Over time, compound interest produces significantly higher returns because you&apos;re effectively earning interest on your interest.
+        </p>
+
+        <h3 className="text-lg font-medium text-gray-900 mt-4 mb-2">
+          How often should interest compound?
+        </h3>
+        <p className="text-gray-600 mb-4">
+          More frequent compounding produces slightly higher returns. Daily compounding will grow your money a bit faster than monthly, which beats quarterly, which beats annually. However, the differences are relatively small for most savings accounts and investment balances. The interest rate and contribution amount matter far more.
+        </p>
+
+        <h3 className="text-lg font-medium text-gray-900 mt-4 mb-2">
+          What is a realistic rate of return to use?
+        </h3>
+        <p className="text-gray-600 mb-4">
+          For a diversified stock portfolio, the historical average is roughly 7% per year after inflation. High-yield savings accounts currently offer 4-5%. Bond funds typically return 3-5%. Use a rate that matches the type of investment you plan to hold.
+        </p>
+
+        <h3 className="text-lg font-medium text-gray-900 mt-4 mb-2">
+          Does this calculator account for taxes?
+        </h3>
+        <p className="text-gray-600 mb-4">
+          No. The results show pre-tax growth. If your money is in a taxable brokerage account, you&apos;ll owe taxes on dividends and capital gains each year. Tax-advantaged accounts like 401(k)s and IRAs let your money compound without annual tax drag, which makes a meaningful difference over decades.
+        </p>
+
+        <h3 className="text-lg font-medium text-gray-900 mt-4 mb-2">
+          Why do small changes in interest rate matter so much?
+        </h3>
+        <p className="text-gray-600">
+          Because compounding is exponential, even a 1% difference in annual return can result in tens of thousands of dollars over a 20- or 30-year period. That&apos;s why keeping investment fees low is so important &mdash; a fund charging 1% in fees versus 0.1% can cost you a substantial portion of your potential gains.
+        </p>
+      </section>
+
+      <section className="mt-10">
+        <h2 className="text-xl font-semibold text-gray-900 mb-3">
+          Example Calculation
+        </h2>
+        <p className="text-gray-600 mb-3">
+          Let&apos;s say you invest $10,000 upfront and contribute $500 per month at a 7% annual return, compounded monthly, for 20 years. Here&apos;s what happens:
+        </p>
+        <ul className="list-disc list-inside text-gray-600 space-y-1 mb-3">
+          <li>Total contributions: $130,000 ($10,000 initial + $120,000 in monthly deposits)</li>
+          <li>Interest earned: approximately $131,500</li>
+          <li>Final balance: approximately $261,500</li>
+        </ul>
+        <p className="text-gray-600">
+          Your money more than doubled thanks to compound interest. Notice that the interest earned actually exceeds your total contributions &mdash; that&apos;s the power of compounding over a long time horizon. Starting five years earlier or adding just $100 more per month would push the final number significantly higher.
         </p>
       </section>
 

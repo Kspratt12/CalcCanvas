@@ -70,6 +70,49 @@ export default function CaseConverterPage() {
 
   return (
     <main className="max-w-4xl mx-auto px-4 py-10">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is Title Case used for?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Title Case capitalizes the first letter of every word and is commonly used for headlines, book titles, article titles, and section headings. It gives text a formal, polished appearance."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "When should I use Sentence case instead of Title Case?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Sentence case capitalizes only the first word and proper nouns, just like a regular sentence. Many style guides recommend sentence case for UI elements like button labels, menu items, and form fields because it feels more natural and conversational."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does the tool handle special characters and numbers?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. Numbers, symbols, and punctuation are left unchanged during conversion. Only alphabetic characters are affected by case transformations."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is my text processed securely?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "All case conversions happen locally in your browser using JavaScript. Your text is never sent to a server, stored in a database, or shared with any third party."
+                }
+              }
+            ]
+          })
+        }}
+      />
       <h1 className="text-3xl font-bold mb-2">Case Converter</h1>
       <p className="text-gray-600 mb-6">
         Transform your text between different letter cases instantly. Supports
@@ -150,6 +193,66 @@ export default function CaseConverterPage() {
           tool handles it all with a single click. No data is sent to any
           server — all conversions happen right in your browser.
         </p>
+      </section>
+
+      {/* What Is Case Converter */}
+      <section className="mt-10">
+        <h2 className="text-xl font-semibold mb-3">What Is a Case Converter?</h2>
+        <p className="text-gray-700 mb-3">
+          A case converter is a tool that changes the capitalization of text from one format to another. In typography and computing, &quot;case&quot; refers to whether a letter is uppercase (capital) or lowercase (small). Different writing contexts require different capitalization styles, and manually retyping text in the correct case is tedious and error-prone.
+        </p>
+        <p className="text-gray-700">
+          This tool supports four common case formats: UPPERCASE converts every letter to capitals, lowercase makes everything small, Title Case capitalizes the first letter of each word, and Sentence case capitalizes only the first letter after a period or at the beginning of text. These cover the vast majority of formatting needs for writers, designers, developers, and anyone working with text.
+        </p>
+      </section>
+
+      {/* FAQ */}
+      <section className="mt-10">
+        <h2 className="text-xl font-semibold mb-4">Frequently Asked Questions</h2>
+
+        <h3 className="text-lg font-medium mt-4 mb-2">What is Title Case used for?</h3>
+        <p className="text-gray-700 mb-4">
+          Title Case capitalizes the first letter of every word and is commonly used for headlines, book titles, article titles, and section headings. It gives text a formal, polished appearance and is the standard format for most English-language titles.
+        </p>
+
+        <h3 className="text-lg font-medium mt-4 mb-2">When should I use Sentence case instead of Title Case?</h3>
+        <p className="text-gray-700 mb-4">
+          Sentence case capitalizes only the first word and proper nouns, just like a regular sentence. Many style guides, including Google&apos;s Material Design guidelines, recommend sentence case for UI elements like button labels, menu items, and form fields because it feels more natural and conversational.
+        </p>
+
+        <h3 className="text-lg font-medium mt-4 mb-2">Does the tool handle special characters and numbers?</h3>
+        <p className="text-gray-700 mb-4">
+          Yes. Numbers, symbols, and punctuation are left unchanged during conversion. Only alphabetic characters are affected by case transformations. This means your URLs, dates, and special formatting will remain intact.
+        </p>
+
+        <h3 className="text-lg font-medium mt-4 mb-2">Is my text processed securely?</h3>
+        <p className="text-gray-700 mb-4">
+          Absolutely. All case conversions happen locally in your browser using JavaScript. Your text is never sent to a server, stored in a database, or shared with any third party. You can safely convert confidential or sensitive text without worry.
+        </p>
+
+        <h3 className="text-lg font-medium mt-4 mb-2">Can I convert text that&apos;s already in mixed case?</h3>
+        <p className="text-gray-700 mb-4">
+          Yes. The tool works regardless of the current formatting of your text. Whether your input is all caps, all lowercase, or a random mix of both, the converter will apply the selected case format consistently across the entire text.
+        </p>
+      </section>
+
+      {/* Use Cases */}
+      <section className="mt-10">
+        <h2 className="text-xl font-semibold mb-3">Who Uses This Tool?</h2>
+        <div className="space-y-3 text-gray-700">
+          <p>
+            <strong>Writers and editors</strong> use the case converter to quickly fix capitalization errors in manuscripts, articles, and blog posts. Instead of manually correcting each word, you can paste the text, click a button, and get properly formatted output instantly.
+          </p>
+          <p>
+            <strong>Developers and data analysts</strong> often need to standardize text data for databases, APIs, or spreadsheets. Converting user-submitted text to a consistent case format helps prevent duplicate entries and improves data quality.
+          </p>
+          <p>
+            <strong>Designers and marketers</strong> use case conversion when preparing text for social media graphics, email subject lines, and advertising copy. A quick case change can transform the tone and visual impact of a headline.
+          </p>
+          <p>
+            <strong>Students</strong> use this tool to format bibliographies, citations, and paper titles according to their required style guide, whether that calls for title case, sentence case, or another format.
+          </p>
+        </div>
       </section>
 
       <section className="mt-8 pb-10">

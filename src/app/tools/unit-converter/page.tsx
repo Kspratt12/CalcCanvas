@@ -108,6 +108,49 @@ export default function UnitConverterPage() {
 
   return (
     <main className="max-w-4xl mx-auto px-4 py-10">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What unit categories does this converter support?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "This converter supports six categories: Length (meters, km, miles, feet, inches), Weight (kg, grams, pounds, ounces), Temperature (Celsius, Fahrenheit, Kelvin), Volume (liters, gallons, cups), Speed (m/s, km/h, mph, knots), and Area (sq meters, sq feet, acres, hectares)."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How accurate are the conversions?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Results are rounded to 6 decimal places, which provides more than enough precision for everyday use. The conversion factors used are the standard internationally recognized values."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How does temperature conversion work differently from other units?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Temperature conversions use formulas rather than simple multiplication. Fahrenheit to Celsius uses (F-32) x 5/9, while Kelvin is Celsius + 273.15. Other unit types use straightforward multiplication factors."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I swap the conversion direction?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. Click the \"Swap\" button to instantly reverse the \"From\" and \"To\" units. This lets you quickly convert in the opposite direction without manually changing the dropdowns."
+                }
+              }
+            ]
+          })
+        }}
+      />
       <h1 className="text-3xl font-bold mb-2">Unit Converter</h1>
       <p className="text-gray-600 mb-6">
         Convert between units of length, weight, temperature, volume, speed, and area.
@@ -214,6 +257,59 @@ export default function UnitConverterPage() {
           <li><strong>Volume</strong> — liters, gallons, cups, fluid ounces.</li>
           <li><strong>Speed</strong> — m/s, km/h, mph, knots.</li>
           <li><strong>Area</strong> — sq meters, sq feet, acres, hectares.</li>
+        </ul>
+      </section>
+
+      <section className="mt-8">
+        <h2 className="text-xl font-semibold mb-3">What Is a Unit Converter?</h2>
+        <p className="text-gray-700 mb-3">
+          A unit converter translates a measurement from one unit to another within the same category. For example, converting 5 miles to kilometers or 72 degrees Fahrenheit to Celsius. While the underlying quantity stays the same, different regions, industries, and applications use different units to express it.
+        </p>
+        <p className="text-gray-700 mb-3">
+          The metric system (meters, kilograms, liters) is used by most of the world, while the imperial system (feet, pounds, gallons) remains standard in the United States and a few other countries. Scientists often work in SI units, cooks use cups and tablespoons, and sailors measure speed in knots. A reliable converter bridges all these systems instantly.
+        </p>
+        <p className="text-gray-700">
+          This tool covers six major categories: length, weight, temperature, volume, speed, and area. Each conversion uses precise mathematical ratios (or formulas, in the case of temperature) to give you accurate results to six decimal places. All calculations run locally in your browser.
+        </p>
+      </section>
+
+      <section className="mt-8">
+        <h2 className="text-xl font-semibold mb-3">Frequently Asked Questions</h2>
+
+        <h3 className="text-lg font-medium mt-4 mb-2">How accurate are these conversions?</h3>
+        <p className="text-gray-700 mb-3">
+          The conversions use standard mathematical ratios defined by international measurement standards. Results are rounded to six decimal places, which is more than sufficient for everyday use. For scientific applications requiring extreme precision, you may want to verify against NIST or ISO reference values.
+        </p>
+
+        <h3 className="text-lg font-medium mt-4 mb-2">Why does temperature conversion use a formula instead of a ratio?</h3>
+        <p className="text-gray-700 mb-3">
+          Unlike length or weight where zero means &quot;nothing,&quot; temperature scales have different zero points. Zero degrees Celsius is 32 degrees Fahrenheit and 273.15 Kelvin. Because the starting points differ, you need a formula (with both multiplication and addition) rather than a simple ratio.
+        </p>
+
+        <h3 className="text-lg font-medium mt-4 mb-2">What is the difference between US and Imperial gallons?</h3>
+        <p className="text-gray-700 mb-3">
+          A US gallon is approximately 3.785 liters, while an Imperial (UK) gallon is approximately 4.546 liters. This tool uses US gallons, which is the more common standard in online references. If you need Imperial gallon conversions, multiply the US gallon result by 0.832.
+        </p>
+
+        <h3 className="text-lg font-medium mt-4 mb-2">Can I convert between categories (like length to weight)?</h3>
+        <p className="text-gray-700 mb-3">
+          No. Length, weight, temperature, and other categories measure fundamentally different physical quantities. You can only convert between units within the same category — for example, meters to feet (both length) or pounds to kilograms (both weight).
+        </p>
+
+        <h3 className="text-lg font-medium mt-4 mb-2">What does the &quot;Swap&quot; button do?</h3>
+        <p className="text-gray-700 mb-3">
+          The Swap button reverses the &quot;From&quot; and &quot;To&quot; units. If you were converting meters to feet, clicking Swap changes it to feet to meters. This is a quick way to do the reverse conversion without manually changing both dropdown menus.
+        </p>
+      </section>
+
+      <section className="mt-8">
+        <h2 className="text-xl font-semibold mb-3">Common Use Cases</h2>
+        <ul className="list-disc list-inside space-y-2 text-gray-700">
+          <li><strong>Cooking and recipes</strong> — Convert between cups, tablespoons, milliliters, and fluid ounces when following recipes from different countries.</li>
+          <li><strong>Travel</strong> — Convert miles to kilometers, Fahrenheit to Celsius, or pounds to kilograms when visiting countries that use different units.</li>
+          <li><strong>Fitness and health</strong> — Switch between pounds and kilograms for weight tracking, or miles and kilometers for running distances.</li>
+          <li><strong>Home improvement</strong> — Convert between feet, inches, meters, and centimeters when working with building materials or furniture dimensions.</li>
+          <li><strong>Science and engineering</strong> — Convert SI units to imperial or vice versa when working with specifications, data sheets, or research papers.</li>
         </ul>
       </section>
 

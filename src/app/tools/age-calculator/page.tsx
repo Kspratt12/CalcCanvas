@@ -99,6 +99,49 @@ export default function AgeCalculatorPage() {
 
   return (
     <main className="max-w-4xl mx-auto px-4 py-10">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "How is age calculated when the birth day hasn't occurred yet this month?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "If today's date is before your birthday in the current month, the calculator borrows days from the previous month. For example, if you were born on the 25th and today is the 10th, the \"days\" component counts from the 25th of last month to the 10th of this month. This matches how most people intuitively think about age."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does this calculator account for leap years?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. The underlying JavaScript Date object correctly handles leap years, including the rules for century years (divisible by 100 but not 400). If you were born on February 29, the calculator still works correctly for non-leap years."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How accurate is the zodiac sign calculation?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The zodiac signs are based on standard Western astrology date ranges. The dates are fixed boundaries that don't shift year to year in this implementation. For people born on the exact cusp between two signs, the assigned sign follows the most commonly used date cutoffs."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I calculate the age of someone who has passed away?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "This calculator computes age relative to today's date. To calculate someone's age at the time of their passing, you would need to use our Date Calculator tool to find the difference between two specific dates."
+                }
+              }
+            ]
+          })
+        }}
+      />
       <h1 className="text-3xl font-bold mb-2">Age Calculator</h1>
       <p className="text-gray-600 mb-6">
         Find your exact age in years, months, and days, along with fun facts about your birthdate.
@@ -172,6 +215,54 @@ export default function AgeCalculatorPage() {
         <p className="text-gray-700">
           The calculator computes the difference between your date of birth and today&apos;s date, breaking it down into years, months, and days. It accounts for varying month lengths and leap years. The zodiac sign is determined by standard Western astrology date ranges. Total days alive is calculated as the number of full days between your birth date and today.
         </p>
+      </section>
+
+      <section className="mt-8">
+        <h2 className="text-xl font-semibold mb-3">What Is an Age Calculator?</h2>
+        <p className="text-gray-700 mb-3">
+          An age calculator determines exactly how old someone is by computing the difference between their date of birth and today&apos;s date. While this sounds simple, accurate age calculation requires handling variable month lengths, leap years, and the quirks of our calendar system. For example, February has 28 or 29 days, and months range from 28 to 31 days long.
+        </p>
+        <p className="text-gray-700 mb-3">
+          Beyond the basic years-months-days breakdown, this calculator also tells you the total number of days you&apos;ve been alive, what day of the week you were born on, your zodiac sign, and how many days remain until your next birthday. These details are surprisingly useful for everything from filling out official forms to planning birthday celebrations.
+        </p>
+        <p className="text-gray-700">
+          The calculation runs entirely in your browser using JavaScript&apos;s Date object. No personal information is stored or transmitted — your birth date stays on your device.
+        </p>
+      </section>
+
+      <section className="mt-8">
+        <h2 className="text-xl font-semibold mb-3">Frequently Asked Questions</h2>
+
+        <h3 className="text-lg font-medium mt-4 mb-2">How is age calculated when the birth day hasn&apos;t occurred yet this month?</h3>
+        <p className="text-gray-700 mb-3">
+          If today&apos;s date is before your birthday in the current month, the calculator borrows days from the previous month. For example, if you were born on the 25th and today is the 10th, the &quot;days&quot; component counts from the 25th of last month to the 10th of this month. This matches how most people intuitively think about age.
+        </p>
+
+        <h3 className="text-lg font-medium mt-4 mb-2">Does this calculator account for leap years?</h3>
+        <p className="text-gray-700 mb-3">
+          Yes. The underlying JavaScript Date object correctly handles leap years, including the rules for century years (divisible by 100 but not 400). If you were born on February 29, the calculator still works correctly for non-leap years.
+        </p>
+
+        <h3 className="text-lg font-medium mt-4 mb-2">How accurate is the zodiac sign calculation?</h3>
+        <p className="text-gray-700 mb-3">
+          The zodiac signs are based on standard Western astrology date ranges. The dates are fixed boundaries that don&apos;t shift year to year in this implementation. For people born on the exact cusp between two signs, the assigned sign follows the most commonly used date cutoffs.
+        </p>
+
+        <h3 className="text-lg font-medium mt-4 mb-2">Can I calculate the age of someone who has passed away?</h3>
+        <p className="text-gray-700 mb-3">
+          This calculator computes age relative to today&apos;s date. To calculate someone&apos;s age at the time of their passing, you would need to use our Date Calculator tool to find the difference between two specific dates.
+        </p>
+      </section>
+
+      <section className="mt-8">
+        <h2 className="text-xl font-semibold mb-3">Common Use Cases</h2>
+        <ul className="list-disc list-inside space-y-2 text-gray-700">
+          <li><strong>Official documents</strong> — Quickly determine your exact age for visa applications, insurance forms, or government paperwork.</li>
+          <li><strong>Age verification</strong> — Check if someone meets a minimum age requirement for services, competitions, or legal purposes.</li>
+          <li><strong>Birthday planning</strong> — See exactly how many days until your next birthday to plan celebrations or count down milestones.</li>
+          <li><strong>Health and fitness</strong> — Many health calculators (like BMI or metabolic rate) require your exact age for accurate results.</li>
+          <li><strong>Trivia and curiosity</strong> — Find out what day of the week you were born on, or how many total days you&apos;ve been alive.</li>
+        </ul>
       </section>
 
       <section className="mt-8">

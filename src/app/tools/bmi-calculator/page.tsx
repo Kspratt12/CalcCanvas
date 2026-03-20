@@ -65,6 +65,57 @@ export default function BmiCalculatorPage() {
 
   return (
     <main className="max-w-4xl mx-auto px-4 py-10">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Is BMI accurate for athletes and bodybuilders?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "BMI does not differentiate between muscle and fat, so people with a lot of muscle mass may get a higher BMI reading that doesn't reflect their actual health status. If you train regularly and carry significant muscle, a body fat percentage test will give you a more accurate assessment."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does BMI apply to children and teenagers?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "For children and teens aged 2 to 19, BMI is calculated the same way but interpreted differently using age- and sex-specific percentile charts. A pediatrician can help determine whether a young person's BMI falls within a healthy range for their developmental stage."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What BMI should I aim for?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Most health organizations recommend keeping your BMI between 18.5 and 24.9. However, your optimal weight depends on many individual factors including age, muscle composition, bone density, and overall health."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How often should I check my BMI?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Checking your BMI once every few months is generally sufficient for tracking long-term trends. Daily or weekly fluctuations in weight are normal and don't necessarily indicate meaningful changes in your health."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can BMI predict heart disease or diabetes risk?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Research shows that higher BMI values are associated with increased risk of heart disease, type 2 diabetes, and certain cancers. However, BMI alone is not a diagnostic tool. Your doctor will consider BMI alongside blood pressure, cholesterol levels, blood sugar, and family history to evaluate your overall risk."
+                }
+              }
+            ]
+          })
+        }}
+      />
       <h1 className="text-3xl font-bold mb-2">BMI Calculator</h1>
       <p className="text-gray-600 mb-6">
         Calculate your Body Mass Index to find out if your weight falls within a healthy range for your height.
@@ -191,6 +242,52 @@ export default function BmiCalculatorPage() {
           A BMI below 18.5 is considered underweight, 18.5–24.9 is normal, 25–29.9 is overweight,
           and 30 or above is obese. While BMI is a useful screening tool, it does not directly
           measure body fat and may not be accurate for athletes or elderly individuals.
+        </p>
+      </section>
+
+      <section className="mt-8">
+        <h2 className="text-xl font-semibold mb-3">What Is BMI?</h2>
+        <p className="text-gray-700 mb-4">
+          Body Mass Index, or BMI, is a simple numeric value derived from your weight and height. It was developed in the early 19th century by Belgian mathematician Adolphe Quetelet as a way to quickly assess whether a person&apos;s weight is proportional to their height. Today, doctors, nutritionists, and public health organizations around the world use BMI as a first-pass screening tool to identify potential weight-related health risks.
+        </p>
+        <p className="text-gray-700 mb-4">
+          Your BMI number falls into one of four main categories: underweight (below 18.5), normal weight (18.5 to 24.9), overweight (25 to 29.9), and obese (30 and above). While BMI is incredibly useful as a quick health indicator, it has limitations. It doesn&apos;t distinguish between muscle mass and fat mass, which means a muscular athlete might register as &quot;overweight&quot; despite having very low body fat. For a more complete picture, consider pairing your BMI result with a body fat percentage measurement or a waist circumference check.
+        </p>
+      </section>
+
+      <section className="mt-8">
+        <h2 className="text-xl font-semibold mb-3">Frequently Asked Questions</h2>
+
+        <h3 className="text-lg font-medium mt-4 mb-2">Is BMI accurate for athletes and bodybuilders?</h3>
+        <p className="text-gray-700 mb-4">
+          BMI does not differentiate between muscle and fat, so people with a lot of muscle mass may get a higher BMI reading that doesn&apos;t reflect their actual health status. If you train regularly and carry significant muscle, a body fat percentage test will give you a more accurate assessment.
+        </p>
+
+        <h3 className="text-lg font-medium mt-4 mb-2">Does BMI apply to children and teenagers?</h3>
+        <p className="text-gray-700 mb-4">
+          For children and teens aged 2 to 19, BMI is calculated the same way but interpreted differently using age- and sex-specific percentile charts. A pediatrician can help determine whether a young person&apos;s BMI falls within a healthy range for their developmental stage.
+        </p>
+
+        <h3 className="text-lg font-medium mt-4 mb-2">What BMI should I aim for?</h3>
+        <p className="text-gray-700 mb-4">
+          Most health organizations recommend keeping your BMI between 18.5 and 24.9. However, your optimal weight depends on many individual factors including age, muscle composition, bone density, and overall health. Talk with your healthcare provider to set a personalized goal.
+        </p>
+
+        <h3 className="text-lg font-medium mt-4 mb-2">How often should I check my BMI?</h3>
+        <p className="text-gray-700 mb-4">
+          Checking your BMI once every few months is generally sufficient for tracking long-term trends. Daily or weekly fluctuations in weight are normal and don&apos;t necessarily indicate meaningful changes in your health. Focus on the overall trend rather than any single reading.
+        </p>
+
+        <h3 className="text-lg font-medium mt-4 mb-2">Can BMI predict heart disease or diabetes risk?</h3>
+        <p className="text-gray-700 mb-4">
+          Research shows that higher BMI values are associated with increased risk of heart disease, type 2 diabetes, and certain cancers. However, BMI alone is not a diagnostic tool. Your doctor will consider BMI alongside blood pressure, cholesterol levels, blood sugar, and family history to evaluate your overall risk.
+        </p>
+      </section>
+
+      <section className="mt-8">
+        <h2 className="text-xl font-semibold mb-3">Example Calculation</h2>
+        <p className="text-gray-700 mb-4">
+          Let&apos;s say you weigh 160 pounds and stand 5 feet 8 inches tall. First, convert to metric: 160 lbs = 72.6 kg, and 5&apos;8&quot; = 68 inches = 1.727 meters. Then apply the formula: BMI = 72.6 / (1.727 &times; 1.727) = 72.6 / 2.982 = <strong>24.3</strong>. This falls within the &quot;Normal&quot; category (18.5 to 24.9), meaning your weight is proportional to your height. Your healthy weight range at this height would be approximately 122 to 164 lbs.
         </p>
       </section>
 

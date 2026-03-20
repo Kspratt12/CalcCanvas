@@ -99,6 +99,57 @@ export default function FractionCalculatorPage() {
 
   return (
     <main className="max-w-4xl mx-auto px-4 py-10">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "How do you add fractions with different denominators?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "First, find the least common multiple (LCM) of both denominators. Then convert each fraction so they share that common denominator. Finally, add the numerators and keep the common denominator."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What does it mean to simplify a fraction?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Simplifying a fraction means dividing both the numerator and denominator by their greatest common divisor (GCD) until no further reduction is possible. For example, 6/8 simplifies to 3/4 because both 6 and 8 are divisible by 2."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How do you divide one fraction by another?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Dividing by a fraction is the same as multiplying by its reciprocal. Flip the second fraction (swap numerator and denominator), then multiply straight across."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I enter negative fractions?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. You can enter a negative number for either the numerator or the denominator. The calculator will handle the sign correctly in all operations and display the negative sign on the numerator in the simplified result."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What happens if I enter zero as a denominator?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Division by zero is undefined in mathematics, so the calculator will not produce a result if either denominator is zero."
+                }
+              }
+            ]
+          })
+        }}
+      />
       <h1 className="text-3xl font-bold mb-2">Fraction Calculator</h1>
       <p className="text-gray-600 mb-6">
         Add, subtract, multiply, or divide fractions with step-by-step solutions and simplified results.
@@ -178,6 +229,64 @@ export default function FractionCalculatorPage() {
           <strong> Multiplication:</strong> Multiplies numerators together and denominators together.
           <strong> Division:</strong> Multiplies the first fraction by the reciprocal of the second.
           All results are simplified using the Greatest Common Divisor (GCD).
+        </p>
+      </section>
+
+      <section className="mt-8">
+        <h2 className="text-xl font-semibold mb-3">What Is a Fraction?</h2>
+        <p className="text-gray-700 mb-4">
+          A fraction represents a part of a whole. It consists of two numbers separated by a line: the numerator (top number) tells you how many parts you have, and the denominator (bottom number) tells you how many equal parts make up the whole. For instance, 3/4 means you have 3 out of 4 equal parts.
+        </p>
+        <p className="text-gray-700 mb-4">
+          Fractions are fundamental in cooking, construction, music, and countless other fields. They allow us to express quantities that aren&apos;t whole numbers with perfect precision &mdash; unlike decimals, which sometimes require rounding. This calculator handles all four basic operations and automatically simplifies your answer by finding the greatest common divisor, so you always get the cleanest possible result.
+        </p>
+      </section>
+
+      <section className="mt-8">
+        <h2 className="text-xl font-semibold mb-3">Frequently Asked Questions</h2>
+
+        <h3 className="text-lg font-medium mt-4 mb-2">How do you add fractions with different denominators?</h3>
+        <p className="text-gray-700 mb-4">
+          First, find the least common multiple (LCM) of both denominators. Then convert each fraction so they share that common denominator by multiplying both the numerator and denominator by the appropriate factor. Finally, add the numerators and keep the common denominator.
+        </p>
+
+        <h3 className="text-lg font-medium mt-4 mb-2">What does it mean to simplify a fraction?</h3>
+        <p className="text-gray-700 mb-4">
+          Simplifying (or reducing) a fraction means dividing both the numerator and denominator by their greatest common divisor (GCD) until no further reduction is possible. For example, 6/8 simplifies to 3/4 because both 6 and 8 are divisible by 2. A simplified fraction is the same value expressed in its smallest terms.
+        </p>
+
+        <h3 className="text-lg font-medium mt-4 mb-2">How do you divide one fraction by another?</h3>
+        <p className="text-gray-700 mb-4">
+          Dividing by a fraction is the same as multiplying by its reciprocal. Flip the second fraction (swap numerator and denominator), then multiply straight across. For example, (2/3) &divide; (4/5) becomes (2/3) &times; (5/4) = 10/12, which simplifies to 5/6.
+        </p>
+
+        <h3 className="text-lg font-medium mt-4 mb-2">Can I enter negative fractions?</h3>
+        <p className="text-gray-700 mb-4">
+          Yes. You can enter a negative number for either the numerator or the denominator. The calculator will handle the sign correctly in all operations and display the negative sign on the numerator in the simplified result.
+        </p>
+
+        <h3 className="text-lg font-medium mt-4 mb-2">What happens if I enter zero as a denominator?</h3>
+        <p className="text-gray-700 mb-4">
+          Division by zero is undefined in mathematics, so the calculator will not produce a result if either denominator is zero. Similarly, dividing by a fraction with a numerator of zero (like 0/5) is not allowed since it would mean dividing by zero.
+        </p>
+      </section>
+
+      <section className="mt-8">
+        <h2 className="text-xl font-semibold mb-3">Example Calculation</h2>
+        <p className="text-gray-700 mb-2">
+          <strong>Scenario:</strong> A recipe calls for 2/3 cup of flour, but you want to make 1.5 times the recipe. You need to multiply 2/3 by 3/2.
+        </p>
+        <p className="text-gray-700 mb-2">
+          <strong>Step 1:</strong> Enter 2 as the first numerator and 3 as the first denominator. Select the multiplication (&times;) operator.
+        </p>
+        <p className="text-gray-700 mb-2">
+          <strong>Step 2:</strong> Enter 3 as the second numerator and 2 as the second denominator.
+        </p>
+        <p className="text-gray-700 mb-2">
+          <strong>Step 3:</strong> Click &quot;Calculate.&quot; The result is 6/6, which simplifies to <strong>1/1</strong> (or simply 1 cup of flour).
+        </p>
+        <p className="text-gray-700">
+          The step-by-step breakdown shows: 2/3 &times; 3/2 = (2 &times; 3) / (3 &times; 2) = 6/6 = 1/1 (simplified). So you need exactly 1 cup of flour for 1.5 times the recipe.
         </p>
       </section>
 

@@ -66,6 +66,57 @@ export default function SalaryToHourlyConverter() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "How do I convert salary to hourly?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Divide your annual salary by the total number of working hours in a year. For a standard full-time schedule, that's 2,080 hours (40 hours per week times 52 weeks). So a $60,000 salary equals about $28.85 per hour."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Should I use 52 weeks or fewer?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "If you get paid time off (PTO), you're still earning during those weeks, so 52 is correct. If you take unpaid time off, reduce the weeks accordingly."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does this account for taxes?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No, this shows your gross (pre-tax) earnings. Your actual take-home pay will be lower after federal income tax, state income tax, Social Security, Medicare, and any other deductions."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How do I compare a salaried job to a contract position?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "First convert the salary to hourly. Then factor in that salaried positions typically include benefits like health insurance, retirement contributions, and PTO. A general rule of thumb is that benefits add 20-30% to total compensation."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What if I work overtime?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "If you regularly work more than 40 hours per week, increase the hours per week field to get a more accurate effective hourly rate. Salaried exempt employees don't receive overtime pay, so working 50 hours per week on a $60,000 salary drops your effective rate from $28.85 to $23.08 per hour."
+                }
+              }
+            ]
+          })
+        }}
+      />
       <h1 className="text-3xl font-bold text-gray-900 mb-2">
         Salary to Hourly Converter
       </h1>
@@ -200,6 +251,81 @@ export default function SalaryToHourlyConverter() {
           per Week x Weeks per Year. This calculator divides or multiplies
           accordingly and breaks down your income across different time periods so
           you can compare offers or budget effectively.
+        </p>
+      </section>
+
+      <section className="mt-10">
+        <h2 className="text-xl font-semibold text-gray-900 mb-3">
+          What Is a Salary to Hourly Converter?
+        </h2>
+        <p className="text-gray-600 mb-3">
+          A salary to hourly converter is a simple financial tool that translates between annual salary and hourly wage. If you&apos;re offered a job with a $75,000 annual salary, you might wonder what that works out to per hour. Conversely, if you&apos;re earning $25 per hour, you may want to know what that equals as a yearly salary.
+        </p>
+        <p className="text-gray-600 mb-3">
+          The math is straightforward: your annual salary divided by the number of working hours in a year gives you the hourly rate. Most full-time jobs assume 40 hours per week and 52 weeks per year, totaling 2,080 work hours. But not everyone works a standard schedule, so this tool lets you customize both hours per week and weeks per year.
+        </p>
+        <p className="text-gray-600">
+          This converter is especially useful when comparing job offers that use different pay structures, or when budgeting based on your actual take-home timing. Freelancers and contractors also find it helpful for setting competitive rates.
+        </p>
+      </section>
+
+      <section className="mt-10">
+        <h2 className="text-xl font-semibold text-gray-900 mb-3">
+          Frequently Asked Questions
+        </h2>
+
+        <h3 className="text-lg font-medium text-gray-900 mt-4 mb-2">
+          How do I convert salary to hourly?
+        </h3>
+        <p className="text-gray-600 mb-4">
+          Divide your annual salary by the total number of working hours in a year. For a standard full-time schedule, that&apos;s 2,080 hours (40 hours per week times 52 weeks). So a $60,000 salary equals about $28.85 per hour.
+        </p>
+
+        <h3 className="text-lg font-medium text-gray-900 mt-4 mb-2">
+          Should I use 52 weeks or fewer?
+        </h3>
+        <p className="text-gray-600 mb-4">
+          If you get paid time off (PTO), you&apos;re still earning during those weeks, so 52 is correct. If you take unpaid time off, reduce the weeks accordingly. For example, two weeks of unpaid vacation means 50 working weeks, which gives a higher effective hourly rate for the same salary.
+        </p>
+
+        <h3 className="text-lg font-medium text-gray-900 mt-4 mb-2">
+          Does this account for taxes?
+        </h3>
+        <p className="text-gray-600 mb-4">
+          No, this shows your gross (pre-tax) earnings. Your actual take-home pay will be lower after federal income tax, state income tax, Social Security, Medicare, and any other deductions. The exact amount depends on your tax bracket and location.
+        </p>
+
+        <h3 className="text-lg font-medium text-gray-900 mt-4 mb-2">
+          How do I compare a salaried job to a contract position?
+        </h3>
+        <p className="text-gray-600 mb-4">
+          First convert the salary to hourly. Then factor in that salaried positions typically include benefits like health insurance, retirement contributions, and PTO. A general rule of thumb is that benefits add 20-30% to total compensation. So a $75,000 salary might be equivalent to $43-47 per hour in total value.
+        </p>
+
+        <h3 className="text-lg font-medium text-gray-900 mt-4 mb-2">
+          What if I work overtime?
+        </h3>
+        <p className="text-gray-600">
+          If you regularly work more than 40 hours per week, increase the hours per week field to get a more accurate effective hourly rate. Keep in mind that salaried exempt employees don&apos;t receive overtime pay, so working 50 hours per week on a $60,000 salary drops your effective rate from $28.85 to $23.08 per hour.
+        </p>
+      </section>
+
+      <section className="mt-10">
+        <h2 className="text-xl font-semibold text-gray-900 mb-3">
+          Example Calculation
+        </h2>
+        <p className="text-gray-600 mb-3">
+          Say you&apos;re offered a job paying $85,000 per year. You work a standard 40-hour week for 52 weeks. Here&apos;s your earnings breakdown:
+        </p>
+        <ul className="list-disc list-inside text-gray-600 space-y-1 mb-3">
+          <li>Hourly rate: $40.87</li>
+          <li>Daily earnings (8-hour day): $326.92</li>
+          <li>Weekly earnings: $1,634.62</li>
+          <li>Monthly earnings: $7,083.33</li>
+          <li>Annual salary: $85,000.00</li>
+        </ul>
+        <p className="text-gray-600">
+          Now suppose you&apos;re comparing that to a contract role offering $45 per hour. At 40 hours per week for 52 weeks, the contract position pays $93,600 annually &mdash; but without benefits. After accounting for self-employment tax and buying your own health insurance, the two offers may be closer than they appear.
         </p>
       </section>
 

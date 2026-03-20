@@ -1,6 +1,14 @@
 import ToolCard from "@/components/ToolCard";
 import AdPlacement from "@/components/AdPlacement";
 import SearchBar from "@/components/SearchBar";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "CalcCanvas — Free Online Calculators & Tools for Finance, Health, Math & More",
+  description:
+    "37 free online calculators and tools for finance, health, math, text, and development. Fast, accurate, mobile-friendly — no sign-up required. Try our mortgage calculator, BMI calculator, JSON formatter, and more.",
+  keywords: "free online calculator, mortgage calculator, BMI calculator, percentage calculator, word counter, JSON formatter, unit converter, compound interest calculator",
+};
 
 /* ------------------------------------------------------------------ */
 /*  Tool data                                                         */
@@ -112,8 +120,8 @@ export default function Home() {
             Free Online Calculators &amp; Tools
           </h1>
           <p className="mt-4 text-lg text-slate-500">
-            Fast, accurate, and easy-to-use tools for finance, health, math, and
-            more.
+            37 fast, accurate, and easy-to-use calculators and tools for finance,
+            health, math, text, and development. No sign-up required.
           </p>
           <div className="mt-8">
             <SearchBar tools={tools} />
@@ -158,21 +166,177 @@ export default function Home() {
         })}
       </section>
 
-      {/* SEO text block */}
-      <section className="border-t border-slate-200 bg-slate-50 py-12">
-        <div className="mx-auto max-w-3xl px-4 text-center">
-          <h2 className="text-xl font-semibold text-slate-900">
-            Why CalcCanvas?
+      {/* SEO content — Why CalcCanvas */}
+      <section className="border-t border-slate-200 bg-slate-50 py-16">
+        <div className="mx-auto max-w-4xl px-4">
+          <h2 className="text-2xl font-bold text-slate-900 text-center">
+            Why Use CalcCanvas?
           </h2>
-          <p className="mt-4 text-sm leading-7 text-slate-500">
-            CalcCanvas provides a growing library of free online calculators and
-            tools designed for everyday use. Whether you need to crunch numbers
-            for a mortgage, track your fitness goals, format JSON, or generate a
-            secure password, CalcCanvas has you covered. Every tool is built to
-            be fast, mobile-friendly, and accurate — no sign-up or download
-            required. Bookmark us and come back anytime you need a quick
-            calculation.
+          <div className="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            <div>
+              <h3 className="text-lg font-semibold text-slate-900">100% Free, No Sign-Up</h3>
+              <p className="mt-2 text-sm leading-6 text-slate-500">
+                Every calculator and tool on CalcCanvas is completely free to use.
+                There are no accounts to create, no subscriptions, and no hidden
+                fees. Just open the tool you need and start calculating.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold text-slate-900">Private &amp; Secure</h3>
+              <p className="mt-2 text-sm leading-6 text-slate-500">
+                All calculations happen directly in your browser. Your data is
+                never sent to a server, never stored, and never shared with
+                anyone. What you type stays on your device.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold text-slate-900">Fast &amp; Mobile-Friendly</h3>
+              <p className="mt-2 text-sm leading-6 text-slate-500">
+                CalcCanvas is built for speed. Pages load instantly with no
+                bloated scripts or pop-ups. Every tool is fully responsive and
+                works just as well on your phone as it does on your desktop.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold text-slate-900">Accurate Formulas</h3>
+              <p className="mt-2 text-sm leading-6 text-slate-500">
+                Our financial calculators use standard amortization and compound
+                interest formulas. Health tools follow established BMI, BMR, and
+                body fat equations. Every tool is built with accuracy in mind.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold text-slate-900">37 Tools in One Place</h3>
+              <p className="mt-2 text-sm leading-6 text-slate-500">
+                From mortgage payments and retirement planning to JSON formatting
+                and password generation, CalcCanvas covers six categories of tools
+                that people actually use every day.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold text-slate-900">No Ads That Block Your Work</h3>
+              <p className="mt-2 text-sm leading-6 text-slate-500">
+                Unlike many calculator sites, CalcCanvas keeps advertisements
+                minimal and out of the way. You will never see a pop-up, overlay,
+                or auto-playing video interrupting your calculation.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SEO content — How it works */}
+      <section className="bg-white py-16">
+        <div className="mx-auto max-w-4xl px-4">
+          <h2 className="text-2xl font-bold text-slate-900 text-center">
+            How CalcCanvas Works
+          </h2>
+          <p className="mt-4 text-center text-sm leading-7 text-slate-500 max-w-2xl mx-auto">
+            Using any CalcCanvas tool takes just a few seconds. Pick a category,
+            open the tool, enter your numbers, and get instant results. Here is
+            what makes each category useful:
           </p>
+          <div className="mt-10 space-y-8">
+            <div>
+              <h3 className="text-lg font-semibold text-slate-900">Financial Calculators</h3>
+              <p className="mt-2 text-sm leading-7 text-slate-500">
+                Planning a home purchase? Our mortgage calculator breaks down
+                monthly payments, total interest, and overall loan cost using the
+                standard amortization formula. The compound interest calculator
+                shows how your savings or investments grow over time. Need to
+                compare job offers? The salary-to-hourly converter makes it easy
+                to see what you actually earn per hour. Other tools cover auto
+                loans, loan payoff timelines, retirement savings projections, tip
+                splitting, and net worth tracking.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold text-slate-900">Health &amp; Fitness Calculators</h3>
+              <p className="mt-2 text-sm leading-7 text-slate-500">
+                The BMI calculator tells you whether your weight is in a healthy
+                range for your height, using the standard Body Mass Index formula.
+                Our calorie calculator estimates your daily energy needs based on
+                your age, sex, weight, height, and activity level. Additional
+                tools calculate body fat percentage, ideal weight ranges, basal
+                metabolic rate (BMR), and running or walking pace.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold text-slate-900">Math, Text &amp; Developer Tools</h3>
+              <p className="mt-2 text-sm leading-7 text-slate-500">
+                Students and professionals use our percentage, fraction, average,
+                and standard deviation calculators for quick math. Writers rely on
+                the word counter and case converter for content editing. Developers
+                use the JSON formatter, Base64 encoder, hash generator, and
+                password generator daily. Every tool processes your data locally in
+                the browser — nothing is uploaded or stored.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ section for homepage SEO */}
+      <section className="border-t border-slate-200 bg-slate-50 py-16">
+        <div className="mx-auto max-w-3xl px-4">
+          <h2 className="text-2xl font-bold text-slate-900 text-center">
+            Frequently Asked Questions
+          </h2>
+          <div className="mt-10 space-y-8">
+            <div>
+              <h3 className="text-base font-semibold text-slate-900">
+                Is CalcCanvas really free?
+              </h3>
+              <p className="mt-2 text-sm leading-7 text-slate-500">
+                Yes. Every tool on CalcCanvas is 100% free with no account
+                required. We support the site through non-intrusive advertising,
+                so you never have to pay for access to any calculator or utility.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-base font-semibold text-slate-900">
+                Is my data safe when I use these tools?
+              </h3>
+              <p className="mt-2 text-sm leading-7 text-slate-500">
+                Absolutely. All calculations are performed directly in your web
+                browser using JavaScript. Your inputs are never sent to our
+                servers or stored anywhere. Once you close the page, your data is
+                gone.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-base font-semibold text-slate-900">
+                How accurate are the calculators?
+              </h3>
+              <p className="mt-2 text-sm leading-7 text-slate-500">
+                Our tools use industry-standard formulas. Financial calculators
+                use the same amortization and compound interest equations used by
+                banks. Health calculators follow WHO and medical guidelines.
+                However, results are estimates and should not replace professional
+                financial or medical advice.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-base font-semibold text-slate-900">
+                Do I need to download anything?
+              </h3>
+              <p className="mt-2 text-sm leading-7 text-slate-500">
+                No. CalcCanvas runs entirely in your web browser. There is nothing
+                to install or download. Just visit the site, pick a tool, and
+                start using it on any device — desktop, tablet, or phone.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-base font-semibold text-slate-900">
+                Can I use CalcCanvas on my phone?
+              </h3>
+              <p className="mt-2 text-sm leading-7 text-slate-500">
+                Yes. Every tool is fully responsive and designed to work on mobile
+                devices. The layout adapts to smaller screens, so you get the same
+                functionality whether you are on a phone, tablet, or computer.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
     </div>

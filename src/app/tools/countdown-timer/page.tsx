@@ -92,6 +92,49 @@ export default function CountdownTimerPage() {
 
   return (
     <main className="max-w-4xl mx-auto px-4 py-10">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Will the timer keep running if I switch browser tabs?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. The timer calculates remaining time based on the system clock, not by counting individual seconds. If you switch tabs and come back, the displayed time will be correct."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I pause and resume the countdown?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. Click \"Pause\" to stop the countdown at any point. When you click \"Start\" again, the timer resumes from where it left off. The \"Reset\" button clears the timer entirely."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What happens when the timer reaches zero?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The timer stops automatically and displays a \"Time's up!\" message. The countdown will not go into negative numbers. You can then reset the timer and start a new countdown."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the maximum duration I can set?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "In timer mode, you can set any combination of hours, minutes, and seconds. There is no practical upper limit. In date mode, you can count down to any future date and time supported by your browser's date picker."
+                }
+              }
+            ]
+          })
+        }}
+      />
       <h1 className="text-3xl font-bold mb-2">Countdown Timer</h1>
       <p className="text-gray-600 mb-6">
         Set a countdown to any future date or a specific duration.
@@ -237,6 +280,54 @@ export default function CountdownTimerPage() {
           <li>Choose &quot;Count to Date&quot; to count down to a specific date and time.</li>
           <li>Click &quot;Start&quot; to begin the countdown.</li>
           <li>Use &quot;Pause&quot; and &quot;Reset&quot; to control the timer.</li>
+        </ul>
+      </section>
+
+      <section className="mt-8">
+        <h2 className="text-xl font-semibold mb-3">What Is a Countdown Timer?</h2>
+        <p className="text-gray-700 mb-3">
+          A countdown timer tracks the time remaining until a specific moment arrives. Unlike a stopwatch that counts up from zero, a countdown timer starts at a set duration or target date and ticks down to zero. When the timer reaches zero, you know that your designated time has elapsed or your target moment has arrived.
+        </p>
+        <p className="text-gray-700 mb-3">
+          This tool offers two modes. The &quot;Timer&quot; mode lets you set a custom duration using hours, minutes, and seconds — perfect for cooking, workouts, study sessions, or any timed activity. The &quot;Count to Date&quot; mode calculates the remaining time until a specific date and time, which is useful for event countdowns, product launches, or deadlines.
+        </p>
+        <p className="text-gray-700">
+          The timer runs in your browser using JavaScript intervals and calculates the remaining time against a fixed endpoint. This means it stays accurate even if the browser tab is briefly backgrounded, since it recalculates from the current time on each tick rather than simply subtracting seconds.
+        </p>
+      </section>
+
+      <section className="mt-8">
+        <h2 className="text-xl font-semibold mb-3">Frequently Asked Questions</h2>
+
+        <h3 className="text-lg font-medium mt-4 mb-2">Will the timer keep running if I switch browser tabs?</h3>
+        <p className="text-gray-700 mb-3">
+          Yes. The timer calculates remaining time based on the system clock, not by counting individual seconds. If you switch tabs and come back, the displayed time will be correct. However, browsers may throttle intervals in background tabs, so the display might update less frequently until you return.
+        </p>
+
+        <h3 className="text-lg font-medium mt-4 mb-2">Can I pause and resume the countdown?</h3>
+        <p className="text-gray-700 mb-3">
+          Yes. Click &quot;Pause&quot; to stop the countdown at any point. When you click &quot;Start&quot; again, the timer resumes from where it left off. The &quot;Reset&quot; button clears the timer entirely and returns you to the input screen.
+        </p>
+
+        <h3 className="text-lg font-medium mt-4 mb-2">What happens when the timer reaches zero?</h3>
+        <p className="text-gray-700 mb-3">
+          The timer stops automatically and displays a &quot;Time&apos;s up!&quot; message. The countdown will not go into negative numbers. You can then reset the timer and start a new countdown whenever you&apos;re ready.
+        </p>
+
+        <h3 className="text-lg font-medium mt-4 mb-2">What is the maximum duration I can set?</h3>
+        <p className="text-gray-700 mb-3">
+          In timer mode, you can set any combination of hours, minutes, and seconds. There is no practical upper limit — you could set a timer for hundreds of hours if needed. In date mode, you can count down to any future date and time supported by your browser&apos;s date picker.
+        </p>
+      </section>
+
+      <section className="mt-8">
+        <h2 className="text-xl font-semibold mb-3">Common Use Cases</h2>
+        <ul className="list-disc list-inside space-y-2 text-gray-700">
+          <li><strong>Cooking and baking</strong> — Set a timer for recipes that require precise timing, like boiling eggs or proofing dough.</li>
+          <li><strong>Study sessions</strong> — Use the Pomodoro technique by setting 25-minute focus sessions followed by 5-minute breaks.</li>
+          <li><strong>Event countdowns</strong> — Count down to a birthday, holiday, product launch, or any important upcoming date.</li>
+          <li><strong>Exercise intervals</strong> — Time workout sets, rest periods, or interval training segments.</li>
+          <li><strong>Meeting and presentation timing</strong> — Keep track of how much time remains in a meeting, talk, or presentation slot.</li>
         </ul>
       </section>
 

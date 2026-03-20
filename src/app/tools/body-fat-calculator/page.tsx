@@ -74,6 +74,57 @@ export default function BodyFatCalculatorPage() {
 
   return (
     <main className="max-w-4xl mx-auto px-4 py-10">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "How accurate is the US Navy body fat method?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The US Navy method is generally accurate within 1 to 3 percent of more advanced methods like DEXA scans for most people. It tends to be slightly less precise for very lean or very overweight individuals."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Where exactly should I measure my waist?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "For the US Navy formula, measure your waist at the level of your navel (belly button), keeping the tape snug but not compressing the skin. Take the measurement at the end of a normal exhale."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is a healthy body fat percentage?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "For men, 14 to 24 percent is generally considered healthy, while for women, 21 to 31 percent falls within the healthy range. Athletes and very active individuals often have lower percentages."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is body fat percentage better than BMI?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Body fat percentage gives you more useful information because it accounts for the difference between fat and muscle. Someone with a \"normal\" BMI could still carry excess visceral fat, while a muscular person might have a high BMI but low body fat."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How can I lower my body fat percentage?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The most effective approach combines a moderate calorie deficit with strength training to preserve muscle mass. Aim to lose 0.5 to 1 percent of body fat per month for sustainable results."
+                }
+              }
+            ]
+          })
+        }}
+      />
       <h1 className="text-3xl font-bold mb-2">Body Fat Calculator</h1>
       <p className="text-gray-600 mb-6">
         Estimate your body fat percentage using the US Navy method based on simple body measurements.
@@ -163,6 +214,52 @@ export default function BodyFatCalculatorPage() {
         <h2 className="text-xl font-semibold mb-3">How It Works</h2>
         <p className="text-gray-700">
           This calculator uses the <strong>US Navy body fat formula</strong>. For men: %BF = 86.010 &times; log10(waist - neck) - 70.041 &times; log10(height) + 36.76. For women: %BF = 163.205 &times; log10(waist + hip - neck) - 97.684 &times; log10(height) - 78.387. All measurements are in inches. This method provides a reasonable estimate without specialized equipment.
+        </p>
+      </section>
+
+      <section className="mt-8">
+        <h2 className="text-xl font-semibold mb-3">What Is Body Fat Percentage?</h2>
+        <p className="text-gray-700 mb-4">
+          Body fat percentage is the proportion of your total body weight that is made up of fat tissue. Unlike BMI, which only considers weight and height, body fat percentage gives you a much clearer picture of your body composition by separating fat mass from lean mass (muscles, bones, organs, and water). Two people can weigh the same but have very different body fat levels, which is why this metric is so valuable.
+        </p>
+        <p className="text-gray-700 mb-4">
+          For men, essential body fat (the minimum needed for basic health) is around 2 to 5 percent, while for women it&apos;s 10 to 13 percent due to reproductive and hormonal needs. Athletes typically carry 6 to 13 percent (men) or 14 to 20 percent (women). A &quot;fitness&quot; level ranges from 14 to 17 percent for men and 21 to 24 percent for women. Knowing your body fat percentage helps you set realistic fitness goals and track progress more meaningfully than stepping on a scale alone. The US Navy method used here provides a solid estimate using just a tape measure, making it accessible to anyone at home.
+        </p>
+      </section>
+
+      <section className="mt-8">
+        <h2 className="text-xl font-semibold mb-3">Frequently Asked Questions</h2>
+
+        <h3 className="text-lg font-medium mt-4 mb-2">How accurate is the US Navy body fat method?</h3>
+        <p className="text-gray-700 mb-4">
+          The US Navy method is generally accurate within 1 to 3 percent of more advanced methods like DEXA scans for most people. It tends to be slightly less precise for very lean or very overweight individuals. For consistent tracking over time, it works well as long as you measure at the same spots each time.
+        </p>
+
+        <h3 className="text-lg font-medium mt-4 mb-2">Where exactly should I measure my waist?</h3>
+        <p className="text-gray-700 mb-4">
+          For the US Navy formula, measure your waist at the level of your navel (belly button), keeping the tape snug but not compressing the skin. Take the measurement at the end of a normal exhale. For the most consistent results, measure first thing in the morning before eating or drinking.
+        </p>
+
+        <h3 className="text-lg font-medium mt-4 mb-2">What is a healthy body fat percentage?</h3>
+        <p className="text-gray-700 mb-4">
+          For men, 14 to 24 percent is generally considered healthy, while for women, 21 to 31 percent falls within the healthy range. Athletes and very active individuals often have lower percentages. Going below essential fat levels (under 5% for men, under 13% for women) can cause serious health problems.
+        </p>
+
+        <h3 className="text-lg font-medium mt-4 mb-2">Is body fat percentage better than BMI?</h3>
+        <p className="text-gray-700 mb-4">
+          Body fat percentage gives you more useful information because it accounts for the difference between fat and muscle. Someone with a &quot;normal&quot; BMI could still carry excess visceral fat, while a muscular person might have a high BMI but low body fat. Ideally, use both measurements together for a fuller health picture.
+        </p>
+
+        <h3 className="text-lg font-medium mt-4 mb-2">How can I lower my body fat percentage?</h3>
+        <p className="text-gray-700 mb-4">
+          The most effective approach combines a moderate calorie deficit with strength training to preserve muscle mass. Aim to lose 0.5 to 1 percent of body fat per month for sustainable results. Crash diets tend to cause muscle loss along with fat loss, which actually raises your body fat percentage relative to your total weight.
+        </p>
+      </section>
+
+      <section className="mt-8">
+        <h2 className="text-xl font-semibold mb-3">Example Calculation</h2>
+        <p className="text-gray-700 mb-4">
+          Take a 180 lb male who is 70 inches tall with a 34-inch waist and a 15.5-inch neck. Using the US Navy formula: %BF = 86.010 &times; log10(34 - 15.5) - 70.041 &times; log10(70) + 36.76 = 86.010 &times; log10(18.5) - 70.041 &times; log10(70) + 36.76 = 86.010 &times; 1.267 - 70.041 &times; 1.845 + 36.76 = 108.97 - 129.23 + 36.76 = <strong>16.5%</strong> body fat. That puts him in the &quot;Fitness&quot; category. His fat mass would be about 29.7 lbs and lean mass about 150.3 lbs.
         </p>
       </section>
 

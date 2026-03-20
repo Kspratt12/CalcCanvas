@@ -69,6 +69,49 @@ export default function StandardDeviationPage() {
 
   return (
     <main className="max-w-4xl mx-auto px-4 py-10">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is the difference between population and sample standard deviation?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Population standard deviation is used when your data set includes every member of the group you're studying. Sample standard deviation applies when you're working with a subset of the full population. The sample version divides by N-1 instead of N (Bessel's correction)."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "When should I use variance instead of standard deviation?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Variance is simply the standard deviation squared. It's useful in certain statistical formulas. However, standard deviation is generally more intuitive because it's expressed in the same units as your original data."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What does a standard deviation of zero mean?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A standard deviation of zero means every value in your data set is exactly the same. There is no spread or variation at all."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I paste data from a spreadsheet?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. Copy a column of numbers from Excel, Google Sheets, or any spreadsheet and paste it directly into the text area. The calculator accepts numbers separated by commas, spaces, or newlines."
+                }
+              }
+            ]
+          })
+        }}
+      />
       <h1 className="text-3xl font-bold mb-2">Standard Deviation Calculator</h1>
       <p className="text-gray-600 mb-6">
         Calculate the standard deviation, variance, and mean of any data set.
@@ -149,6 +192,64 @@ export default function StandardDeviationPage() {
           The <strong>population standard deviation (\u03C3)</strong> divides by N, while the
           <strong> sample standard deviation (s)</strong> divides by N-1 (Bessel&apos;s correction).
           <strong> Variance</strong> is the square of the standard deviation.
+        </p>
+      </section>
+
+      <section className="mt-8">
+        <h2 className="text-xl font-semibold mb-3">What Is Standard Deviation?</h2>
+        <p className="text-gray-700 mb-4">
+          Standard deviation is a measure of how spread out numbers are in a data set. A low standard deviation means the values tend to cluster close to the average (mean), while a high standard deviation indicates the values are spread over a wider range. Think of it as a way to quantify consistency &mdash; the lower the number, the more consistent your data.
+        </p>
+        <p className="text-gray-700 mb-4">
+          You&apos;ll encounter standard deviation in science, finance, quality control, and academics. A manufacturer might use it to check if products stay within acceptable tolerances. An investor might use it to measure the volatility of a stock&apos;s returns. Teachers use it to understand how test scores are distributed across a class. This calculator gives you both the population and sample versions, along with variance, mean, and other key statistics in one shot.
+        </p>
+      </section>
+
+      <section className="mt-8">
+        <h2 className="text-xl font-semibold mb-3">Frequently Asked Questions</h2>
+
+        <h3 className="text-lg font-medium mt-4 mb-2">What is the difference between population and sample standard deviation?</h3>
+        <p className="text-gray-700 mb-4">
+          Population standard deviation is used when your data set includes every member of the group you&apos;re studying. Sample standard deviation applies when you&apos;re working with a subset of the full population. The sample version divides by N-1 instead of N (Bessel&apos;s correction) to account for the fact that a sample tends to underestimate the true variability.
+        </p>
+
+        <h3 className="text-lg font-medium mt-4 mb-2">When should I use variance instead of standard deviation?</h3>
+        <p className="text-gray-700 mb-4">
+          Variance is simply the standard deviation squared. It&apos;s useful in certain statistical formulas and when comparing variability across data sets. However, standard deviation is generally more intuitive because it&apos;s expressed in the same units as your original data, while variance is in squared units.
+        </p>
+
+        <h3 className="text-lg font-medium mt-4 mb-2">What does a standard deviation of zero mean?</h3>
+        <p className="text-gray-700 mb-4">
+          A standard deviation of zero means every value in your data set is exactly the same. There is no spread or variation at all. For instance, the data set {"{"}5, 5, 5, 5{"}"} has a mean of 5 and a standard deviation of 0.
+        </p>
+
+        <h3 className="text-lg font-medium mt-4 mb-2">How many decimal places does this calculator use?</h3>
+        <p className="text-gray-700 mb-4">
+          Results are rounded to 4 decimal places for readability. This level of precision is more than sufficient for most practical applications, including academic homework, business analysis, and scientific measurements.
+        </p>
+
+        <h3 className="text-lg font-medium mt-4 mb-2">Can I paste data from a spreadsheet?</h3>
+        <p className="text-gray-700 mb-4">
+          Yes. Copy a column of numbers from Excel, Google Sheets, or any spreadsheet and paste it directly into the text area. The calculator accepts numbers separated by commas, spaces, or newlines, so most paste formats will work automatically.
+        </p>
+      </section>
+
+      <section className="mt-8">
+        <h2 className="text-xl font-semibold mb-3">Example Calculation</h2>
+        <p className="text-gray-700 mb-2">
+          <strong>Scenario:</strong> A teacher wants to understand how her students performed on a quiz. The scores are: 72, 85, 90, 68, 95, 78, 82, 88.
+        </p>
+        <p className="text-gray-700 mb-2">
+          <strong>Step 1:</strong> Enter the data: 72, 85, 90, 68, 95, 78, 82, 88.
+        </p>
+        <p className="text-gray-700 mb-2">
+          <strong>Step 2:</strong> The mean is (72 + 85 + 90 + 68 + 95 + 78 + 82 + 88) &divide; 8 = <strong>82.25</strong>.
+        </p>
+        <p className="text-gray-700 mb-2">
+          <strong>Step 3:</strong> The population standard deviation comes out to approximately <strong>8.4779</strong>, meaning most scores fall within about 8.5 points of the average.
+        </p>
+        <p className="text-gray-700">
+          <strong>Interpretation:</strong> A standard deviation of ~8.5 on a quiz scored out of 100 suggests moderate spread. The class performed fairly consistently, with no extreme outliers pulling the average up or down.
         </p>
       </section>
 

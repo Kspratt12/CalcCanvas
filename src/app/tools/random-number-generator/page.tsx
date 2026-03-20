@@ -56,6 +56,49 @@ export default function RandomNumberGeneratorPage() {
 
   return (
     <main className="max-w-4xl mx-auto px-4 py-10">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Are these numbers truly random?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "They are pseudo-random, generated using JavaScript's built-in Math.random() function. This is perfectly suitable for games, drawings, educational exercises, and general-purpose randomization."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Why can't I generate more unique numbers than my range allows?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "If your range is 1 to 10, there are only 10 possible unique values. Asking for 15 unique numbers from that range is mathematically impossible. The tool prevents this when duplicates are disabled."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the Fisher-Yates shuffle algorithm?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Fisher-Yates is a well-known algorithm for generating a random permutation of a list. It walks through the array from the end to the beginning, swapping each element with a randomly chosen earlier element, guaranteeing every possible ordering is equally likely."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I use this for a lottery or raffle?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. Set your range to match your ticket numbers, set the quantity to the number of winners, and turn off duplicates to ensure no ticket is picked twice. Keep in mind these are pseudo-random, not certified for official lottery use."
+                }
+              }
+            ]
+          })
+        }}
+      />
       <h1 className="text-3xl font-bold mb-2">Random Number Generator</h1>
       <p className="text-gray-600 mb-6">
         Generate random numbers within a custom range with options for quantity and duplicate control.
@@ -128,6 +171,64 @@ export default function RandomNumberGeneratorPage() {
         <h2 className="text-xl font-semibold mb-3">How It Works</h2>
         <p className="text-gray-700">
           This tool uses JavaScript&apos;s <code className="bg-gray-100 px-1 rounded">Math.random()</code> function to generate pseudo-random numbers within your specified range. When duplicates are disabled, it uses the Fisher-Yates shuffle algorithm on the complete range and selects the first N values, guaranteeing unique results. Note that without duplicates, the quantity cannot exceed the range size.
+        </p>
+      </section>
+
+      <section className="mt-8">
+        <h2 className="text-xl font-semibold mb-3">What Is a Random Number Generator?</h2>
+        <p className="text-gray-700 mb-4">
+          A random number generator (RNG) produces numbers that lack any predictable pattern. In computing, most RNGs are &quot;pseudo-random&quot; &mdash; they use mathematical algorithms to produce sequences that appear random but are actually determined by an initial seed value. For everyday purposes like games, drawings, and simulations, pseudo-random numbers work perfectly well.
+        </p>
+        <p className="text-gray-700 mb-4">
+          This tool lets you control exactly what kind of random output you need. You set the range (minimum and maximum), decide how many numbers to generate, and choose whether duplicates are allowed. When duplicates are turned off, the tool uses the Fisher-Yates shuffle algorithm to guarantee every number in your result is unique, making it ideal for raffles, lottery picks, and random sampling.
+        </p>
+      </section>
+
+      <section className="mt-8">
+        <h2 className="text-xl font-semibold mb-3">Frequently Asked Questions</h2>
+
+        <h3 className="text-lg font-medium mt-4 mb-2">Are these numbers truly random?</h3>
+        <p className="text-gray-700 mb-4">
+          They are pseudo-random, generated using JavaScript&apos;s built-in Math.random() function. This is perfectly suitable for games, drawings, educational exercises, and general-purpose randomization. For cryptographic or security-sensitive applications, a cryptographically secure random number generator (CSPRNG) would be more appropriate.
+        </p>
+
+        <h3 className="text-lg font-medium mt-4 mb-2">Why can&apos;t I generate more unique numbers than my range allows?</h3>
+        <p className="text-gray-700 mb-4">
+          If your range is 1 to 10, there are only 10 possible unique values. Asking for 15 unique numbers from that range is mathematically impossible. The tool prevents this by requiring your quantity to be less than or equal to the range size when duplicates are disabled.
+        </p>
+
+        <h3 className="text-lg font-medium mt-4 mb-2">What is the Fisher-Yates shuffle algorithm?</h3>
+        <p className="text-gray-700 mb-4">
+          Fisher-Yates is a well-known algorithm for generating a random permutation of a list. It walks through the array from the end to the beginning, swapping each element with a randomly chosen earlier element. This guarantees every possible ordering is equally likely, making it the gold standard for fair shuffling.
+        </p>
+
+        <h3 className="text-lg font-medium mt-4 mb-2">Can I generate decimal numbers?</h3>
+        <p className="text-gray-700 mb-4">
+          This tool generates whole numbers (integers) only. If you need random decimal values, you could generate a large range of integers and then divide by a power of 10 to get the precision you want. For example, generate numbers from 1 to 1000, then divide each by 100 for two decimal places.
+        </p>
+
+        <h3 className="text-lg font-medium mt-4 mb-2">Can I use this for a lottery or raffle?</h3>
+        <p className="text-gray-700 mb-4">
+          Absolutely. Set your range to match your ticket numbers, set the quantity to the number of winners you need, and turn off duplicates to ensure no ticket is picked twice. Click &quot;Generate Numbers&quot; and you have your winners. Just keep in mind these are pseudo-random, not certified for official lottery use.
+        </p>
+      </section>
+
+      <section className="mt-8">
+        <h2 className="text-xl font-semibold mb-3">Example Calculation</h2>
+        <p className="text-gray-700 mb-2">
+          <strong>Scenario:</strong> You&apos;re a teacher and need to randomly assign 5 students to present from a class of 30 students (numbered 1 through 30).
+        </p>
+        <p className="text-gray-700 mb-2">
+          <strong>Step 1:</strong> Set the minimum to 1 and maximum to 30 (matching your student numbers).
+        </p>
+        <p className="text-gray-700 mb-2">
+          <strong>Step 2:</strong> Set &quot;How Many&quot; to 5 and uncheck &quot;Allow duplicates&quot; so no student gets picked twice.
+        </p>
+        <p className="text-gray-700 mb-2">
+          <strong>Step 3:</strong> Click &quot;Generate Numbers.&quot; You might get results like: <strong>7, 22, 3, 18, 29</strong>.
+        </p>
+        <p className="text-gray-700">
+          Each of the 30 students had an equal chance of being selected, and no student number appears more than once. Use &quot;Copy All&quot; to save the list for your records.
         </p>
       </section>
 
