@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import AdPlacement from "@/components/AdPlacement";
 import "./globals.css";
 
 const inter = Inter({
@@ -14,19 +13,19 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://calccanvas.com"),
   title: "CalcCanvas — Free Online Calculators & Tools",
   description:
-    "47 free online calculators and tools for finance, health, math, text, and development. Fast, accurate, and easy to use — no sign-up required.",
+    "57 free online calculators and tools for finance, health, math, text, and development. Fast, accurate, and easy to use — no sign-up required.",
   manifest: "/manifest.json",
   openGraph: {
     type: "website",
     siteName: "CalcCanvas",
     title: "CalcCanvas — Free Online Calculators & Tools",
-    description: "47 free online calculators and tools for finance, health, math, text, and development.",
+    description: "57 free online calculators and tools for finance, health, math, text, and development.",
     url: "https://calccanvas.com",
   },
   twitter: {
     card: "summary",
     title: "CalcCanvas — Free Online Calculators & Tools",
-    description: "47 free online calculators and tools. Fast, accurate, and private.",
+    description: "57 free online calculators and tools. Fast, accurate, and private.",
   },
 };
 
@@ -46,7 +45,6 @@ export default function RootLayout({
       </head>
       <body className="flex min-h-full flex-col font-sans">
         <Header />
-        <AdPlacement slot="header-leaderboard" format="leaderboard" />
         <main className="flex-1">{children}</main>
         <Footer />
       </body>

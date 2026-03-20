@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import AdPlacement from '@/components/AdPlacement';
 import Link from 'next/link';
 
 const jsonLd = {
@@ -161,7 +160,6 @@ export default function LoanPayoffCalculator() {
         pay. Add extra payments to see how much time and money you can save.
       </p>
 
-      <AdPlacement format="leaderboard" />
 
       <div className="mt-8 space-y-4">
         <div>
@@ -285,12 +283,7 @@ export default function LoanPayoffCalculator() {
           )}
         </div>
       )}
-
-      <div className="mt-8">
-        <AdPlacement format="rectangle" />
-      </div>
-
-      <section className="mt-10">
+<section className="mt-10">
         <h2 className="text-xl font-semibold text-gray-900 mb-3">
           How to use this calculator
         </h2>

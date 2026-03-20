@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import AdPlacement from '@/components/AdPlacement';
 import Link from 'next/link';
 
 const jsonLd = {
@@ -182,7 +181,6 @@ export default function DueDateCalculator() {
         Estimate your pregnancy due date, current week, and trimester from your last menstrual period or conception date.
       </p>
 
-      <AdPlacement format="leaderboard" />
 
       <div className="mt-8 space-y-4">
         <div>
@@ -306,12 +304,7 @@ export default function DueDateCalculator() {
           </div>
         </>
       )}
-
-      <div className="mt-8">
-        <AdPlacement format="rectangle" />
-      </div>
-
-      <section className="mt-10">
+<section className="mt-10">
         <h2 className="text-xl font-semibold text-gray-900 mb-3">
           What Is a Due Date Calculator?
         </h2>

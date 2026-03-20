@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import AdPlacement from '@/components/AdPlacement';
 import Link from 'next/link';
 
 const jsonLd = {
@@ -218,7 +217,6 @@ export default function NetWorthCalculator() {
         liabilities. Add or remove items to match your situation.
       </p>
 
-      <AdPlacement format="leaderboard" />
 
       <div className="mt-8 space-y-8">
         {renderSection('Assets', assets, setAssets)}
@@ -269,12 +267,7 @@ export default function NetWorthCalculator() {
           </div>
         </div>
       )}
-
-      <div className="mt-8">
-        <AdPlacement format="rectangle" />
-      </div>
-
-      <section className="mt-10">
+<section className="mt-10">
         <h2 className="text-xl font-semibold text-gray-900 mb-3">
           How to use this calculator
         </h2>

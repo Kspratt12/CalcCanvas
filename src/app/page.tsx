@@ -1,5 +1,4 @@
 import ToolCard from "@/components/ToolCard";
-import AdPlacement from "@/components/AdPlacement";
 import SearchBar from "@/components/SearchBar";
 import Calculator from "@/components/Calculator";
 import type { Metadata } from "next";
@@ -7,7 +6,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "CalcCanvas — Free Online Calculator | Finance, Health, Math Tools",
   description:
-    "Free online calculator with 47 tools for finance, health, math, text, and development. Use our scientific calculator, mortgage calculator, BMI calculator, and more — no sign-up required.",
+    "Free online calculator with 57 tools for finance, health, math, text, and development. Use our scientific calculator, mortgage calculator, BMI calculator, and more — no sign-up required.",
   keywords: "online calculator, free calculator, scientific calculator, mortgage calculator, BMI calculator, percentage calculator, word counter, JSON formatter, unit converter, compound interest calculator",
 };
 
@@ -41,11 +40,19 @@ const tools: Tool[] = [
   { title: "Loan Payoff Calculator", description: "Find out how long it takes to pay off a loan with extra payments.", href: "/tools/loan-payoff-calculator", icon: "\uD83C\uDFE6", category: "Financial Calculators" },
   { title: "Auto Loan Calculator", description: "Estimate monthly car payments and total interest costs.", href: "/tools/auto-loan-calculator", icon: "\uD83D\uDE97", category: "Financial Calculators" },
   { title: "Retirement Calculator", description: "Plan your retirement savings and see if you are on track.", href: "/tools/retirement-calculator", icon: "\uD83C\uDFD6\uFE0F", category: "Financial Calculators" },
+  { title: "401k Calculator", description: "Estimate your 401k balance at retirement with employer match and compound growth.", href: "/tools/401k-calculator", icon: "\uD83D\uDCBC", category: "Financial Calculators" },
   { title: "Net Worth Calculator", description: "Calculate your total net worth by listing assets and liabilities.", href: "/tools/net-worth-calculator", icon: "\uD83D\uDCCA", category: "Financial Calculators" },
   { title: "Sales Tax Calculator", description: "Calculate sales tax and total price for any US state.", href: "/tools/sales-tax-calculator", icon: "\uD83D\uDCB2", category: "Financial Calculators" },
   { title: "Income Tax Calculator", description: "Estimate your 2024 federal income tax and take-home pay.", href: "/tools/income-tax-calculator", icon: "\uD83C\uDFDB\uFE0F", category: "Financial Calculators" },
+  { title: "Paycheck Calculator", description: "Estimate take-home pay after taxes, Social Security, Medicare, and deductions.", href: "/tools/paycheck-calculator", icon: "\uD83D\uDCB3", category: "Financial Calculators" },
   { title: "Investment Calculator", description: "Calculate future value of investments with monthly contributions.", href: "/tools/investment-calculator", icon: "\uD83D\uDCB9", category: "Financial Calculators" },
   { title: "Inflation Calculator", description: "See how inflation affects purchasing power over time.", href: "/tools/inflation-calculator", icon: "\uD83D\uDCC0", category: "Financial Calculators" },
+  { title: "CD Calculator", description: "Calculate certificate of deposit interest and maturity value.", href: "/tools/cd-calculator", icon: "\uD83D\uDCBD", category: "Financial Calculators" },
+  { title: "Roth IRA Calculator", description: "Estimate tax-free Roth IRA growth and retirement income.", href: "/tools/roth-ira-calculator", icon: "\uD83C\uDF1F", category: "Financial Calculators" },
+  { title: "Savings Calculator", description: "Estimate how your savings grow with regular deposits and compound interest.", href: "/tools/savings-calculator", icon: "\uD83D\uDCB0", category: "Financial Calculators" },
+
+  { title: "Loan Calculator", description: "Calculate monthly payments, total interest, and amortization for any loan.", href: "/tools/loan-calculator", icon: "\uD83D\uDCB3", category: "Financial Calculators" },
+  { title: "Debt to Income Ratio Calculator", description: "Calculate your DTI ratio and check if you qualify for a mortgage.", href: "/tools/debt-to-income-calculator", icon: "\uD83D\uDCCB", category: "Financial Calculators" },
 
   // Health & Fitness
   { title: "BMI Calculator", description: "Calculate your Body Mass Index and see where you stand.", href: "/tools/bmi-calculator", icon: "\u2696\uFE0F", category: "Health & Fitness" },
@@ -54,6 +61,9 @@ const tools: Tool[] = [
   { title: "Ideal Weight Calculator", description: "Find your ideal weight range based on height and frame.", href: "/tools/ideal-weight-calculator", icon: "\uD83C\uDFAF", category: "Health & Fitness" },
   { title: "BMR Calculator", description: "Calculate your Basal Metabolic Rate to understand resting calorie burn.", href: "/tools/bmr-calculator", icon: "\uD83D\uDD25", category: "Health & Fitness" },
   { title: "Pace Calculator", description: "Calculate running or walking pace, time, and distance.", href: "/tools/pace-calculator", icon: "\uD83C\uDFC3", category: "Health & Fitness" },
+  { title: "Macro Calculator", description: "Calculate your ideal daily protein, carbs, and fat intake.", href: "/tools/macro-calculator", icon: "\uD83E\uDD69", category: "Health & Fitness" },
+  { title: "TDEE Calculator", description: "Calculate your Total Daily Energy Expenditure based on activity level.", href: "/tools/tdee-calculator", icon: "\u26A1", category: "Health & Fitness" },
+  { title: "Calorie Deficit Calculator", description: "Calculate how many calories to eat daily to reach your weight loss goal.", href: "/tools/calorie-deficit-calculator", icon: "\uD83D\uDCC9", category: "Health & Fitness" },
   { title: "Due Date Calculator", description: "Calculate your estimated due date and pregnancy timeline.", href: "/tools/due-date-calculator", icon: "\uD83D\uDC76", category: "Health & Fitness" },
 
   // Math
@@ -110,7 +120,7 @@ export default function Home() {
                 Free Online Calculator
               </h1>
               <p className="mt-4 text-lg text-slate-500">
-                Use our calculator below or explore 47 specialized tools for
+                Use our calculator below or explore 57 specialized tools for
                 finance, health, math, text, and development. Fast, accurate, and
                 private — all calculations happen in your browser.
               </p>
@@ -139,7 +149,7 @@ export default function Home() {
       <section className="border-y border-slate-200 bg-white py-6">
         <div className="mx-auto max-w-5xl px-4 flex flex-wrap items-center justify-center gap-8 sm:gap-12 text-center">
           <div>
-            <div className="text-2xl font-bold text-slate-900">47+</div>
+            <div className="text-2xl font-bold text-slate-900">57+</div>
             <div className="text-xs text-slate-500 mt-1">Free Tools</div>
           </div>
           <div className="h-8 w-px bg-slate-200 hidden sm:block" />
@@ -215,13 +225,6 @@ export default function Home() {
                 ))}
               </div>
 
-              {/* Ad between sections (skip after last) */}
-              {i < categories.length - 1 && (
-                <AdPlacement
-                  slot={`home-${cat.slug}`}
-                  format="rectangle"
-                />
-              )}
             </div>
           );
         })}
@@ -267,7 +270,7 @@ export default function Home() {
               </p>
             </div>
             <div>
-              <h3 className="text-lg font-semibold text-slate-900">47 Tools in One Place</h3>
+              <h3 className="text-lg font-semibold text-slate-900">57 Tools in One Place</h3>
               <p className="mt-2 text-sm leading-6 text-slate-500">
                 CalcCanvas covers six categories of tools that people actually
                 use every day — from mortgage payments and retirement planning to

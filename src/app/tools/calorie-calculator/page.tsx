@@ -8,6 +8,7 @@ const RELATED_TOOLS = [
   { name: "BMR Calculator", href: "/tools/bmr-calculator" },
   { name: "Body Fat Calculator", href: "/tools/body-fat-calculator" },
   { name: "Ideal Weight Calculator", href: "/tools/ideal-weight-calculator" },
+  { name: "Macro Calculator", href: "/tools/macro-calculator" },
 ];
 
 const ACTIVITY_LEVELS = [

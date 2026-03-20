@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import AdPlacement from '@/components/AdPlacement';
 import Link from 'next/link';
 
 const jsonLd = {
@@ -120,7 +119,6 @@ export default function SalesTaxCalculator() {
         Calculate sales tax amount and total price for any purchase. Select a common US state rate or enter your own.
       </p>
 
-      <AdPlacement format="leaderboard" />
 
       <div className="mt-8 space-y-4">
         <div>
@@ -205,12 +203,7 @@ export default function SalesTaxCalculator() {
           </div>
         </div>
       )}
-
-      <div className="mt-8">
-        <AdPlacement format="rectangle" />
-      </div>
-
-      <section className="mt-10">
+<section className="mt-10">
         <h2 className="text-xl font-semibold text-gray-900 mb-3">
           What Is a Sales Tax Calculator?
         </h2>

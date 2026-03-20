@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import AdPlacement from '@/components/AdPlacement';
 import Link from 'next/link';
 
 const jsonLd = {
@@ -170,7 +169,6 @@ export default function GPACalculator() {
         Calculate your weighted GPA on a 4.0 scale. Add your courses, select grades, and enter credit hours.
       </p>
 
-      <AdPlacement format="leaderboard" />
 
       <div className="mt-8 space-y-3">
         {courses.map((course, index) => (
@@ -275,12 +273,7 @@ export default function GPACalculator() {
           </div>
         </div>
       )}
-
-      <div className="mt-8">
-        <AdPlacement format="rectangle" />
-      </div>
-
-      <section className="mt-10">
+<section className="mt-10">
         <h2 className="text-xl font-semibold text-gray-900 mb-3">
           What Is a GPA Calculator?
         </h2>
