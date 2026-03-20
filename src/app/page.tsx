@@ -7,7 +7,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "CalcCanvas — Free Online Calculator | Finance, Health, Math Tools",
   description:
-    "Free online calculator with 37 tools for finance, health, math, text, and development. Use our scientific calculator, mortgage calculator, BMI calculator, and more — no sign-up required.",
+    "Free online calculator with 47 tools for finance, health, math, text, and development. Use our scientific calculator, mortgage calculator, BMI calculator, and more — no sign-up required.",
   keywords: "online calculator, free calculator, scientific calculator, mortgage calculator, BMI calculator, percentage calculator, word counter, JSON formatter, unit converter, compound interest calculator",
 };
 
@@ -42,6 +42,10 @@ const tools: Tool[] = [
   { title: "Auto Loan Calculator", description: "Estimate monthly car payments and total interest costs.", href: "/tools/auto-loan-calculator", icon: "\uD83D\uDE97", category: "Financial Calculators" },
   { title: "Retirement Calculator", description: "Plan your retirement savings and see if you are on track.", href: "/tools/retirement-calculator", icon: "\uD83C\uDFD6\uFE0F", category: "Financial Calculators" },
   { title: "Net Worth Calculator", description: "Calculate your total net worth by listing assets and liabilities.", href: "/tools/net-worth-calculator", icon: "\uD83D\uDCCA", category: "Financial Calculators" },
+  { title: "Sales Tax Calculator", description: "Calculate sales tax and total price for any US state.", href: "/tools/sales-tax-calculator", icon: "\uD83D\uDCB2", category: "Financial Calculators" },
+  { title: "Income Tax Calculator", description: "Estimate your 2024 federal income tax and take-home pay.", href: "/tools/income-tax-calculator", icon: "\uD83C\uDFDB\uFE0F", category: "Financial Calculators" },
+  { title: "Investment Calculator", description: "Calculate future value of investments with monthly contributions.", href: "/tools/investment-calculator", icon: "\uD83D\uDCB9", category: "Financial Calculators" },
+  { title: "Inflation Calculator", description: "See how inflation affects purchasing power over time.", href: "/tools/inflation-calculator", icon: "\uD83D\uDCC0", category: "Financial Calculators" },
 
   // Health & Fitness
   { title: "BMI Calculator", description: "Calculate your Body Mass Index and see where you stand.", href: "/tools/bmi-calculator", icon: "\u2696\uFE0F", category: "Health & Fitness" },
@@ -50,6 +54,7 @@ const tools: Tool[] = [
   { title: "Ideal Weight Calculator", description: "Find your ideal weight range based on height and frame.", href: "/tools/ideal-weight-calculator", icon: "\uD83C\uDFAF", category: "Health & Fitness" },
   { title: "BMR Calculator", description: "Calculate your Basal Metabolic Rate to understand resting calorie burn.", href: "/tools/bmr-calculator", icon: "\uD83D\uDD25", category: "Health & Fitness" },
   { title: "Pace Calculator", description: "Calculate running or walking pace, time, and distance.", href: "/tools/pace-calculator", icon: "\uD83C\uDFC3", category: "Health & Fitness" },
+  { title: "Due Date Calculator", description: "Calculate your estimated due date and pregnancy timeline.", href: "/tools/due-date-calculator", icon: "\uD83D\uDC76", category: "Health & Fitness" },
 
   // Math
   { title: "Percentage Calculator", description: "Calculate percentages, percentage change, and more.", href: "/tools/percentage-calculator", icon: "\uFF05", category: "Math Calculators" },
@@ -58,6 +63,9 @@ const tools: Tool[] = [
   { title: "Standard Deviation Calculator", description: "Calculate standard deviation, variance, and mean of a data set.", href: "/tools/standard-deviation-calculator", icon: "\uD83D\uDCC9", category: "Math Calculators" },
   { title: "Average Calculator", description: "Find the mean, median, and mode of a set of numbers.", href: "/tools/average-calculator", icon: "\u2795", category: "Math Calculators" },
   { title: "Square Root Calculator", description: "Calculate square roots instantly for any number.", href: "/tools/square-root-calculator", icon: "\u221A", category: "Math Calculators" },
+  { title: "Scientific Calculator", description: "Full scientific calculator with trig, logs, and advanced functions.", href: "/tools/scientific-calculator", icon: "\uD83E\uDDEE", category: "Math Calculators" },
+  { title: "GPA Calculator", description: "Calculate your weighted GPA on a 4.0 scale.", href: "/tools/gpa-calculator", icon: "\uD83C\uDF93", category: "Math Calculators" },
+  { title: "Grade Calculator", description: "Calculate weighted grades and what you need on your final.", href: "/tools/grade-calculator", icon: "\uD83D\uDCDD", category: "Math Calculators" },
 
   // Text Tools
   { title: "Word Counter", description: "Count words, characters, sentences, and paragraphs in your text.", href: "/tools/word-counter", icon: "\uD83D\uDCDD", category: "Text Tools" },
@@ -81,6 +89,8 @@ const tools: Tool[] = [
   { title: "Countdown Timer", description: "Set a countdown to any future date or event.", href: "/tools/countdown-timer", icon: "\u23F3", category: "Everyday Tools" },
   { title: "QR Code Generator", description: "Create QR codes for URLs, text, and contact info.", href: "/tools/qr-code-generator", icon: "\uD83D\uDCF1", category: "Everyday Tools" },
   { title: "Unit Converter", description: "Convert between units of length, weight, temperature, and more.", href: "/tools/unit-converter", icon: "\uD83D\uDD04", category: "Everyday Tools" },
+  { title: "Time Calculator", description: "Add or subtract time, or find the duration between two times.", href: "/tools/time-calculator", icon: "\u23F0", category: "Everyday Tools" },
+  { title: "Hours Calculator", description: "Calculate hours worked and pay from your weekly timesheet.", href: "/tools/hours-calculator", icon: "\uD83D\uDD52", category: "Everyday Tools" },
 ];
 
 /* ------------------------------------------------------------------ */
@@ -100,7 +110,7 @@ export default function Home() {
                 Free Online Calculator
               </h1>
               <p className="mt-4 text-lg text-slate-500">
-                Use our calculator below or explore 37 specialized tools for
+                Use our calculator below or explore 47 specialized tools for
                 finance, health, math, text, and development. Fast, accurate, and
                 private — all calculations happen in your browser.
               </p>
@@ -129,7 +139,7 @@ export default function Home() {
       <section className="border-y border-slate-200 bg-white py-6">
         <div className="mx-auto max-w-5xl px-4 flex flex-wrap items-center justify-center gap-8 sm:gap-12 text-center">
           <div>
-            <div className="text-2xl font-bold text-slate-900">37+</div>
+            <div className="text-2xl font-bold text-slate-900">47+</div>
             <div className="text-xs text-slate-500 mt-1">Free Tools</div>
           </div>
           <div className="h-8 w-px bg-slate-200 hidden sm:block" />

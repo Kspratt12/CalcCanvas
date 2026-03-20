@@ -41,6 +41,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "unit-converter",
     "uuid-generator",
     "word-counter",
+    "sales-tax-calculator",
+    "gpa-calculator",
+    "grade-calculator",
+    "due-date-calculator",
+    "time-calculator",
+    "hours-calculator",
+    "scientific-calculator",
+    "inflation-calculator",
+    "investment-calculator",
+    "income-tax-calculator",
   ];
 
   const toolPages: MetadataRoute.Sitemap = toolSlugs.map((slug) => ({
