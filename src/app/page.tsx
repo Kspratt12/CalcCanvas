@@ -186,13 +186,13 @@ export default function Home() {
           const catTools = tools.filter((t) => t.category === cat.name);
           return (
             <div key={cat.slug} id={cat.slug}>
-              <div className="mb-6 mt-12 first:mt-0">
+              <div className="mb-8 mt-16 first:mt-0 border-b border-slate-100 pb-2">
                 <h2 className="text-2xl font-bold text-slate-900">
                   {cat.name}
                 </h2>
                 <p className="mt-1 text-sm text-slate-500">{cat.desc}</p>
               </div>
-              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+              <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                 {catTools.map((tool) => (
                   <ToolCard
                     key={tool.href}
