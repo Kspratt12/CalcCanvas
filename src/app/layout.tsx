@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://calccanvas.com"),
   title: "CalcCanvas — Free Online Calculators & Tools",
   description:
-    "Free online calculators and tools for finance, health, math, text, and development. Fast, accurate, and easy to use — no sign-up required.",
+    "47 free online calculators and tools for finance, health, math, text, and development. Fast, accurate, and easy to use — no sign-up required.",
   manifest: "/manifest.json",
   icons: {
     icon: [
