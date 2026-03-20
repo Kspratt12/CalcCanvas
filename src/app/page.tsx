@@ -1,13 +1,14 @@
 import ToolCard from "@/components/ToolCard";
 import AdPlacement from "@/components/AdPlacement";
 import SearchBar from "@/components/SearchBar";
+import Calculator from "@/components/Calculator";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "CalcCanvas — Free Online Calculators & Tools for Finance, Health, Math & More",
+  title: "CalcCanvas — Free Online Calculator | Finance, Health, Math Tools",
   description:
-    "37 free online calculators and tools for finance, health, math, text, and development. Fast, accurate, mobile-friendly — no sign-up required. Try our mortgage calculator, BMI calculator, JSON formatter, and more.",
-  keywords: "free online calculator, mortgage calculator, BMI calculator, percentage calculator, word counter, JSON formatter, unit converter, compound interest calculator",
+    "Free online calculator with 37 tools for finance, health, math, text, and development. Use our scientific calculator, mortgage calculator, BMI calculator, and more — no sign-up required.",
+  keywords: "online calculator, free calculator, scientific calculator, mortgage calculator, BMI calculator, percentage calculator, word counter, JSON formatter, unit converter, compound interest calculator",
 };
 
 /* ------------------------------------------------------------------ */
@@ -23,36 +24,12 @@ interface Tool {
 }
 
 const categories = [
-  {
-    name: "Financial Calculators",
-    emoji: "\uD83D\uDCB0",
-    slug: "financial",
-  },
-  {
-    name: "Health & Fitness",
-    emoji: "\uD83D\uDCAA",
-    slug: "health",
-  },
-  {
-    name: "Math Calculators",
-    emoji: "\uD83D\uDCD0",
-    slug: "math",
-  },
-  {
-    name: "Text Tools",
-    emoji: "\u270F\uFE0F",
-    slug: "text",
-  },
-  {
-    name: "Developer Tools",
-    emoji: "\uD83D\uDCBB",
-    slug: "developer",
-  },
-  {
-    name: "Everyday Tools",
-    emoji: "\uD83D\uDD27",
-    slug: "everyday",
-  },
+  { name: "Financial Calculators", slug: "financial", desc: "Mortgage, loans, interest, retirement, and salary tools" },
+  { name: "Health & Fitness", slug: "health", desc: "BMI, calories, body fat, ideal weight, and pace tools" },
+  { name: "Math Calculators", slug: "math", desc: "Percentages, fractions, averages, and statistics tools" },
+  { name: "Text Tools", slug: "text", desc: "Word counter, case converter, lorem ipsum, and slug tools" },
+  { name: "Developer Tools", slug: "developer", desc: "JSON formatter, Base64, passwords, UUIDs, and hashes" },
+  { name: "Everyday Tools", slug: "everyday", desc: "Age, date, countdown, QR codes, and unit conversion" },
 ];
 
 const tools: Tool[] = [
@@ -113,18 +90,37 @@ const tools: Tool[] = [
 export default function Home() {
   return (
     <div>
-      {/* Hero */}
-      <section className="bg-white py-16 text-center">
-        <div className="mx-auto max-w-3xl px-4">
-          <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
-            Free Online Calculators &amp; Tools
-          </h1>
-          <p className="mt-4 text-lg text-slate-500">
-            37 fast, accurate, and easy-to-use calculators and tools for finance,
-            health, math, text, and development. No sign-up required.
-          </p>
-          <div className="mt-8">
-            <SearchBar tools={tools} />
+      {/* Hero with Calculator */}
+      <section className="bg-gradient-to-b from-white to-slate-50 py-12 sm:py-16">
+        <div className="mx-auto max-w-6xl px-4">
+          <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-start">
+            {/* Left: Title + Search */}
+            <div className="text-center lg:text-left lg:pt-8">
+              <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
+                Free Online Calculator
+              </h1>
+              <p className="mt-4 text-lg text-slate-500">
+                Use our calculator below or explore 37 specialized tools for
+                finance, health, math, text, and development. Fast, accurate, and
+                private — all calculations happen in your browser.
+              </p>
+              <div className="mt-8 max-w-xl mx-auto lg:mx-0">
+                <SearchBar tools={tools} />
+              </div>
+              <div className="mt-6 flex flex-wrap gap-3 justify-center lg:justify-start">
+                <a href="#financial" className="px-4 py-2 bg-white border border-slate-200 rounded-lg text-sm font-medium text-slate-700 hover:border-[#2563eb] hover:text-[#2563eb] transition">Financial</a>
+                <a href="#health" className="px-4 py-2 bg-white border border-slate-200 rounded-lg text-sm font-medium text-slate-700 hover:border-[#2563eb] hover:text-[#2563eb] transition">Health</a>
+                <a href="#math" className="px-4 py-2 bg-white border border-slate-200 rounded-lg text-sm font-medium text-slate-700 hover:border-[#2563eb] hover:text-[#2563eb] transition">Math</a>
+                <a href="#text" className="px-4 py-2 bg-white border border-slate-200 rounded-lg text-sm font-medium text-slate-700 hover:border-[#2563eb] hover:text-[#2563eb] transition">Text</a>
+                <a href="#developer" className="px-4 py-2 bg-white border border-slate-200 rounded-lg text-sm font-medium text-slate-700 hover:border-[#2563eb] hover:text-[#2563eb] transition">Developer</a>
+                <a href="#everyday" className="px-4 py-2 bg-white border border-slate-200 rounded-lg text-sm font-medium text-slate-700 hover:border-[#2563eb] hover:text-[#2563eb] transition">Everyday</a>
+              </div>
+            </div>
+
+            {/* Right: Calculator Widget */}
+            <div className="bg-white border border-slate-200 rounded-2xl shadow-lg p-5 sm:p-6">
+              <Calculator />
+            </div>
           </div>
         </div>
       </section>
@@ -135,11 +131,11 @@ export default function Home() {
           const catTools = tools.filter((t) => t.category === cat.name);
           return (
             <div key={cat.slug} id={cat.slug}>
-              <div className="mb-6 mt-10 first:mt-0">
+              <div className="mb-6 mt-12 first:mt-0">
                 <h2 className="text-2xl font-bold text-slate-900">
-                  <span className="mr-2">{cat.emoji}</span>
                   {cat.name}
                 </h2>
+                <p className="mt-1 text-sm text-slate-500">{cat.desc}</p>
               </div>
               <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                 {catTools.map((tool) => (
