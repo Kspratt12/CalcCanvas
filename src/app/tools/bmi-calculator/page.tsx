@@ -292,6 +292,144 @@ export default function BmiCalculatorPage() {
       </section>
 
       <section className="mt-8">
+        <h2 className="text-xl font-semibold mb-3">BMI Categories Explained</h2>
+        <p className="text-gray-700 mb-4">
+          While most people are familiar with the four broad BMI categories, the World Health Organization actually breaks BMI into seven distinct classifications. Each category carries different health implications, and understanding where you fall can help you have a more informed conversation with your doctor.
+        </p>
+        <div className="grid grid-cols-1 gap-2 mb-4">
+          <div className="flex items-center justify-between border border-purple-200 bg-purple-50 rounded-lg px-4 py-3">
+            <span className="font-medium text-purple-800">Severely Underweight</span>
+            <span className="text-purple-700 font-semibold">Below 16.0</span>
+          </div>
+          <div className="flex items-center justify-between border border-blue-200 bg-blue-50 rounded-lg px-4 py-3">
+            <span className="font-medium text-blue-800">Underweight</span>
+            <span className="text-blue-700 font-semibold">16.0 – 18.4</span>
+          </div>
+          <div className="flex items-center justify-between border border-green-200 bg-green-50 rounded-lg px-4 py-3">
+            <span className="font-medium text-green-800">Normal Weight</span>
+            <span className="text-green-700 font-semibold">18.5 – 24.9</span>
+          </div>
+          <div className="flex items-center justify-between border border-yellow-200 bg-yellow-50 rounded-lg px-4 py-3">
+            <span className="font-medium text-yellow-800">Overweight</span>
+            <span className="text-yellow-700 font-semibold">25.0 – 29.9</span>
+          </div>
+          <div className="flex items-center justify-between border border-orange-200 bg-orange-50 rounded-lg px-4 py-3">
+            <span className="font-medium text-orange-800">Obese Class I</span>
+            <span className="text-orange-700 font-semibold">30.0 – 34.9</span>
+          </div>
+          <div className="flex items-center justify-between border border-red-200 bg-red-50 rounded-lg px-4 py-3">
+            <span className="font-medium text-red-800">Obese Class II</span>
+            <span className="text-red-700 font-semibold">35.0 – 39.9</span>
+          </div>
+          <div className="flex items-center justify-between border border-red-300 bg-red-100 rounded-lg px-4 py-3">
+            <span className="font-medium text-red-900">Obese Class III</span>
+            <span className="text-red-800 font-semibold">40.0 and above</span>
+          </div>
+        </div>
+        <p className="text-gray-700 mb-4">
+          People in the <strong>severely underweight</strong> range face elevated risks of malnutrition, weakened immune function, and bone loss. The <strong>underweight</strong> category still warrants attention, as it can signal inadequate nutrition or an underlying medical condition. The <strong>normal weight</strong> range is associated with the lowest overall risk of chronic disease and the best long-term health outcomes.
+        </p>
+        <p className="text-gray-700 mb-4">
+          On the higher end, <strong>overweight</strong> individuals have a moderately increased risk of developing conditions like type 2 diabetes, high blood pressure, and sleep apnea. <strong>Obese Class I</strong> carries a higher risk, while <strong>Class II</strong> and <strong>Class III</strong> (sometimes called morbid obesity) are associated with significantly elevated risks of cardiovascular disease, joint problems, and reduced life expectancy. If your BMI places you in any of these higher categories, working with a healthcare provider to develop a personalized plan is a smart first step.
+        </p>
+      </section>
+
+      <section className="mt-8">
+        <h2 className="text-xl font-semibold mb-3">BMI Chart by Height and Weight</h2>
+        <p className="text-gray-700 mb-4">
+          The table below shows approximate BMI values for common height and weight combinations. Find your height on the left, then scan across to find the weight closest to yours. This gives you a quick reference without needing to plug numbers into the calculator every time.
+        </p>
+        <div className="overflow-x-auto mb-4">
+          <table className="w-full text-sm border-collapse">
+            <thead>
+              <tr className="bg-gray-100">
+                <th className="border border-gray-300 px-3 py-2 text-left text-gray-700">Height</th>
+                <th className="border border-gray-300 px-3 py-2 text-center text-gray-700">120 lbs</th>
+                <th className="border border-gray-300 px-3 py-2 text-center text-gray-700">140 lbs</th>
+                <th className="border border-gray-300 px-3 py-2 text-center text-gray-700">160 lbs</th>
+                <th className="border border-gray-300 px-3 py-2 text-center text-gray-700">180 lbs</th>
+                <th className="border border-gray-300 px-3 py-2 text-center text-gray-700">200 lbs</th>
+                <th className="border border-gray-300 px-3 py-2 text-center text-gray-700">220 lbs</th>
+                <th className="border border-gray-300 px-3 py-2 text-center text-gray-700">250 lbs</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td className="border border-gray-300 px-3 py-2 font-medium">5&apos;0&quot;</td><td className="border border-gray-300 px-3 py-2 text-center text-green-700">23.4</td><td className="border border-gray-300 px-3 py-2 text-center text-yellow-700">27.3</td><td className="border border-gray-300 px-3 py-2 text-center text-orange-700">31.2</td><td className="border border-gray-300 px-3 py-2 text-center text-red-700">35.2</td><td className="border border-gray-300 px-3 py-2 text-center text-red-700">39.1</td><td className="border border-gray-300 px-3 py-2 text-center text-red-700">43.0</td><td className="border border-gray-300 px-3 py-2 text-center text-red-700">48.8</td></tr>
+              <tr className="bg-gray-50"><td className="border border-gray-300 px-3 py-2 font-medium">5&apos;2&quot;</td><td className="border border-gray-300 px-3 py-2 text-center text-green-700">21.9</td><td className="border border-gray-300 px-3 py-2 text-center text-yellow-700">25.6</td><td className="border border-gray-300 px-3 py-2 text-center text-yellow-700">29.3</td><td className="border border-gray-300 px-3 py-2 text-center text-orange-700">32.9</td><td className="border border-gray-300 px-3 py-2 text-center text-red-700">36.6</td><td className="border border-gray-300 px-3 py-2 text-center text-red-700">40.3</td><td className="border border-gray-300 px-3 py-2 text-center text-red-700">45.7</td></tr>
+              <tr><td className="border border-gray-300 px-3 py-2 font-medium">5&apos;4&quot;</td><td className="border border-gray-300 px-3 py-2 text-center text-green-700">20.6</td><td className="border border-gray-300 px-3 py-2 text-center text-green-700">24.0</td><td className="border border-gray-300 px-3 py-2 text-center text-yellow-700">27.5</td><td className="border border-gray-300 px-3 py-2 text-center text-orange-700">30.9</td><td className="border border-gray-300 px-3 py-2 text-center text-orange-700">34.3</td><td className="border border-gray-300 px-3 py-2 text-center text-red-700">37.8</td><td className="border border-gray-300 px-3 py-2 text-center text-red-700">42.9</td></tr>
+              <tr className="bg-gray-50"><td className="border border-gray-300 px-3 py-2 font-medium">5&apos;6&quot;</td><td className="border border-gray-300 px-3 py-2 text-center text-green-700">19.4</td><td className="border border-gray-300 px-3 py-2 text-center text-green-700">22.6</td><td className="border border-gray-300 px-3 py-2 text-center text-yellow-700">25.8</td><td className="border border-gray-300 px-3 py-2 text-center text-yellow-700">29.1</td><td className="border border-gray-300 px-3 py-2 text-center text-orange-700">32.3</td><td className="border border-gray-300 px-3 py-2 text-center text-orange-700">35.5</td><td className="border border-gray-300 px-3 py-2 text-center text-red-700">40.4</td></tr>
+              <tr><td className="border border-gray-300 px-3 py-2 font-medium">5&apos;8&quot;</td><td className="border border-gray-300 px-3 py-2 text-center text-green-700">18.2</td><td className="border border-gray-300 px-3 py-2 text-center text-green-700">21.3</td><td className="border border-gray-300 px-3 py-2 text-center text-green-700">24.3</td><td className="border border-gray-300 px-3 py-2 text-center text-yellow-700">27.4</td><td className="border border-gray-300 px-3 py-2 text-center text-orange-700">30.4</td><td className="border border-gray-300 px-3 py-2 text-center text-orange-700">33.4</td><td className="border border-gray-300 px-3 py-2 text-center text-red-700">38.0</td></tr>
+              <tr className="bg-gray-50"><td className="border border-gray-300 px-3 py-2 font-medium">5&apos;10&quot;</td><td className="border border-gray-300 px-3 py-2 text-center text-blue-700">17.2</td><td className="border border-gray-300 px-3 py-2 text-center text-green-700">20.1</td><td className="border border-gray-300 px-3 py-2 text-center text-green-700">23.0</td><td className="border border-gray-300 px-3 py-2 text-center text-yellow-700">25.8</td><td className="border border-gray-300 px-3 py-2 text-center text-yellow-700">28.7</td><td className="border border-gray-300 px-3 py-2 text-center text-orange-700">31.6</td><td className="border border-gray-300 px-3 py-2 text-center text-orange-700">35.9</td></tr>
+              <tr><td className="border border-gray-300 px-3 py-2 font-medium">6&apos;0&quot;</td><td className="border border-gray-300 px-3 py-2 text-center text-blue-700">16.3</td><td className="border border-gray-300 px-3 py-2 text-center text-green-700">19.0</td><td className="border border-gray-300 px-3 py-2 text-center text-green-700">21.7</td><td className="border border-gray-300 px-3 py-2 text-center text-green-700">24.4</td><td className="border border-gray-300 px-3 py-2 text-center text-yellow-700">27.1</td><td className="border border-gray-300 px-3 py-2 text-center text-yellow-700">29.8</td><td className="border border-gray-300 px-3 py-2 text-center text-orange-700">33.9</td></tr>
+              <tr className="bg-gray-50"><td className="border border-gray-300 px-3 py-2 font-medium">6&apos;2&quot;</td><td className="border border-gray-300 px-3 py-2 text-center text-blue-700">15.4</td><td className="border border-gray-300 px-3 py-2 text-center text-green-700">18.0</td><td className="border border-gray-300 px-3 py-2 text-center text-green-700">20.5</td><td className="border border-gray-300 px-3 py-2 text-center text-green-700">23.1</td><td className="border border-gray-300 px-3 py-2 text-center text-yellow-700">25.7</td><td className="border border-gray-300 px-3 py-2 text-center text-yellow-700">28.2</td><td className="border border-gray-300 px-3 py-2 text-center text-orange-700">32.1</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p className="text-gray-700 mb-4">
+          Color coding makes it easy to spot the category at a glance: <span className="text-blue-700 font-medium">blue</span> means underweight, <span className="text-green-700 font-medium">green</span> is normal, <span className="text-yellow-700 font-medium">yellow</span> is overweight, <span className="text-orange-700 font-medium">orange</span> is obese class I, and <span className="text-red-700 font-medium">red</span> is obese class II or higher. Keep in mind these are approximations — for a precise result, use the calculator above.
+        </p>
+      </section>
+
+      <section className="mt-8">
+        <h2 className="text-xl font-semibold mb-3">Limitations of BMI</h2>
+        <p className="text-gray-700 mb-4">
+          BMI is a useful starting point, but it has real blind spots that are worth understanding. The biggest one is that BMI cannot tell the difference between muscle and fat. A 220-pound bodybuilder and a 220-pound sedentary person at the same height will get the exact same BMI, even though their health profiles are completely different. If you lift weights or play sports regularly, your BMI may overstate your actual health risk.
+        </p>
+        <p className="text-gray-700 mb-4">
+          Age is another factor BMI doesn&apos;t account for well. Older adults naturally lose muscle mass and gain fat as they age, so an elderly person with a &quot;normal&quot; BMI might actually have a higher body fat percentage than the number suggests. On the flip side, children and teenagers are still growing, so their BMI needs to be interpreted using age- and sex-specific percentile charts rather than the standard adult categories.
+        </p>
+        <p className="text-gray-700 mb-4">
+          Research has also shown that health risks at the same BMI can differ across ethnic groups. For example, studies indicate that people of South Asian descent may face higher cardiovascular risk at lower BMI values compared to people of European descent, while some Pacific Islander populations may carry less risk at higher BMI levels. This is one reason many health organizations are reconsidering universal BMI cutoffs.
+        </p>
+        <p className="text-gray-700 mb-4">
+          Perhaps most importantly, BMI doesn&apos;t measure body fat directly. It&apos;s a proxy — a rough estimate based on height and weight alone. For a fuller picture of your health, consider tracking <strong>waist circumference</strong> (which captures dangerous visceral fat), <strong>body fat percentage</strong> (measured via calipers, DEXA scan, or bioelectrical impedance), or your <strong>waist-to-hip ratio</strong>. Our <Link href="/tools/body-fat-calculator" className="text-[#2563eb] underline hover:text-blue-800">body fat calculator</Link> can help you get a more nuanced assessment.
+        </p>
+      </section>
+
+      <section className="mt-8">
+        <h2 className="text-xl font-semibold mb-3">BMI vs Body Fat Percentage</h2>
+        <p className="text-gray-700 mb-4">
+          BMI and body fat percentage both attempt to answer the same question — is your weight healthy? — but they go about it in very different ways. BMI uses only your height and weight, making it quick and free to calculate. Body fat percentage, on the other hand, measures how much of your total body weight comes from fat tissue versus lean mass (muscle, bone, water, organs). It&apos;s more accurate but requires specialized tools like skinfold calipers, a DEXA scan, or a bioelectrical impedance scale.
+        </p>
+        <p className="text-gray-700 mb-4">
+          So when should you use which? BMI works well as a quick screening tool for the general population. If you&apos;re not particularly muscular and want a fast health check, BMI gives you a reasonable starting point. Body fat percentage is better for anyone who exercises regularly, carries above-average muscle, or wants a more precise understanding of their body composition. Athletes, in particular, should rely on body fat percentage rather than BMI.
+        </p>
+        <p className="text-gray-700 mb-4">
+          Doctors still use BMI for a practical reason: it&apos;s simple, standardized, and backed by decades of population-level research linking it to disease risk. It doesn&apos;t require any equipment beyond a scale and a tape measure. That said, many physicians now use BMI as a starting point and follow up with additional measurements when needed. You can check your body composition using our <Link href="/tools/body-fat-calculator" className="text-[#2563eb] underline hover:text-blue-800">body fat calculator</Link> for a more complete picture.
+        </p>
+      </section>
+
+      <section className="mt-8">
+        <h2 className="text-xl font-semibold mb-3">How to Improve Your BMI</h2>
+        <p className="text-gray-700 mb-4">
+          If your BMI falls in the <strong>underweight</strong> range, the goal is to gain weight in a healthy way. Focus on eating a caloric surplus of 300 to 500 calories above your maintenance level each day, prioritizing nutrient-dense foods like lean proteins, whole grains, nuts, and healthy fats. Pair this with a strength training program to ensure you&apos;re building muscle rather than just adding fat. You can figure out your daily calorie needs using our <Link href="/tools/calorie-calculator" className="text-[#2563eb] underline hover:text-blue-800">calorie calculator</Link>.
+        </p>
+        <p className="text-gray-700 mb-4">
+          If your BMI puts you in the <strong>overweight or obese</strong> categories, aim for a moderate caloric deficit of about 500 calories per day, which translates to roughly one pound of weight loss per week. Combine a balanced diet with both cardiovascular exercise (walking, cycling, swimming) and resistance training to preserve muscle mass while losing fat. Crash diets and extreme calorie restriction tend to backfire — slow and steady wins the race. Most health professionals recommend losing no more than 1 to 2 pounds per week for sustainable results.
+        </p>
+        <p className="text-gray-700 mb-4">
+          No matter which direction you need to move, knowing your baseline metabolic rate helps you set realistic targets. Our <Link href="/tools/bmr-calculator" className="text-[#2563eb] underline hover:text-blue-800">BMR calculator</Link> shows you how many calories your body burns at rest, giving you a foundation to build your nutrition plan around. And remember — small, consistent changes beat dramatic overhauls every time.
+        </p>
+      </section>
+
+      <section className="mt-8">
+        <h2 className="text-xl font-semibold mb-3">BMI for Different Age Groups</h2>
+        <p className="text-gray-700 mb-4">
+          <strong>Children and teenagers (ages 2 to 19):</strong> Standard BMI categories don&apos;t apply to kids. Instead, pediatricians use BMI-for-age percentile charts that compare a child&apos;s BMI against others of the same age and sex. A child at the 85th percentile or above is considered overweight, while the 95th percentile and above indicates obesity. These percentile charts account for the fact that body composition changes significantly during growth and puberty.
+        </p>
+        <p className="text-gray-700 mb-4">
+          <strong>Adults (ages 20 to 65):</strong> The standard BMI categories listed above apply to this group. This is the age range where most of the research linking BMI to health outcomes has been conducted. That said, your individual risk depends on many other factors — fitness level, diet quality, family history, and where you carry your weight all matter.
+        </p>
+        <p className="text-gray-700 mb-4">
+          <strong>Seniors (ages 65 and older):</strong> Interestingly, research suggests that a slightly higher BMI — around 25 to 27 — may actually be protective for older adults. This is sometimes called the &quot;obesity paradox.&quot; The extra weight can provide reserves during illness and may help protect against bone fractures from falls. For seniors, being slightly overweight by standard BMI definitions is generally less concerning than being underweight, which is linked to increased frailty and mortality risk.
+        </p>
+      </section>
+
+      <div className="w-[300px] h-[250px] bg-gray-200 flex items-center justify-center text-gray-500 text-sm mx-auto mt-8 rounded">
+        Advertisement
+      </div>
+
+      <section className="mt-8">
         <h2 className="text-xl font-semibold mb-3">Related Tools</h2>
         <div className="flex flex-wrap gap-3">
           {RELATED_TOOLS.map((tool) => (

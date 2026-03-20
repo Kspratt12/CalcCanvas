@@ -125,6 +125,61 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Social proof bar */}
+      <section className="border-y border-slate-200 bg-white py-6">
+        <div className="mx-auto max-w-5xl px-4 flex flex-wrap items-center justify-center gap-8 sm:gap-12 text-center">
+          <div>
+            <div className="text-2xl font-bold text-slate-900">37+</div>
+            <div className="text-xs text-slate-500 mt-1">Free Tools</div>
+          </div>
+          <div className="h-8 w-px bg-slate-200 hidden sm:block" />
+          <div>
+            <div className="text-2xl font-bold text-slate-900">6</div>
+            <div className="text-xs text-slate-500 mt-1">Categories</div>
+          </div>
+          <div className="h-8 w-px bg-slate-200 hidden sm:block" />
+          <div>
+            <div className="text-2xl font-bold text-slate-900">100%</div>
+            <div className="text-xs text-slate-500 mt-1">Free &amp; Private</div>
+          </div>
+          <div className="h-8 w-px bg-slate-200 hidden sm:block" />
+          <div>
+            <div className="text-2xl font-bold text-slate-900">0</div>
+            <div className="text-xs text-slate-500 mt-1">Data Stored</div>
+          </div>
+          <div className="h-8 w-px bg-slate-200 hidden sm:block" />
+          <div>
+            <div className="text-2xl font-bold text-slate-900">Instant</div>
+            <div className="text-xs text-slate-500 mt-1">Results</div>
+          </div>
+        </div>
+      </section>
+
+      {/* Popular Tools */}
+      <section className="mx-auto max-w-7xl px-4 pt-12 sm:px-6 lg:px-8">
+        <h2 className="text-2xl font-bold text-slate-900">Most Popular Tools</h2>
+        <p className="mt-1 text-sm text-slate-500">Our most-used calculators and tools</p>
+        <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
+          {[
+            { title: "Mortgage Calculator", href: "/tools/mortgage-calculator", icon: "\uD83C\uDFE0" },
+            { title: "BMI Calculator", href: "/tools/bmi-calculator", icon: "\u2696\uFE0F" },
+            { title: "Percentage Calculator", href: "/tools/percentage-calculator", icon: "\uFF05" },
+            { title: "Word Counter", href: "/tools/word-counter", icon: "\uD83D\uDCDD" },
+            { title: "JSON Formatter", href: "/tools/json-formatter", icon: "\uD83D\uDCC2" },
+            { title: "Unit Converter", href: "/tools/unit-converter", icon: "\uD83D\uDD04" },
+          ].map((tool) => (
+            <a
+              key={tool.href}
+              href={tool.href}
+              className="flex items-center gap-3 rounded-xl border border-slate-200 bg-white p-4 hover:border-[#2563eb]/30 hover:shadow-md transition"
+            >
+              <span className="text-2xl">{tool.icon}</span>
+              <span className="text-sm font-semibold text-slate-900">{tool.title}</span>
+            </a>
+          ))}
+        </div>
+      </section>
+
       {/* Tool categories */}
       <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         {categories.map((cat, i) => {

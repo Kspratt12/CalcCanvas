@@ -50,6 +50,34 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
+  const blogSlugs = [
+    "how-mortgage-interest-works",
+    "compound-interest-explained",
+    "what-is-bmi",
+    "how-to-calculate-calories",
+    "percentage-calculation-guide",
+    "salary-vs-hourly-which-is-better",
+    "how-much-to-save-for-retirement",
+    "standard-deviation-explained",
+    "body-fat-percentage-guide",
+    "json-formatting-guide",
+  ];
+
+  const blogPages: MetadataRoute.Sitemap = [
+    {
+      url: `${baseUrl}/blog`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.7,
+    },
+    ...blogSlugs.map((slug) => ({
+      url: `${baseUrl}/blog/${slug}`,
+      lastModified: new Date(),
+      changeFrequency: "weekly" as const,
+      priority: 0.7,
+    })),
+  ];
+
   const staticPages: MetadataRoute.Sitemap = [
     { url: `${baseUrl}/about`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.5 },
     { url: `${baseUrl}/privacy`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.3 },
@@ -64,6 +92,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1.0,
     },
     ...toolPages,
+    ...blogPages,
     ...staticPages,
   ];
 }

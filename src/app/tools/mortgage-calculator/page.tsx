@@ -339,6 +339,192 @@ export default function MortgageCalculator() {
         </p>
       </section>
 
+      <section className="mt-10">
+        <h2 className="text-xl font-semibold text-gray-900 mb-3">
+          Understanding Mortgage Payments
+        </h2>
+        <p className="text-gray-700 mb-3">
+          Your monthly mortgage payment is often referred to as PITI, which stands for Principal, Interest, Taxes, and Insurance. The calculator above covers the first two components &mdash; principal and interest &mdash; but understanding all four is essential for budgeting accurately.
+        </p>
+        <p className="text-gray-700 mb-3">
+          <strong>Principal</strong> is the portion of your payment that goes toward paying down the actual loan balance. <strong>Interest</strong> is what the lender charges you for borrowing the money. <strong>Taxes</strong> refers to property taxes, which your lender typically collects monthly and holds in an escrow account. <strong>Insurance</strong> includes homeowners insurance and, if your down payment is under 20%, private mortgage insurance (PMI).
+        </p>
+        <p className="text-gray-700 mb-3">
+          What surprises many first-time buyers is how the split between principal and interest changes over time. In the early years of a mortgage, the vast majority of each payment goes toward interest. As the loan matures, the balance shifts and more of your payment chips away at the principal. This is called amortization.
+        </p>
+        <p className="text-gray-700 mb-3">
+          Here&apos;s a concrete example using a $280,000 loan at 6.5% over 30 years (monthly payment of about $1,770):
+        </p>
+        <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 mb-3">
+          <div className="grid grid-cols-4 gap-2 text-sm font-semibold text-gray-900 border-b border-gray-300 pb-2 mb-2">
+            <div>Period</div>
+            <div>To Interest</div>
+            <div>To Principal</div>
+            <div>Remaining Balance</div>
+          </div>
+          <div className="grid grid-cols-4 gap-2 text-sm text-gray-700 py-1">
+            <div>Year 1 (Month 1)</div>
+            <div>$1,517</div>
+            <div>$253</div>
+            <div>$279,747</div>
+          </div>
+          <div className="grid grid-cols-4 gap-2 text-sm text-gray-700 py-1">
+            <div>Year 15 (Month 181)</div>
+            <div>$1,088</div>
+            <div>$682</div>
+            <div>$199,870</div>
+          </div>
+          <div className="grid grid-cols-4 gap-2 text-sm text-gray-700 py-1">
+            <div>Year 30 (Month 360)</div>
+            <div>$10</div>
+            <div>$1,760</div>
+            <div>$0</div>
+          </div>
+        </div>
+        <p className="text-gray-700">
+          Notice how in Month 1, roughly 86% of your payment goes to interest. By the halfway point, the split is closer to 60/40. And in the final year, nearly every dollar goes toward paying off principal. This is why making extra payments early in the loan has such a dramatic effect on total interest paid.
+        </p>
+      </section>
+
+      <section className="mt-10">
+        <h2 className="text-xl font-semibold text-gray-900 mb-3">
+          15-Year vs 20-Year vs 30-Year Mortgages
+        </h2>
+        <p className="text-gray-700 mb-3">
+          Choosing the right loan term is one of the biggest financial decisions you&apos;ll make. A shorter term means higher monthly payments but dramatically less interest over the life of the loan. Here&apos;s a side-by-side comparison using a $350,000 home with 20% down ($280,000 loan) at a 6.5% interest rate:
+        </p>
+        <div className="bg-gray-50 border border-gray-200 rounded-lg overflow-hidden mb-4">
+          <div className="grid grid-cols-4 gap-0 text-sm font-semibold text-gray-900 bg-gray-100 border-b border-gray-300">
+            <div className="p-3"></div>
+            <div className="p-3 text-center">15-Year</div>
+            <div className="p-3 text-center">20-Year</div>
+            <div className="p-3 text-center">30-Year</div>
+          </div>
+          <div className="grid grid-cols-4 gap-0 text-sm text-gray-700 border-b border-gray-200">
+            <div className="p-3 font-medium">Monthly Payment</div>
+            <div className="p-3 text-center">$2,441</div>
+            <div className="p-3 text-center">$2,089</div>
+            <div className="p-3 text-center">$1,770</div>
+          </div>
+          <div className="grid grid-cols-4 gap-0 text-sm text-gray-700 border-b border-gray-200">
+            <div className="p-3 font-medium">Total Interest</div>
+            <div className="p-3 text-center">$159,400</div>
+            <div className="p-3 text-center">$221,360</div>
+            <div className="p-3 text-center">$357,300</div>
+          </div>
+          <div className="grid grid-cols-4 gap-0 text-sm text-gray-700">
+            <div className="p-3 font-medium">Total Cost</div>
+            <div className="p-3 text-center">$439,400</div>
+            <div className="p-3 text-center">$501,360</div>
+            <div className="p-3 text-center">$637,300</div>
+          </div>
+        </div>
+        <p className="text-gray-700 mb-3">
+          The difference is staggering. Choosing a 15-year term over a 30-year term saves you nearly <strong>$198,000</strong> in interest &mdash; but your monthly payment jumps by about $671. The 20-year term offers a middle ground, saving you $136,000 in interest compared to the 30-year option while keeping payments more manageable.
+        </p>
+        <p className="text-gray-700 mb-3">
+          <strong>A 30-year mortgage makes sense</strong> if you want the lowest monthly payment for cash flow flexibility, you&apos;re investing the difference elsewhere, or you&apos;re buying near the top of your budget. <strong>A 15-year mortgage works well</strong> if you have a high income relative to the home price, you&apos;re close to retirement and want to be debt-free, or you simply want to build equity faster. <strong>The 20-year term</strong> is a smart compromise if the 15-year payment feels tight but you don&apos;t want to pay 30 years of interest.
+        </p>
+      </section>
+
+      <section className="mt-10">
+        <h2 className="text-xl font-semibold text-gray-900 mb-3">
+          How to Get a Lower Mortgage Rate
+        </h2>
+        <p className="text-gray-700 mb-3">
+          Even a small reduction in your interest rate can save you tens of thousands of dollars. Here are the most effective ways to secure a lower rate:
+        </p>
+        <p className="text-gray-700 mb-3">
+          <strong>Improve your credit score.</strong> Lenders reserve their best rates for borrowers with scores above 740. Paying down credit card balances, avoiding new credit inquiries before applying, and correcting any errors on your credit report can all bump your score. A 50-point improvement could shave 0.25% to 0.5% off your rate.
+        </p>
+        <p className="text-gray-700 mb-3">
+          <strong>Make a larger down payment.</strong> Putting down 20% or more not only eliminates PMI but also signals lower risk to lenders, often resulting in a better rate. If you can stretch to 25% or even 30% down, you may qualify for an even more favorable rate tier.
+        </p>
+        <p className="text-gray-700 mb-3">
+          <strong>Shop around aggressively.</strong> Rates vary between lenders more than most people realize. Get quotes from at least three to five lenders, including banks, credit unions, and online mortgage companies. Multiple inquiries within a 45-day window count as a single hard pull on your credit report.
+        </p>
+        <p className="text-gray-700 mb-3">
+          <strong>Consider paying points.</strong> A mortgage point costs 1% of the loan amount and typically lowers your rate by about 0.25%. On a $280,000 loan, one point costs $2,800. If it reduces your rate from 6.5% to 6.25%, you&apos;d save roughly $52 per month &mdash; paying for itself in about 54 months.
+        </p>
+        <p className="text-gray-700">
+          <strong>Evaluate ARM vs. fixed.</strong> Adjustable-rate mortgages (ARMs) often start with lower rates than fixed-rate loans. A 5/1 ARM could save you money if you plan to sell or refinance within the first five years. Just make sure you understand the risk of rate increases after the initial fixed period ends.
+        </p>
+      </section>
+
+      <section className="mt-10">
+        <h2 className="text-xl font-semibold text-gray-900 mb-3">
+          Hidden Costs of Homeownership
+        </h2>
+        <p className="text-gray-700 mb-3">
+          The purchase price and mortgage payment are just the starting point. Several ongoing costs catch new homeowners off guard, so it&apos;s important to factor them into your budget from the beginning.
+        </p>
+        <p className="text-gray-700 mb-3">
+          <strong>Property taxes</strong> typically range from 1% to 2% of your home&apos;s assessed value per year. On a $350,000 home, that&apos;s $3,500 to $7,000 annually, or roughly $290 to $583 per month added to your housing cost.
+        </p>
+        <p className="text-gray-700 mb-3">
+          <strong>Homeowners insurance</strong> usually runs $1,200 to $2,500 per year depending on your location, home size, and coverage level. This is required by every mortgage lender.
+        </p>
+        <p className="text-gray-700 mb-3">
+          <strong>Private mortgage insurance (PMI)</strong> applies when your down payment is less than 20%. It typically costs 0.5% to 1% of the loan amount per year. On a $315,000 loan (10% down on $350,000), that&apos;s an extra $131 to $263 per month until you reach 20% equity.
+        </p>
+        <p className="text-gray-700 mb-3">
+          <strong>HOA fees</strong> are common in condos, townhouses, and planned communities. They can range from $100 to $500 or more per month and typically cover exterior maintenance, amenities, and community insurance.
+        </p>
+        <p className="text-gray-700 mb-3">
+          <strong>Maintenance and repairs</strong> are the cost most buyers underestimate. The general rule of thumb is to budget 1% of your home&apos;s value per year for upkeep. That&apos;s $3,500 per year on a $350,000 home for things like HVAC servicing, roof repairs, plumbing fixes, and appliance replacements.
+        </p>
+        <p className="text-gray-700">
+          <strong>Closing costs</strong> at the time of purchase typically run 2% to 5% of the loan amount. On a $280,000 mortgage, expect to pay $5,600 to $14,000 in lender fees, appraisal costs, title insurance, and other charges.
+        </p>
+      </section>
+
+      <section className="mt-10">
+        <h2 className="text-xl font-semibold text-gray-900 mb-3">
+          Mortgage Prepayment Strategies
+        </h2>
+        <p className="text-gray-700 mb-3">
+          Paying off your mortgage early can save you a massive amount of interest. Here are the most popular prepayment approaches and how they stack up:
+        </p>
+        <p className="text-gray-700 mb-3">
+          <strong>Extra monthly payments.</strong> Adding even a modest amount to your monthly payment goes directly toward principal, reducing your balance faster and cutting the total interest you owe. For example, adding just $100 per month to a $300,000 mortgage at 6.5% over 30 years saves you roughly <strong>$43,000 in interest</strong> and pays off the loan about 4 years early.
+        </p>
+        <p className="text-gray-700 mb-3">
+          <strong>Biweekly payments.</strong> Instead of making 12 monthly payments, you pay half the monthly amount every two weeks. Because there are 52 weeks in a year, this results in 26 half-payments &mdash; the equivalent of 13 full payments. That one extra payment per year can shave 4 to 5 years off a 30-year mortgage.
+        </p>
+        <p className="text-gray-700 mb-3">
+          <strong>Lump sum payments.</strong> Applying a tax refund, bonus, or inheritance directly to your mortgage principal can make a big dent. A one-time $5,000 payment in Year 5 of a $300,000 loan at 6.5% saves you roughly $13,000 in interest over the remaining term.
+        </p>
+        <p className="text-gray-700 mb-3">
+          <strong>Refinancing to a shorter term.</strong> If rates have dropped since you took out your mortgage, refinancing from a 30-year to a 15-year loan locks in a lower rate and forces faster payoff. Just make sure the closing costs on the new loan don&apos;t eat up the savings.
+        </p>
+        <p className="text-gray-700">
+          Before prepaying, check that your lender doesn&apos;t charge a prepayment penalty. Most conventional loans don&apos;t, but it&apos;s always worth confirming. Also consider whether the money might earn a higher return invested elsewhere &mdash; if your mortgage rate is 3.5% but your investments average 8%, the math may favor investing instead.
+        </p>
+      </section>
+
+      <section className="mt-10">
+        <h2 className="text-xl font-semibold text-gray-900 mb-3">
+          Mortgage Glossary
+        </h2>
+        <p className="text-gray-700 mb-3">
+          Mortgage paperwork is full of jargon. Here are the key terms you&apos;ll encounter during the homebuying process:
+        </p>
+        <div className="space-y-2">
+          <p className="text-gray-700"><strong>APR (Annual Percentage Rate):</strong> The total yearly cost of a loan expressed as a percentage, including interest and lender fees &mdash; gives a more complete picture than the interest rate alone.</p>
+          <p className="text-gray-700"><strong>Amortization:</strong> The process of spreading loan payments over time so each installment covers both interest and principal, gradually reducing the balance to zero.</p>
+          <p className="text-gray-700"><strong>ARM (Adjustable-Rate Mortgage):</strong> A mortgage with an interest rate that stays fixed for an initial period (e.g., 5 years) then adjusts periodically based on market conditions.</p>
+          <p className="text-gray-700"><strong>Closing Costs:</strong> Fees paid at the finalization of a real estate transaction, including lender charges, appraisal fees, title insurance, and attorney costs.</p>
+          <p className="text-gray-700"><strong>DTI (Debt-to-Income Ratio):</strong> The percentage of your gross monthly income that goes toward debt payments; lenders typically prefer a DTI below 43%.</p>
+          <p className="text-gray-700"><strong>Escrow:</strong> An account managed by your lender that holds funds for property taxes and insurance, paid from a portion of your monthly mortgage payment.</p>
+          <p className="text-gray-700"><strong>Fixed-Rate Mortgage:</strong> A loan with an interest rate that remains the same for the entire term, providing predictable monthly payments.</p>
+          <p className="text-gray-700"><strong>LTV (Loan-to-Value Ratio):</strong> The ratio of your loan amount to the appraised value of the property; an LTV above 80% typically triggers PMI requirements.</p>
+          <p className="text-gray-700"><strong>PMI (Private Mortgage Insurance):</strong> Insurance required by lenders when your down payment is less than 20%, protecting them if you default on the loan.</p>
+          <p className="text-gray-700"><strong>Points:</strong> Upfront fees paid to the lender at closing to reduce your interest rate; one point equals 1% of the loan amount.</p>
+          <p className="text-gray-700"><strong>Principal:</strong> The original amount of money borrowed, not including interest or other charges.</p>
+          <p className="text-gray-700"><strong>Refinance:</strong> Replacing your existing mortgage with a new loan, typically to secure a lower interest rate, change the loan term, or access home equity.</p>
+        </div>
+      </section>
+
       <section className="mt-8 pb-10">
         <h2 className="text-xl font-semibold text-gray-900 mb-3">
           Related Tools

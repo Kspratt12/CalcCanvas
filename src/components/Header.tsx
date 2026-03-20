@@ -9,6 +9,7 @@ const navLinks = [
   { label: "Math", href: "/#math" },
   { label: "Text Tools", href: "/#text" },
   { label: "Developer Tools", href: "/#developer" },
+  { label: "Blog", href: "/blog" },
 ];
 
 export default function Header() {

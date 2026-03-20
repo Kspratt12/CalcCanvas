@@ -13,6 +13,7 @@ const companyLinks = [
   { label: "About", href: "/about" },
   { label: "Privacy Policy", href: "/privacy" },
   { label: "Terms of Service", href: "/terms" },
+  { label: "Blog", href: "/blog" },
 ];
 
 export default function Footer() {
