@@ -76,7 +76,7 @@ export default function OGImage() {
           )}
         </div>
         <span style={{ fontSize: 20, color: "#93c5fd", marginTop: 32 }}>
-          37 tools &bull; 100% free &bull; No sign-up required
+          47 tools &bull; 100% free &bull; No sign-up required
         </span>
       </div>
     ),

@@ -267,11 +267,11 @@ export default function Home() {
               </p>
             </div>
             <div>
-              <h3 className="text-lg font-semibold text-slate-900">37 Tools in One Place</h3>
+              <h3 className="text-lg font-semibold text-slate-900">47 Tools in One Place</h3>
               <p className="mt-2 text-sm leading-6 text-slate-500">
-                From mortgage payments and retirement planning to JSON formatting
-                and password generation, CalcCanvas covers six categories of tools
-                that people actually use every day.
+                CalcCanvas covers six categories of tools that people actually
+                use every day — from mortgage payments and retirement planning to
+                JSON formatting and password generation.
               </p>
             </div>
             <div>
