@@ -59,7 +59,7 @@ const posts = [
   },
   {
     slug: "body-fat-percentage-guide",
-    title: "Body Fat Percentage: What&apos;s Healthy and How to Measure It",
+    title: "Body Fat Percentage: What\u2019s Healthy and How to Measure It",
     description:
       "Healthy body fat ranges by age and sex, measurement methods compared, and why body fat percentage matters more than weight alone.",
     date: "2025-05-25",
